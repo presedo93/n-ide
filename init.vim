@@ -14,13 +14,16 @@ call plug#begin("~/.vim/plugged")
 
 Plug 'junegunn/fzf', {'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'leafgarland/typescript-vim'
 Plug 'dracula/vim'
+
+" ****** NERDTree & commenter ******
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'preservim/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
+
+" ****** Conquer of Completion ******
 Plug 'neoclide/coc.nvim', {'branch':'release'}
 let g:coc_global_extensions = [
     \ 'coc-tsserver',
@@ -32,11 +35,17 @@ let g:coc_global_extensions = [
     \ 'coc-sql',
     \ 'coc-yaml'
     \]
+Plug 'yaegassy/coc-tailwindcss3', {'do': 'yarn install --frozen-lockfile'}
+
+" ****** Other plugins ******
 Plug 'sheerun/vim-polyglot',
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" Plug 'pangloss/vim-javascript'
+" Plug 'peitalin/vim-jsx-typescript'
+" Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
@@ -46,6 +55,7 @@ set termguicolors
 endif
 syntax enable
 colorscheme dracula
+hi Normal guibg=NONE ctermbg=NONE
 
 " ****** General mappings ******
 let mapleader = " "
@@ -54,6 +64,7 @@ nnoremap <leader>pf :Files<CR>
 inoremap jk <esc>:w<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-S> :update<cr>
+nnoremap <leader><esc> :q<CR>
 
 " ****** NERDTree config ******
 let g:NERDTreeShowHidden = 1
