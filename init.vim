@@ -38,6 +38,7 @@ let g:coc_global_extensions = [
 Plug 'yaegassy/coc-tailwindcss3', {'do': 'yarn install --frozen-lockfile'}
 
 " ****** Other plugins ******
+Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot',
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'vim-airline/vim-airline'
@@ -59,8 +60,8 @@ hi Normal guibg=NONE ctermbg=NONE
 
 " ****** General mappings ******
 let mapleader = " "
-nnoremap <leader>pv :Vex<CR>
-nnoremap <leader>pf :Files<CR>
+nnoremap <leader>v :Vex<CR>
+nnoremap <leader>f :Files<CR>
 inoremap jk <esc>:w<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-S> :update<cr>
