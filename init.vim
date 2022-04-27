@@ -7,6 +7,7 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set encoding=utf8
+set mouse=n
 let g:airline_powerline_fonts = 1
 
 " ****** Plugins ******
