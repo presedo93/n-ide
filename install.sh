@@ -2,8 +2,10 @@
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
    sudo apt install neovim
+   sudo apt install ripgrep
 elif [[ "$OSTYPE" == "darwin"* ]]; then
    brew install neovim
+   brew install ripgrep
 fi
 
 # Install the vim-plug extension
