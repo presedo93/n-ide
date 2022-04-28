@@ -7,8 +7,6 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set encoding=utf8
-" set mouse=n
-let g:airline_powerline_fonts = 1
 
 " ****** Plugins ******
 call plug#begin("~/.vim/plugged")
@@ -48,10 +46,6 @@ Plug 'cohama/lexima.vim'
 " ****** Airline ******
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-" Plug 'pangloss/vim-javascript'
-" Plug 'peitalin/vim-jsx-typescript'
-" Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
@@ -147,6 +141,10 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
 
 function! s:show_documentation()
   if CocAction('hasProvider', 'hover')
