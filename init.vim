@@ -58,7 +58,8 @@ colorscheme dracula
 hi Normal guibg=NONE ctermbg=NONE
 
 " ****** General mappings ******
-let mapleader = " "
+let mapleader = ","
+let g:mapleader = ","
 nnoremap <leader>v :Vex<CR>
 nnoremap <leader>f :Files<CR>
 inoremap jk <esc>:w<CR>
@@ -111,6 +112,16 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" ****** delete and cut ******
+nnoremap x "_x
+nnoremap d "_d
+nnoremap D "_D
+vnoremap d "_d
+
+nnoremap <leader>d ""d
+nnoremap <leader>D ""D
+vnoremap <leader>d ""d
 
 " ****** Terminal setup ******
 " turn terminal to normal mode with escape
