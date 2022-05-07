@@ -1,12 +1,24 @@
 " ****** Basic configuration ******
-set scrolloff=8
-set number
-set relativenumber
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set smartindent
-set encoding=utf8
+set nocompatible            " disable compatibility to old-time vi
+set showmatch               " show matching
+set ignorecase              " case insensitive
+set hlsearch                " highlight search
+set incsearch               " incremental search
+set scrolloff=8             " number of lines above/below cursor
+set number                  " add line numbers
+set relativenumber          " relatile number from cursor
+set tabstop=4               " tab stops
+set shiftwidth=4            " shift width
+set expandtab               " converts tabs to white space
+set smartindent             " smart indent of spaces
+set encoding=utf8           " text encoding
+set clipboard=unnamedplus   " using system clipboard
+set cursorline              " highlight current cursorline
+set wildmode=longest,list   " get bash-like tab completions
+set mouse=a                 " enable mouse click
+set mouse=v                 " middle-click paste with
+set noswapfile              " disable creating swap file
+syntax on                   " syntax highlighting
 
 " ****** Plugins ******
 call plug#begin("~/.vim/plugged")
@@ -15,6 +27,7 @@ Plug 'junegunn/fzf', {'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'dracula/vim'
+Plug 'mhinz/vim-startify'
 
 " ****** NERDTree & commenter ******
 Plug 'scrooloose/nerdtree'
@@ -90,6 +103,12 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" ****** move split panes to left/bottom/top/right ******
+ nnoremap <A-h> <C-W>H
+ nnoremap <A-j> <C-W>J
+ nnoremap <A-k> <C-W>K
+ nnoremap <A-l> <C-W>L
+
 " ****** resize split windows ******
 nnoremap <silent> <C-A-K> <C-W>-<CR>
 nnoremap <silent> <C-A-J> <C-W>+<CR>
@@ -106,8 +125,8 @@ nnoremap <silent> <leader>j 20j<CR>
 nnoremap <silent> <leader>k 20k<CR>
 
 " ****** move lines ******
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
+" nnoremap <A-j> :m .+1<CR>==
+" nnoremap <A-k> :m .-2<CR>==
 inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
@@ -166,9 +185,6 @@ function! s:show_documentation()
 endfunction
 
 " ****** ack.vim ******
-
-" Use ripgrep for searching ⚡️
-" Options include:
 " --vimgrep -> Needed to parse the rg response properly for ack.vim
 " --type-not sql -> Avoid huge sql file dumps as it slows down the search
 " --smart-case -> Search case insensitive if all lowercase pattern, Search case sensitively otherwise
