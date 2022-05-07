@@ -12,11 +12,10 @@ set shiftwidth=4            " shift width
 set expandtab               " converts tabs to white space
 set smartindent             " smart indent of spaces
 set encoding=utf8           " text encoding
-set clipboard=unnamedplus   " using system clipboard
 set cursorline              " highlight current cursorline
-set wildmode=longest,list   " get bash-like tab completions
-set mouse=a                 " enable mouse click
 set mouse=v                 " middle-click paste with
+set mouse=a                 " enable mouse click
+set wildmode=longest,list   " get bash-like tab completions
 set noswapfile              " disable creating swap file
 syntax on                   " syntax highlighting
 
@@ -104,10 +103,10 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " ****** move split panes to left/bottom/top/right ******
- nnoremap <A-h> <C-W>H
- nnoremap <A-j> <C-W>J
- nnoremap <A-k> <C-W>K
- nnoremap <A-l> <C-W>L
+ nnoremap <A-S-h> <C-W>H
+ nnoremap <A-S-j> <C-W>J
+ nnoremap <A-S-k> <C-W>K
+ nnoremap <A-S-l> <C-W>L
 
 " ****** resize split windows ******
 nnoremap <silent> <C-A-K> <C-W>-<CR>
@@ -125,8 +124,8 @@ nnoremap <silent> <leader>j 20j<CR>
 nnoremap <silent> <leader>k 20k<CR>
 
 " ****** move lines ******
-" nnoremap <A-j> :m .+1<CR>==
-" nnoremap <A-k> :m .-2<CR>==
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
 inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
