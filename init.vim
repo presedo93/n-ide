@@ -17,6 +17,7 @@ set mouse=v                 " middle-click paste with
 set mouse=a                 " enable mouse click
 set wildmode=longest,list   " get bash-like tab completions
 set noswapfile              " disable creating swap file
+set clipboard=unnamedplus   " set the copy to clipboard
 syntax on                   " syntax highlighting
 
 " ****** Plugins ******
@@ -70,8 +71,8 @@ colorscheme dracula
 hi Normal guibg=NONE ctermbg=NONE
 
 " ****** General mappings ******
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = " "
+let g:mapleader = " "
 nnoremap <leader>v :Vex<CR>
 nnoremap <leader>f :Files<CR>
 inoremap jk <esc>:w<CR>
@@ -103,10 +104,10 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " ****** move split panes to left/bottom/top/right ******
- nnoremap <A-S-h> <C-W>H
- nnoremap <A-S-j> <C-W>J
- nnoremap <A-S-k> <C-W>K
- nnoremap <A-S-l> <C-W>L
+nnoremap <A-S-h> <C-W>H
+nnoremap <A-S-j> <C-W>J
+nnoremap <A-S-k> <C-W>K
+nnoremap <A-S-l> <C-W>L
 
 " ****** resize split windows ******
 nnoremap <silent> <C-A-K> <C-W>-<CR>
@@ -137,9 +138,12 @@ nnoremap d "_d
 nnoremap D "_D
 vnoremap d "_d
 
-nnoremap <leader>d ""d
-nnoremap <leader>D ""D
-vnoremap <leader>d ""d
+nnoremap <leader>d "+d
+nnoremap <leader>D "+D
+vnoremap <leader>d "+d
+
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
 
 " ****** Terminal setup ******
 " turn terminal to normal mode with escape
