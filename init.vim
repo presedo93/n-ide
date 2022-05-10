@@ -208,3 +208,10 @@ nnoremap <Leader>/ :Ack!<Space>
 " Navigate quickfix list with ease
 nnoremap <silent> [q :cprevious<CR>
 nnoremap <silent> ]q :cnext<CR>
+
+if system('uname -r') =~ "Microsoft"
+    augroup Yank
+        autocmd!
+        autocmd TextYankPost * :call system('/mnt/c/windows/system32/clip.exe ',@")
+        augroup END
+endif
