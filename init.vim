@@ -18,6 +18,7 @@ set mouse=a                 " enable mouse click
 set wildmode=longest,list   " get bash-like tab completions
 set noswapfile              " disable creating swap file
 set clipboard=unnamedplus   " set the copy to clipboard
+set autoread                " when a file is changed outside
 syntax on                   " syntax highlighting
 
 " ****** Plugins ******
@@ -176,8 +177,8 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>i  <Plug>(coc-format-selected)
+nmap <leader>i  <Plug>(coc-format-selected)
 
 function! s:show_documentation()
   if CocAction('hasProvider', 'hover')
