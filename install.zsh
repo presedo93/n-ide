@@ -48,7 +48,7 @@ fi
 
 echo -e "$LG==> Creating the symlinks for all the configs... $NC"
 # Create a symbolic link from this repo's init.vim
-ln -svf $PWD/vim/init.vim $HOME/.config/nvim/init.vim
+ln -svf $PWD/vim/* $HOME/.config/nvim
 
 # Create a symbolic link from this repo's tmux.conf
 ln -svf $PWD/tmux/tmux.conf $HOME/.tmux.conf
