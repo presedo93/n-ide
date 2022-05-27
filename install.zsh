@@ -7,6 +7,8 @@ if [[ $# -eq 1 && $1 == "package"* ]]; then
     echo -e "$LG=> Installing all the packages... $NC"
     if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	echo -e "$LG==> Linux OS detected... $NC"
+        sudo add-apt-repository ppa:neovim-ppa/unstable
+        sudo apt update
         sudo apt install neovim
         sudo apt install ripgrep
 

@@ -1,5 +1,3 @@
-require('plugins.tree')
-require('plugins.sitter')
 
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
@@ -22,4 +20,7 @@ return require('packer').startup(function()
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
+
+    use 'lewis6991/gitsigns.nvim'
+  
 end)

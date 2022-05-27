@@ -2,4 +2,8 @@ require('settings')
 require('mappings')
 require('plugins')
 
--- vim.cmd("colorscheme duskfox")
+-- Plugins
+vim.cmd("colorscheme duskfox")
+require('plugins.tree')
+require('plugins.sitter')
+require('plugins.signs')
