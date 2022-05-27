@@ -24,8 +24,8 @@ if [[ $# -eq 1 && $1 == "package"* ]]; then
     curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
     # Install the vim-plug extension
-    echo -e "$LG===> Installing vim extensions manager... $NC"
-    curl -fLo ~/.vim/plugged/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    echo -e "$LG===> Installing vim packer ... $NC"
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
     # Create the config folder for nvim
     echo -e "$LG===> Creating the config vim folder... $NC"
