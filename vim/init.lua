@@ -3,7 +3,11 @@ require('mappings')
 require('plugins')
 
 -- Plugins
-vim.cmd("colorscheme duskfox")
+require('colors')
+vim.cmd('colorscheme nightfox')
 require('plugins.tree')
 require('plugins.sitter')
 require('plugins.signs')
+
+-- LSP
+require('lsp')
