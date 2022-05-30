@@ -1,6 +1,6 @@
+require('plugins')
 require('settings')
 require('mappings')
-require('plugins')
 
 -- Plugins
 require('colors')

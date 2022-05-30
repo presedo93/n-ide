@@ -21,6 +21,12 @@ if [[ $# -eq 1 && $1 == "package"* ]]; then
         brew install tmux
     fi
 
+    # Install pyenv
+    curl https://pyenv.run | bash
+
+    # Install nvm
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
     # Install the kitty terminal
     echo -e "$LG===> Installing kitty terminal... $NC"
     curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin

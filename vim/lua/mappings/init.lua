@@ -7,7 +7,7 @@ vim.g.mapleader = ' '
 
 -- Save and exit
 map('n', 'q', ':w<CR>', opts)
-map('n', 'Q', ':q<CR>', opts)
+map('n', '<esc><esc>', ':q<CR>', opts)
 
 -- Change split
 map('n', '<C-J>', '<C-W><C-J>', opts)
@@ -52,6 +52,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
+require("nvim-lsp-installer").setup{}
 local servers = { 'pyright', 'rust_analyzer', 'tailwindcss', 'tsserver' }
 
 -- Add additional capabilities supported by nvim-cmp
