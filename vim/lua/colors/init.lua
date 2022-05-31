@@ -1,5 +1,5 @@
 require('colors.tabs')
--- require('colors.feli')
+require('colors.feli')
 
 require('nightfox').setup({
     options = {

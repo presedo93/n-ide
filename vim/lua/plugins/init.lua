@@ -23,6 +23,13 @@ return require('packer').startup(function()
         run = ':TSUpdate'
     }
 
+    use 'nvim-treesitter/nvim-treesitter-refactor'
+
+    use {
+	    "SmiteshP/nvim-gps",
+	    requires = "nvim-treesitter/nvim-treesitter"
+    }
+
     use 'lewis6991/gitsigns.nvim'
 
     use 'neovim/nvim-lspconfig'
@@ -36,4 +43,11 @@ return require('packer').startup(function()
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
     
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
+    
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    use 'nvim-lua/lsp-status.nvim'
 end)

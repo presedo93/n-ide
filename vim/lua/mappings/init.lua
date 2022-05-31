@@ -22,8 +22,17 @@ map('n', '<leader>n', ':NvimTreeFindFile<CR>', opts)
 
 -- tabby
 map('n', '<leader>t', ':$tabnew<CR>', opts)
-map('n', '<C-Right>', ':tabn<CR>', opts)
-map('n', '<C-Left>', ':tabp<CR>', opts)
+map('n', '<M-.>', ':tabn<CR>', opts)
+map('n', '<M-,>', ':tabp<CR>', opts)
+
+-- Telescope
+map('n', '<leader>ff', 'Telescope find_files<CR>', opts)
+map('n', '<leader>fg', 'Telescope live_grep<CR>', opts)
+map('n', '<leader>fb', 'Telescope buffers<CR>', opts)
+
+map('n', '<leader>gc', 'Telescope git_commits<CR>', opts)
+map('n', '<leader>gs', 'Telescope git_status<CR>', opts)
+map('n', '<leader>ts', 'Telescope treesitter<CR>', opts)
 
 -- LSP
 map('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
