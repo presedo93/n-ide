@@ -1,5 +1,5 @@
-require('colors.tabs')
-require('colors.feli')
+require('ui.tabby')
+require('ui.feline')
 
 require('nightfox').setup({
     options = {

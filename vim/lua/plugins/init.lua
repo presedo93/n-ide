@@ -30,6 +30,8 @@ return require('packer').startup(function()
 	    requires = "nvim-treesitter/nvim-treesitter"
     }
 
+    use 'b3nj5m1n/kommentary'
+
     use 'lewis6991/gitsigns.nvim'
 
     use 'neovim/nvim-lspconfig'

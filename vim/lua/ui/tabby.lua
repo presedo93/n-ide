@@ -1,7 +1,6 @@
 local filename = require("tabby.filename")
--- local colors = require("colors.colors")
 local util = require("tabby.util")
-local colors = require('colors.util')
+local ui = require('ui.utils')
 
 local cwd = function()
   return "  " .. vim.fn.fnamemodify(vim.fn.getcwd(), ":t") .. " "
@@ -13,28 +12,28 @@ local line = {
   hl = "TabLineFill",
   layout = "active_wins_at_tail",
   head = {
-    { cwd, hl = colors.groups.TLHead },
-    { "", hl = colors.groups.TLHeadSep },
+    { cwd, hl = ui.groups.TLHead },
+    { "", hl = ui.groups.TLHeadSep },
   },
   active_tab = {
     label = function(tabid)
       return {
         "  " .. tabid .. " ",
-        hl = colors.groups.TLActive,
+        hl = ui.groups.TLActive,
       }
     end,
-    left_sep = { "", hl = colors.groups.TLActiveSep },
-    right_sep = { "", hl = colors.groups.TLActiveSep },
+    left_sep = { "", hl = ui.groups.TLActiveSep },
+    right_sep = { "", hl = ui.groups.TLActiveSep },
   },
   inactive_tab = {
     label = function(tabid)
       return {
         "  " .. tabid .. " ",
-        hl = colors.groups.TLBoldLine,
+        hl = ui.groups.TLBoldLine,
       }
     end,
-    left_sep = { "", hl = colors.groups.TLLineSep },
-    right_sep = { "", hl = colors.groups.TLLineSep },
+    left_sep = { "", hl = ui.groups.TLLineSep },
+    right_sep = { "", hl = ui.groups.TLLineSep },
   },
   top_win = {
     label = function(winid)
@@ -43,8 +42,8 @@ local line = {
         hl = "TabLine",
       }
     end,
-    left_sep = { "", hl = colors.groups.TLLineSep },
-    right_sep = { "", hl = colors.groups.TLLineSep },
+    left_sep = { "", hl = ui.groups.TLLineSep },
+    right_sep = { "", hl = ui.groups.TLLineSep },
   },
   win = {
     label = function(winid)
@@ -53,12 +52,12 @@ local line = {
         hl = "TabLine",
       }
     end,
-    left_sep = { "", hl = colors.groups.TLLineSep },
-    right_sep = { "", hl = colors.groups.TLLineSep },
+    left_sep = { "", hl = ui.groups.TLLineSep },
+    right_sep = { "", hl = ui.groups.TLLineSep },
   },
   tail = {
-    { "", hl = colors.groups.TLHeadSep },
-    { "  ", hl = colors.groups.TLHead },
+    { "", hl = ui.groups.TLHeadSep },
+    { "  ", hl = ui.groups.TLHead },
   },
 }
 

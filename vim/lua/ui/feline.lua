@@ -1,4 +1,4 @@
-local u = require("colors.util")
+local u = require("ui.utils")
 local fmt = string.format
 
 -- "┃", "█", "", "", "", "", "", "", "●"

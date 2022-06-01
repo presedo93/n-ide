@@ -10,13 +10,11 @@ if [[ $# -eq 1 && $1 == "package"* ]]; then
         sudo add-apt-repository ppa:neovim-ppa/unstable
         sudo apt update
         sudo apt install neovim
-        sudo apt install ripgrep
 
         sudo apt install tmux
     elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo -e "$LG==> Mac OS detected... $NC"
         brew install neovim
-        brew install ripgrep
 
         brew install tmux
     fi
