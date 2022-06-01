@@ -7,25 +7,31 @@ if [[ $# -eq 1 && $1 == "package"* ]]; then
     echo -e "$LG=> Installing all the packages... $NC"
     if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	echo -e "$LG==> Linux OS detected... $NC"
+        sudo add-apt-repository ppa:neovim-ppa/unstable
+        sudo apt update
         sudo apt install neovim
-        sudo apt install ripgrep
 
         sudo apt install tmux
     elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo -e "$LG==> Mac OS detected... $NC"
         brew install neovim
-        brew install ripgrep
 
         brew install tmux
     fi
+
+    # Install pyenv
+    curl https://pyenv.run | bash
+
+    # Install nvm
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
     # Install the kitty terminal
     echo -e "$LG===> Installing kitty terminal... $NC"
     curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
     # Install the vim-plug extension
-    echo -e "$LG===> Installing vim extensions manager... $NC"
-    curl -fLo ~/.vim/plugged/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    echo -e "$LG===> Installing vim packer ... $NC"
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
     # Create the config folder for nvim
     echo -e "$LG===> Creating the config vim folder... $NC"
@@ -48,7 +54,7 @@ fi
 
 echo -e "$LG==> Creating the symlinks for all the configs... $NC"
 # Create a symbolic link from this repo's init.vim
-ln -svf $PWD/vim/init.vim $HOME/.config/nvim/init.vim
+ln -svf $PWD/vim/* $HOME/.config/nvim
 
 # Create a symbolic link from this repo's tmux.conf
 ln -svf $PWD/tmux/tmux.conf $HOME/.tmux.conf
