@@ -42,7 +42,7 @@ local c = {
     hl = u.groups.SLAlt,
   },
   fileinfo = {
-    provider = { name = "file_info", opts = { type = "relative" } },
+    provider = { name = "file_info", opts = { type = "base-only" } },
     hl = u.groups.SLAlt,
     left_sep = { str = " ", hl = u.groups.SLAltSep },
     right_sep = { str = " ", hl = u.groups.SLAltSep },

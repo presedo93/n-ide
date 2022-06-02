@@ -9,6 +9,9 @@ vim.g.mapleader = ' '
 map('n', 'q', ':w<CR>', opts)
 map('n', '<esc><esc>', ':q<CR>', opts)
 
+-- Re-do
+map('n', 'U', '<C-r>', opts)
+
 -- Change split
 map('n', '<C-J>', '<C-W><C-J>', opts)
 map('n', '<C-K>', '<C-W><C-K>', opts)
@@ -24,7 +27,7 @@ map('n', '<S-Left>', '<C-W>H', opts)
 -- Resize split
 map('n', '<M-Up>', '<C-W>-', opts)
 map('n', '<M-Down>', '<C-W>+', opts)
-map('n', '<M-C-Right>', '<C-W>>', opts)
+map('n', '<M-Right>', '<C-W>>', opts)
 map('n', '<M-Left>', '<C-W><', opts)
 
 -- Move lines
