@@ -61,6 +61,10 @@ map('n', '<leader>t', ':$tabnew<CR>', opts)
 map('n', '<M-.>', ':tabn<CR>', opts)
 map('n', '<M-,>', ':tabp<CR>', opts)
 
+-- Formatter
+map('n', '<leader>fc', ':Format<CR>', opts)
+map('n', '<leader>Fc', ':FormatWrite<CR>', opts)
+
 -- Telescope
 map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
 map('n', '<leader>fg', ':Telescope live_grep<CR>', opts)

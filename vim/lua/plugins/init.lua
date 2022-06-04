@@ -10,6 +10,8 @@ return require('packer').startup(function()
 
     use 'nanozuki/tabby.nvim'
 
+    use 'mhartington/formatter.nvim'
+
     use {
         'kyazdani42/nvim-tree.lua',
         requires = {
