@@ -1,6 +1,6 @@
 local wk = require('which-key')
 
--- Basics -> n
+-- Leader -> n
 wk.register(
     {
         ['<leader>'] = {
@@ -25,6 +25,25 @@ wk.register(
     },
     {
         mode = 'n',
+        buffer = nil,
+        silent = true,
+        noremap = true,
+        nowait = false
+    }
+)
+
+-- Leader -> v
+wk.register(
+    {
+        ['<leader>'] = {
+            name = 'Leader',
+            ['d'] = { '"+d', 'Copy and Delete' },
+            ['D'] = { '"+D', 'Copy and Delete til end of line' },
+            ['y'] = { '"+y', 'Copy to clipboard' },
+        }
+    },
+    {
+        mode = 'v',
         buffer = nil,
         silent = true,
         noremap = true,

@@ -31,6 +31,8 @@ wk.register(
         ['<F2>'] = { ':NvimTreeToggle<CR>', 'Toggle side tree' },
         ['[d'] = { '<cmd>lua vim.diagnostic.goto_prev()<CR>', 'LSP -> go to next' },
         [']d'] = { '<cmd>lua vim.diagnostic.goto_next()<CR>', 'LSP -> go to prev' },
+        ['<'] = { '<gv', 'Left indent' },
+        ['>'] = { '>gv', 'Left indent' },
     },
     {
         mode = 'n',
@@ -63,6 +65,9 @@ wk.register(
         ['<M-k>'] = { ":m '<-2<CR>gv=gv", 'Move line one up' },
 
         ['d'] = { '"_d', 'Delete lines' },
+
+        ['<'] = { '<gv', 'Left indent' },
+        ['>'] = { '>gv', 'Left indent' },
     },
     {
         mode = 'v',
