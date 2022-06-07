@@ -1,3 +1,7 @@
+require('which-key').setup {}
+require('mappings.basics')
+---------------------------------------------------
+
 local map = vim.api.nvim_set_keymap
 local buf_map = vim.api.nvim_buf_set_keymap
 local buf_opt = vim.api.nvim_buf_set_option

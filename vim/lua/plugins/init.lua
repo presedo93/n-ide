@@ -1,5 +1,11 @@
+local fn = vim.fn
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+end
 
-return require('packer').startup(function()
+return require('packer').startup(function(use)
+
     use 'wbthomason/packer.nvim'
 
     use 'rstacruz/vim-closer'
@@ -11,6 +17,8 @@ return require('packer').startup(function()
     use 'nanozuki/tabby.nvim'
 
     use 'mhartington/formatter.nvim'
+
+    use 'folke/which-key.nvim'
 
     use {
         'kyazdani42/nvim-tree.lua',
@@ -31,6 +39,8 @@ return require('packer').startup(function()
 	    "SmiteshP/nvim-gps",
 	    requires = "nvim-treesitter/nvim-treesitter"
     }
+
+    use 'sunjon/shade.nvim'
 
     use 'b3nj5m1n/kommentary'
 
@@ -54,4 +64,16 @@ return require('packer').startup(function()
     }
 
     use 'nvim-lua/lsp-status.nvim'
+
+    use 'mfussenegger/nvim-dap'
+
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
+    use { "Pocco81/DAPInstall.nvim", commit = "24923c3819a450a772bb8f675926d530e829665f" }
+
+  -- Automatically set up your configuration after cloning packer.nvim
+  -- Put this at the end after all plugins
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 end)
