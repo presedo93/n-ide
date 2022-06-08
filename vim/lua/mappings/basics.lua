@@ -4,7 +4,7 @@ local wk = require('which-key')
 wk.register(
     {
         ['q'] = {':w<CR>', 'Save the file' },
-        ['<esc><esc>'] = { ':q<CR>', 'Close the view' },
+        ['<esc>'] = { ['<esc>'] = { ':q<CR>', 'Close the view' } },
         ['U'] = { '<C-r>', 'Re-do what was un-done' },
 
         ['<C-J>'] = { '<C-W><C-J>', 'Move down in splits' },
@@ -25,14 +25,16 @@ wk.register(
         ['<M-j>'] = { ':m .+1<CR>==', 'Move line one up' },
         ['<M-k>'] = { ':m .-2<CR>==', 'Move line one down' },
 
+        ['M-.'] = { ':tabn<CR>', 'tabby -> Next tabby tab' },
+        ['M-,'] = { ':tabp<CR>', 'tabby -> Prev tabby tab' },
+
         ['x'] = { '"_x', 'Delete character' },
         ['d'] = { '"_d', 'Delete lines' },
         ['D'] = { '"_D', 'Delete until end of line' },
+
         ['<F2>'] = { ':NvimTreeToggle<CR>', 'Toggle side tree' },
-        ['[d'] = { '<cmd>lua vim.diagnostic.goto_prev()<CR>', 'LSP -> go to next' },
-        [']d'] = { '<cmd>lua vim.diagnostic.goto_next()<CR>', 'LSP -> go to prev' },
-        ['<'] = { '<gv', 'Left indent' },
-        ['>'] = { '>gv', 'Left indent' },
+        ['['] = { ['d'] = { '<cmd>lua vim.diagnostic.goto_prev()<CR>', 'LSP -> go to next' } },
+        [']'] = { ['d'] = { '<cmd>lua vim.diagnostic.goto_next()<CR>', 'LSP -> go to prev' } },
     },
     {
         mode = 'n',

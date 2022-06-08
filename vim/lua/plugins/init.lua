@@ -8,7 +8,11 @@ return require('packer').startup(function(use)
 
     use 'wbthomason/packer.nvim'
 
-    use 'rstacruz/vim-closer'
+    use 'windwp/nvim-autopairs'
+    
+    use 'p00f/nvim-ts-rainbow'
+
+    use 'windwp/nvim-ts-autotag'
 
     use 'EdenEast/nightfox.nvim'
 

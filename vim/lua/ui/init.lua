@@ -22,3 +22,6 @@ require'shade'.setup({
     toggle           = '<Leader>s',
   }
 })
+
+-- Colors and auto close pairs
+require('nvim-autopairs').setup{}
