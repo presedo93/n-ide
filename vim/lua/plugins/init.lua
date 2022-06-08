@@ -18,6 +18,8 @@ return require('packer').startup(function(use)
 
     use 'feline-nvim/feline.nvim'
 
+    use 'johnfrankmorgan/whitespace.nvim'
+
     use 'nanozuki/tabby.nvim'
 
     use 'mhartington/formatter.nvim'

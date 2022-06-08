@@ -25,8 +25,8 @@ wk.register(
         ['<M-j>'] = { ':m .+1<CR>==', 'Move line one up' },
         ['<M-k>'] = { ':m .-2<CR>==', 'Move line one down' },
 
-        ['M-.'] = { ':tabn<CR>', 'tabby -> Next tabby tab' },
-        ['M-,'] = { ':tabp<CR>', 'tabby -> Prev tabby tab' },
+        ['<M-.>'] = { ':tabn<CR>', 'tabby -> Next tabby tab' },
+        ['<M-,>'] = { ':tabp<CR>', 'tabby -> Prev tabby tab' },
 
         ['x'] = { '"_x', 'Delete character' },
         ['d'] = { '"_d', 'Delete lines' },
