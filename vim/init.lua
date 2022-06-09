@@ -12,3 +12,6 @@ require('plugins.formatter')
 
 -- LSP
 require('lsp')
+
+-- DAP
+require('dbg')

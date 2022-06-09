@@ -58,7 +58,7 @@ local c = {
   cur_position = {
     provider = function()
       -- TODO: What about 4+ diget line numbers?
-      return fmt(" %3d:%-2d ", unpack(vim.api.nvim_win_get_cursor(0)))
+      return fmt("%3d:%-2d ", unpack(vim.api.nvim_win_get_cursor(0)))
     end,
     hl = vi_mode_hl,
     left_sep = { str = u.icons.left_filled, hl = vi_sep_hl },

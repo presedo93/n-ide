@@ -9,7 +9,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use 'windwp/nvim-autopairs'
-    
+
     use 'p00f/nvim-ts-rainbow'
 
     use 'windwp/nvim-ts-autotag'
@@ -18,7 +18,7 @@ return require('packer').startup(function(use)
 
     use 'feline-nvim/feline.nvim'
 
-    use 'johnfrankmorgan/whitespace.nvim'
+    use 'bronson/vim-trailing-whitespace'
 
     use 'nanozuki/tabby.nvim'
 
@@ -46,8 +46,6 @@ return require('packer').startup(function(use)
 	    requires = "nvim-treesitter/nvim-treesitter"
     }
 
-    use 'sunjon/shade.nvim'
-
     use 'b3nj5m1n/kommentary'
 
     use 'lewis6991/gitsigns.nvim'
@@ -55,15 +53,15 @@ return require('packer').startup(function(use)
     use 'neovim/nvim-lspconfig'
 
     use 'williamboman/nvim-lsp-installer'
-  
+
     use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-  
+
     use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
 
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-    
+
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
-    
+
     use {
         'nvim-telescope/telescope.nvim',
         requires = { {'nvim-lua/plenary.nvim'} }
@@ -73,10 +71,18 @@ return require('packer').startup(function(use)
 
     use 'mfussenegger/nvim-dap'
 
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use 'nvim-telescope/telescope-dap.nvim'
 
-    use { "Pocco81/DAPInstall.nvim", commit = "24923c3819a450a772bb8f675926d530e829665f" }
+    use 'mfussenegger/nvim-dap-python'
 
+    use 'theHamsta/nvim-dap-virtual-text'
+
+    use 'rcarriga/nvim-dap-ui'
+
+    use { "Pocco81/DAPInstall.nvim", branch = "dev" }
+
+    use 'simrat39/rust-tools.nvim'
+    --
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

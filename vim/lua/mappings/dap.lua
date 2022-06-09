@@ -1,60 +1,63 @@
+local wk = require('which-key')
 
-local M = {}
+wk.register(
+    {
+        d = {
+          name = "DAP -> Debug",
+          -- ['e'] = { "<cmd>lua require'dapui'.eval(vim.fn.input '[expression] > ')<cr>", "evaluate input" },
+          -- ['c'] = { "<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[condition] > ')<cr>", "conditional breakpoint" },
+          ['t'] = { "<cmd>lua require'dapui'.toggle()<cr>", "toggle ui" },
+          ['e'] = { "<cmd>lua require'dapui'.eval()<cr>", "evaluate" },
 
-local whichkey = require "which-key"
+          ['c'] = { "<cmd>lua require'dap'.continue()<cr>", "continue" },
+          ['d'] = { "<cmd>lua require'dap'.disconnect()<cr>", "disconnect" },
+          ['g'] = { "<cmd>lua require'dap'.session()<cr>", "get session" },
+          ['h'] = { "<cmd>lua require'dap.ui.widgets'.hover()<cr>", "hover variables" },
+          ['s'] = { "<cmd>lua require'dap.ui.widgets'.scopes()<cr>", "scopes" },
 
--- local function keymap(lhs, rhs, desc)
---   vim.keymap.set("n", lhs, rhs, { silent = true, desc = desc })
--- end
+          ['i'] = { "<cmd>lua require'dap'.step_into()<cr>", "step into" },
+          ['o'] = { "<cmd>lua require'dap'.step_over()<cr>", "step over" },
+          ['u'] = { "<cmd>lua require'dap'.step_out()<cr>", "step out" },
 
-function M.setup()
-  local keymap = {
-    d = {
-      name = "Debug",
-      R = { "<cmd>lua require'dap'.run_to_cursor()<cr>", "Run to Cursor" },
-      E = { "<cmd>lua require'dapui'.eval(vim.fn.input '[Expression] > ')<cr>", "Evaluate Input" },
-      C = { "<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[Condition] > ')<cr>", "Conditional Breakpoint" },
-      U = { "<cmd>lua require'dapui'.toggle()<cr>", "Toggle UI" },
-      b = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
-      c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
-      d = { "<cmd>lua require'dap'.disconnect()<cr>", "Disconnect" },
-      e = { "<cmd>lua require'dapui'.eval()<cr>", "Evaluate" },
-      g = { "<cmd>lua require'dap'.session()<cr>", "Get Session" },
-      h = { "<cmd>lua require'dap.ui.widgets'.hover()<cr>", "Hover Variables" },
-      S = { "<cmd>lua require'dap.ui.widgets'.scopes()<cr>", "Scopes" },
-      i = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
-      o = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
-      p = { "<cmd>lua require'dap'.pause.toggle()<cr>", "Pause" },
-      q = { "<cmd>lua require'dap'.close()<cr>", "Quit" },
-      r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl" },
-      s = { "<cmd>lua require'dap'.continue()<cr>", "Start" },
-      t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
-      x = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" },
-      u = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
+          ['r'] = { "<cmd>lua require'dap'.run_to_cursor()<cr>", "run to cursor" },
+          ['p'] = { "<cmd>lua require'dap'.pause.toggle()<cr>", "pause" },
+          ['q'] = { "<cmd>lua require'dap'.close()<cr>", "quit" },
+
+          ['b'] = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "toggle breakpoint" },
+          ['R'] = { "<cmd>lua require'dap'.repl.toggle()<cr>", "toggle repl" },
+          ['X'] = { "<cmd>lua require'dap'.terminate()<cr>", "terminate" },
+        },
+        c = {
+            name = 'DAP -> Telescope',
+            ['c'] = { '<cmd>lua require"telescope".extensions.dap.commands{}<CR>', 'List commands' },
+            ['o'] = { '<cmd>lua require"telescope".extensions.dap.configurations{}<CR>', ' List configurations' },
+            ['b'] = { '<cmd>lua require"telescope".extensions.dap.list_breakpoints{}<CR>', 'List breakpoints' },
+            ['v'] = { '<cmd>lua require"telescope".extensions.dap.variables{}<CR>', 'List variables' },
+            ['f'] = { '<cmd>lua require"telescope".extensions.dap.frames{}<CR>', 'List frames' },
+        }
     },
-  }
+    {
+        mode = "n",
+        prefix = "<leader>",
+        buffer = nil,
+        silent = true,
+        noremap = true,
+        nowait = false,
+    }
+)
 
-  whichkey.register(keymap, {
-    mode = "n",
-    prefix = "<leader>",
-    buffer = nil,
-    silent = true,
-    noremap = true,
-    nowait = false,
-  })
-
-  local keymap_v = {
-    name = "Debug",
-    e = { "<cmd>lua require'dapui'.eval()<cr>", "Evaluate" },
-  }
-  whichkey.register(keymap_v, {
-    mode = "v",
-    prefix = "<leader>",
-    buffer = nil,
-    silent = true,
-    noremap = true,
-    nowait = false,
-  })
-end
-
-return M
+-- Dap -> v
+wk.register(
+    {
+        name = "DAP -> Debug",
+        e = { "<cmd>lua require'dapui'.eval()<cr>", "Evaluate" },
+    },
+    {
+        mode = "v",
+        prefix = "<leader>",
+        buffer = nil,
+        silent = true,
+        noremap = true,
+        nowait = false,
+    }
+)
