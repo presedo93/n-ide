@@ -104,6 +104,9 @@ alias n="nvim"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Disable auto corrections
+unsetopt correct_all
+
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 
 # Poetry

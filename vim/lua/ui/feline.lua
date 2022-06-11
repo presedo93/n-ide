@@ -53,7 +53,7 @@ local c = {
       return fmt(" %s %s ", os, vim.bo.fileencoding)
     end,
     hl = u.groups.StatusLine,
-    left_sep = { str = u.icons.left_filled, hl = u.groups.SLAltSep },
+    -- left_sep = { str = u.icons.left_filled, hl = u.groups.SLAltSep },
   },
   cur_position = {
     provider = function()
@@ -138,7 +138,7 @@ local active = {
     c.lsp_info,
     c.lsp_hint,
 --    c.file_type,
---    c.file_enc,
+   c.file_enc,
     c.cur_position,
     c.cur_percent,
   },

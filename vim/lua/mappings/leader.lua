@@ -10,18 +10,16 @@ wk.register(
             ['y'] = { '"+y', 'Copy to clipboard' },
             ['r'] = { ':NvimTreeRefresh<CR>', 'tree -> Refresh side tree' },
             ['n'] = { ':NvimTreeFindFile<CR>', 'tree -> Find file in side tree' },
-            ['t'] = { 
+            ['t'] = {
                 ['t'] = { ':$tabnew<CR>', 'tree -> create new tab' },
                 ['s'] = { ':Telescope treesitter<CR>', 'TL -> treesitter' },
                 ['w'] = { "<cmd>lua require('whitespace-nvim').trim()<CR>", 'whitespaces -> Remove trailing' }
             },
             ['f'] = {
-                ['c'] = { ':Format<CR>', 'Format the code' },
                 ['f'] = { ':Telescope find_files<CR>', 'TL -> Find files' },
                 ['g'] = { ':Telescope live_grep<CR>', 'TL -> Live search' },
                 ['b'] = { ':Telescope buffers<CR>', 'TL -> buffers' },
             },
-            ['F'] = { ['c'] = { ':FormatWrite<CR>', 'Format and save' } },
             ['g'] = {
                 ['c'] = { ':Telescope git_commits<CR>', 'TL -> git commits' },
                 ['s'] = { ':Telescope git_status<CR>', 'TL -> git status' },

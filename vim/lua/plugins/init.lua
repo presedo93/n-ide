@@ -22,8 +22,6 @@ return require('packer').startup(function(use)
 
     use 'nanozuki/tabby.nvim'
 
-    use 'mhartington/formatter.nvim'
-
     use 'folke/which-key.nvim'
 
     use {

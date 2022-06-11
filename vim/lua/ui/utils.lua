@@ -8,7 +8,7 @@ M.groups = {
     SLAltSep = { bg = "#39506d", fg = "#131a24" },
     SLError = { bg = "#c94f6d", fg = "#131a24", style = "bold" },
     SLErrorStatus = { bg = "#dfdfe0", fg = "#c94f6d" },
-    SLFtHint = { bg = "#81b29a", fg = "#39506d" },
+    SLFtHint = { bg = "#81b29a", fg = "#131a24" },
     SLGitBranch = { bg = "#131a24", fg = "#dbc074" },
     SLHint = { bg = "#81b29a", fg = "#131a24", style = "bold" },
     SLHintInfo = { bg = "#719cd6", fg = "#81b29a" },
