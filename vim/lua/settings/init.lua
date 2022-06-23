@@ -29,3 +29,5 @@ set.showmode = false
 set.autoread = true
 set.clipboard = 'unnamedplus'
 set.swapfile = false
+
+-- set.shm = 'I'

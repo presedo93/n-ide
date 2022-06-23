@@ -9,7 +9,7 @@ wk.register(
           ['t'] = { "<cmd>lua require'dapui'.toggle()<cr>", "toggle ui" },
           ['e'] = { "<cmd>lua require'dapui'.eval()<cr>", "evaluate" },
 
-          ['c'] = { "<cmd>lua require'dap'.continue()<cr>", "continue" },
+          ['c'] = { "<cmd>lua require'dap'.continue()<cr>", "start / continue" },
           ['d'] = { "<cmd>lua require'dap'.disconnect()<cr>", "disconnect" },
           ['g'] = { "<cmd>lua require'dap'.session()<cr>", "get session" },
           ['h'] = { "<cmd>lua require'dap.ui.widgets'.hover()<cr>", "hover variables" },

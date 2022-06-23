@@ -76,11 +76,12 @@ local c = {
   },
   lsp_status = {
     provider = function()
-      return require("nvim-gps").get_location()
+      if require("nvim-gps").is_available() then
+        return require("nvim-gps").get_location()
+      else
+        return '  '
+      end
     end,
-    enabled = function()
-		return require("nvim-gps").is_available()
-	end,
     hl = u.groups.SLStatus,
     left_sep = { str = "", hl = u.groups.SLStatusBg, always_visible = true },
     right_sep = { str = "", hl = u.groups.SLErrorStatus, always_visible = true },

@@ -9,7 +9,7 @@ require('rust-tools').setup({})
 -- UI
 local dap_breakpoint = {
     error = {
-        text = '🟥',
+        text = '',
         texthl = 'LspDiagnosticsSignError',
         linehl = '',
         numhl = '',
@@ -21,7 +21,7 @@ local dap_breakpoint = {
         numhl = '',
     },
     stopped = {
-        text = '⭐️',
+        text = 'ﰲ',
         texthl = 'LspDiagnosticsSignInformation',
         linehl = 'DiagnosticUnderlineInfo',
         numhl = 'LspDiagnosticsSignInformation',

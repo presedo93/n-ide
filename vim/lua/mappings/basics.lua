@@ -4,23 +4,27 @@ local wk = require('which-key')
 wk.register(
     {
         ['q'] = {':w<CR>', 'Save the file' },
-        ['<esc>'] = { ['<esc>'] = { ':q<CR>', 'Close the view' } },
+        ['<esc>'] = {
+            ['<esc>'] = { ':q<CR>', 'Close the view' },
+        },
         ['U'] = { '<C-r>', 'Re-do what was un-done' },
+
+        ['<C-T>'] = { ':$tabnew<CR>', 'tree -> create new tab' },
 
         ['<C-J>'] = { '<C-W><C-J>', 'Move down in splits' },
         ['<C-K>'] = { '<C-W><C-K>', 'Move up in splits' },
         ['<C-L>'] = { '<C-W><C-L>', 'Move right in splits' },
         ['<C-H>'] = { '<C-W><C-H>', 'Move left in splits' },
 
-        ['<S-Up>'] = { '<C-W>K', 'Move split up' },
-        ['<S-Down>'] = { '<C-W>J', 'Move split down' },
-        ['<S-Right>'] = { '<C-W>L', 'Move split right' },
-        ['<S-Left>'] = { '<C-W>H', 'Move split left' },
+        ['<S-Up>'] = { '<C-W>+', 'Resize split up' },
+        ['<S-Down>'] = { '<C-W>-', 'Resize split down' },
+        ['<S-Right>'] = { '<C-W>>', 'Resize split right' },
+        ['<S-Left>'] = { '<C-W><', 'Resize split left' },
 
-        ['<M-Up>'] = { '<C-W>-', 'Resize split up' },
-        ['<M-Down>'] = { '<C-W>+', 'Resize split down' },
-        ['<M-Right>'] = { '<C-W>>', 'Resize split right' },
-        ['<M-Left>'] = { '<C-W><', 'Resize split left' },
+        ['<M-Up>'] = { '<C-W>K', 'Move split up' },
+        ['<M-Down>'] = { '<C-W>J', 'Move split down' },
+        ['<M-Right>'] = { '<C-W>L', 'Move split right' },
+        ['<M-Left>'] = { '<C-W>H', 'Move split left' },
 
         ['<M-j>'] = { ':m .+1<CR>==', 'Move line one up' },
         ['<M-k>'] = { ':m .-2<CR>==', 'Move line one down' },
@@ -32,9 +36,28 @@ wk.register(
         ['d'] = { '"_d', 'Delete lines' },
         ['D'] = { '"_D', 'Delete until end of line' },
 
+        ['y'] = {
+            name = 'Copy to clipboard',
+            ['d'] = { '"+d', 'Copy and Delete' },
+            ['D'] = { '"+D', 'Copy and Delete til end of line' },
+            ['y'] = { '"+y', 'Copy to clipboard' },
+        },
+
+        ['<F1>'] = { ':WhichKey<CR>', 'Show which keys' },
         ['<F2>'] = { ':NvimTreeToggle<CR>', 'Toggle side tree' },
-        ['['] = { ['d'] = { '<cmd>lua vim.diagnostic.goto_prev()<CR>', 'LSP -> go to next' } },
-        [']'] = { ['d'] = { '<cmd>lua vim.diagnostic.goto_next()<CR>', 'LSP -> go to prev' } },
+
+        ['['] = {
+            ['d'] = { '<cmd>lua vim.diagnostic.goto_prev()<CR>', 'LSP -> go to next' }
+        },
+        [']'] = {
+            ['d'] = { '<cmd>lua vim.diagnostic.goto_next()<CR>', 'LSP -> go to prev' }
+        },
+        ['g'] = {
+            name = 'LSP shortcuts',
+            ['d'] = { 'LSP -> Go to definition' },
+            ['i'] = { 'LSP -> Go to implementation' },
+            ['r'] = { 'LSP -> Go to references' },
+        },
     },
     {
         mode = 'n',
@@ -67,6 +90,11 @@ wk.register(
         ['<M-k>'] = { ":m '<-2<CR>gv=gv", 'Move line one up' },
 
         ['d'] = { '"_d', 'Delete lines' },
+        ['y'] = {
+            name = 'Copy to clipboard',
+            ['d'] = { '"+d', 'Copy and Delete' },
+            ['y'] = { '"+y', 'Copy to clipboard' },
+        },
 
         ['<'] = { '<gv', 'Left indent' },
         ['>'] = { '>gv', 'Left indent' },

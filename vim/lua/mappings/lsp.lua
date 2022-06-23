@@ -9,6 +9,7 @@ local on_attach = function(client, bufnr)
     wk.register(
         {
             ['g'] = {
+                name = 'LSP shortcuts',
                 ['d'] = { '<cmd>lua vim.lsp.buf.definition()<CR>', 'LSP -> Go to definition' },
                 ['i'] = { '<cmd>lua vim.lsp.buf.implementation()<CR>', 'LSP -> Go to implementation' },
                 ['r'] = { '<cmd>lua vim.lsp.buf.references()<CR>', 'LSP -> Go to references' },
