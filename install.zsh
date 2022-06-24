@@ -3,7 +3,7 @@
 LG="\033[0;32m"
 NC="\033[0m"
 
-if [[ $# -eq 1 && $1 == "package"* ]]; then
+if [[ $# -eq 1 && $1 == "all"* ]]; then
     echo -e "$LG=> Installing all the packages... $NC"
     if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	echo -e "$LG==> Linux OS detected... $NC"
@@ -24,6 +24,9 @@ if [[ $# -eq 1 && $1 == "package"* ]]; then
 
     # Install poetry
     curl -sSL https://install.python-poetry.org | python3 - --preview
+
+    # Set poetry to create venvs in-project
+    poetry config virtualenvs.in-project true
 
     # Install nvm
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
