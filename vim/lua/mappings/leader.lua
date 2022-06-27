@@ -8,6 +8,7 @@ wk.register(
         ['f'] = {
             name = 'Files',
             ['f'] = { ':Telescope find_files<CR>', 'TL -> Find files' },
+            ['c'] = {'<cmd>lua vim.lsp.buf.formatting()<CR>', 'LSP -> Formatting' },
             ['g'] = { ':Telescope live_grep<CR>', 'TL -> Live search' },
             ['b'] = { ':Telescope buffers<CR>', 'TL -> buffers' },
             ['s'] = { ':Telescope treesitter<CR>', 'TL -> treesitter' },
@@ -24,15 +25,12 @@ wk.register(
         ['q'] = { '<cmd>lua vim.diagnostic.setloclist()<CR>', 'LSP -> set local list' },
 
         ['D'] = { '<cmd>lua vim.lsp.buf.type_definition()<CR>', 'LSP -> Type definition' },
-        ['rn'] = { '<cmd>lua vim.lsp.buf.rename()<CR>', 'LSP -> Rename' },
-        ['ca'] = { '<cmd>lua vim.lsp.buf.code_action()<CR>', 'LSP -> Code Action' },
-        ['f'] = {
-            ['c'] = {'<cmd>lua vim.lsp.buf.formatting()<CR>', 'LSP -> Formatting' },
-        },
+        ['r'] = { '<cmd>lua vim.lsp.buf.rename()<CR>', 'LSP -> Rename' },
+        ['c'] = { '<cmd>lua vim.lsp.buf.code_action()<CR>', 'LSP -> Code Action' },
     },
     {
         mode = 'n',
-        prefix = "<leader>",
+        prefix = '<leader>',
         buffer = nil,
         silent = true,
         noremap = true,
