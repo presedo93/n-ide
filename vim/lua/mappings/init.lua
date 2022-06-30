@@ -4,6 +4,7 @@ require('which-key').setup {
         ["<cr>"] = "RET",
         ["<tab>"] = "TAB",
         ["<F2>"] = "F2",
+        ["<F3>"] = "F3",
 
         ["<C-T>"] = "Ctrl + T",
 
@@ -40,5 +41,6 @@ require('mappings.basics')
 require('mappings.leader')
 require('mappings.lsp')
 require('mappings.dap')
+require('mappings.term')
 
 vim.g.mapleader = ' '

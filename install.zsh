@@ -19,6 +19,11 @@ if [[ $# -eq 1 && $1 == "all"* ]]; then
         brew install tmux
     fi
 
+    # Install lazygit
+    sudo add-apt-repository ppa:lazygit-team/release
+    sudo apt update
+    sudo apt install lazygit
+
     # Install pyenv
     curl https://pyenv.run | bash
 
