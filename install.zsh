@@ -17,6 +17,7 @@ if [[ $# -eq 1 && $1 == "all"* ]]; then
         brew install neovim
 
         brew install tmux
+        brew install lazygit
     fi
 
     # Install lazygit
