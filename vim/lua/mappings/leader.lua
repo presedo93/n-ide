@@ -27,6 +27,7 @@ wk.register(
         ['D'] = { '<cmd>lua vim.lsp.buf.type_definition()<CR>', 'LSP -> Type definition' },
         ['r'] = { '<cmd>lua vim.lsp.buf.rename()<CR>', 'LSP -> Rename' },
         ['c'] = { '<cmd>lua vim.lsp.buf.code_action()<CR>', 'LSP -> Code Action' },
+        ['s'] = { ':SidebarNvimToggle<CR>', 'sidebar -> Sidebar toggle'}
     },
     {
         mode = 'n',

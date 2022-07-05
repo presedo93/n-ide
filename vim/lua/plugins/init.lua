@@ -24,6 +24,8 @@ return require('packer').startup(function(use)
 
     use 'folke/which-key.nvim'
 
+    use 'sidebar-nvim/sidebar.nvim'
+
     use 'akinsho/toggleterm.nvim'
 
     use {
