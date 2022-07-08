@@ -12,6 +12,11 @@ if [[ $# -eq 1 && $1 == "all"* ]]; then
         sudo apt install neovim
 
         sudo apt install tmux
+
+        LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
+        curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+        sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
+        rm lazygit.tar.gz
     elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo -e "$LG==> Mac OS detected... $NC"
         brew install neovim
@@ -20,21 +25,19 @@ if [[ $# -eq 1 && $1 == "all"* ]]; then
         brew install lazygit
     fi
 
-    # Install lazygit
-    sudo add-apt-repository ppa:lazygit-team/release
-    sudo apt update
-    sudo apt install lazygit
-
     # Install pyenv
+    echo -e "$LG===> Installing pyenv... $NC"
     curl https://pyenv.run | bash
 
     # Install poetry
+    echo -e "$LG===> Installing poetry... $NC"
     curl -sSL https://install.python-poetry.org | python3 - --preview
 
     # Set poetry to create venvs in-project
     poetry config virtualenvs.in-project true
 
     # Install nvm
+    echo -e "$LG===> Installing nvm... $NC"
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
     # Install the kitty terminal
