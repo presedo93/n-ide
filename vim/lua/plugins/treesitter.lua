@@ -1,5 +1,5 @@
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "cpp", "python", "typescript", "lua", "rust" },
+    ensure_installed = { "cpp", "python", "typescript", "tsx", "lua", "rust" },
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = false

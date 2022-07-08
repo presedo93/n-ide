@@ -18,7 +18,7 @@ local line = {
   active_tab = {
     label = function(tabid)
       return {
-        "  " .. tabid .. " ",
+        "   ",
         hl = ui.groups.TLActive,
       }
     end,
@@ -28,7 +28,7 @@ local line = {
   inactive_tab = {
     label = function(tabid)
       return {
-        "  " .. tabid .. " ",
+        "  ",
         hl = ui.groups.TLBoldLine,
       }
     end,
