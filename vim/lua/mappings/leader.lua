@@ -23,11 +23,13 @@ wk.register(
         },
         ['e'] = { '<cmd>lua vim.diagnostic.open_float()<CR>', 'LSP -> open float' },
         ['q'] = { '<cmd>lua vim.diagnostic.setloclist()<CR>', 'LSP -> set local list' },
-
         ['D'] = { '<cmd>lua vim.lsp.buf.type_definition()<CR>', 'LSP -> Type definition' },
         ['r'] = { '<cmd>lua vim.lsp.buf.rename()<CR>', 'LSP -> Rename' },
         ['c'] = { '<cmd>lua vim.lsp.buf.code_action()<CR>', 'LSP -> Code Action' },
-        ['s'] = { ':SidebarNvimToggle<CR>', 'sidebar -> Sidebar toggle'}
+        ['t'] = {
+            ['n'] = { ':+tabmove<CR>', 'tabby -> move to next position' },
+            ['p'] = { ':-tabmove<CR>', 'tabby -> move to prev position' },
+        },
     },
     {
         mode = 'n',
