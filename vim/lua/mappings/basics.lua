@@ -58,6 +58,7 @@ wk.register(
             ['i'] = { 'LSP -> Go to implementation' },
             ['r'] = { 'LSP -> Go to references' },
         },
+        ['K'] = { '<cmd>lua vim.lsp.buf.hover()<CR>', 'LSP -> Hover' },
     },
     {
         mode = 'n',

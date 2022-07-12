@@ -8,7 +8,7 @@ wk.register(
         ['f'] = {
             name = 'Files',
             ['f'] = { ':Telescope find_files<CR>', 'TL -> Find files' },
-            ['c'] = {'<cmd>lua vim.lsp.buf.formatting()<CR>', 'LSP -> Formatting' },
+            ['c'] = {'<cmd>lua vim.lsp.buf.format{ async = true }<CR>', 'LSP -> Formatting' },
             ['g'] = { ':Telescope live_grep<CR>', 'TL -> Live search' },
             ['b'] = { ':Telescope buffers<CR>', 'TL -> buffers' },
             ['s'] = { ':Telescope treesitter<CR>', 'TL -> treesitter' },

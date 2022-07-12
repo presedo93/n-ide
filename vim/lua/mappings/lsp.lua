@@ -19,7 +19,7 @@ local on_attach = function(client, bufnr)
                 ['rn'] = { '<cmd>lua vim.lsp.buf.rename()<CR>', 'LSP -> Rename' },
                 ['ca'] = { '<cmd>lua vim.lsp.buf.code_action()<CR>', 'LSP -> Code Action' },
                 ['f'] = {
-                    ['c'] = {'<cmd>lua vim.lsp.buf.formatting()<CR>', 'LSP -> Formatting' },
+                    ['c'] = {'<cmd>lua vim.lsp.buf.format{ async = true }<CR>', 'LSP -> Formatting' },
                 },
             },
             ['K'] = { '<cmd>lua vim.lsp.buf.hover()<CR>', 'LSP -> Hover' }
