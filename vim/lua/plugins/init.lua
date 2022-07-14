@@ -62,6 +62,8 @@ return require('packer').startup(function(use)
 
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
 
+    use 'rafamadriz/friendly-snippets'
+
     use {
         'nvim-telescope/telescope.nvim',
         requires = { {'nvim-lua/plenary.nvim'} }
