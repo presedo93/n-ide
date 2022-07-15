@@ -2,7 +2,6 @@ require'nvim-treesitter.configs'.setup {
     ensure_installed = { "cpp", "python", "typescript", "tsx", "lua", "rust" },
     highlight = {
         enable = true,
-        additional_vim_regex_highlighting = false
     },
     rainbow = {
         enable = true,
@@ -10,7 +9,10 @@ require'nvim-treesitter.configs'.setup {
         max_file_lines = nil,
     },
     autotag = {
-        enable = true
+        enable = true,
+    },
+    indent = {
+        enable = true,
     },
     refactor = {
         highlight_definitions = { enable = true },
