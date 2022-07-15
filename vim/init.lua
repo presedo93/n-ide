@@ -5,11 +5,14 @@ require('settings')
 require('mappings')
 
 -- Plugins
-require('ui')
+require('plugins.alpha')
 require('plugins.nvimtree')
 require('plugins.treesitter')
 require('plugins.gitsigns')
 require('plugins.term')
+
+-- Ui
+require('ui')
 vim.cmd('colorscheme nightfox')
 
 -- LSP
