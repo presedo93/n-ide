@@ -19,7 +19,7 @@ if [[ $# -eq 1 && $1 == "all"* ]]; then
         rm lazygit.tar.gz
     elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo -e "$LG==> Mac OS detected... $NC"
-        brew install neovim
+        brew install neovim --HEAD
 
         brew install tmux
         brew install lazygit
