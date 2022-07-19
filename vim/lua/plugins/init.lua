@@ -100,7 +100,7 @@ return require('packer').startup(function(use)
 
     use 'lewis6991/gitsigns.nvim'
 
-    use 'numToStr/Comment.nvim'
+    use 'b3nj5m1n/kommentary'
 
     -- Languages & tools
 

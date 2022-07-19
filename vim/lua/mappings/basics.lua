@@ -36,15 +36,13 @@ wk.register(
 
         ['x'] = { '"_x', 'Delete character' },
         ['d'] = { '"_d', 'Delete lines' },
-        ['d'] = {
-            ['s'] = {
-                name = 'Surround -> delete',
-                ['a'] = { '>' },
-                ['b'] = { ')' },
-                ['B'] = { '}' },
-                ['r'] = { ']' },
-                ['q'] = { '"' },
-            },
+        ['ds'] = {
+            name = 'Surround -> delete',
+            ['a'] = { '>' },
+            ['b'] = { ')' },
+            ['B'] = { '}' },
+            ['r'] = { ']' },
+            ['q'] = { '"' },
         },
         ['c'] = {
             name = 'Sorrund -> change'},
