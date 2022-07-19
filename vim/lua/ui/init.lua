@@ -30,3 +30,16 @@ cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = 
 
 -- Highlight arguments
 require('hlargs').setup()
+
+-- Surround
+require('nvim-surround').setup()
+
+-- UFO
+require('ufo').setup({
+    provider_selector = function(bufnr, filetype, buftype)
+        return {'treesitter', 'indent'}
+    end
+})
+
+-- Aerial
+require('aerial').setup({})

@@ -32,6 +32,10 @@ return require('packer').startup(function(use)
 
     use 'akinsho/toggleterm.nvim'
 
+    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+
+    use { 'stevearc/aerial.nvim' }
+
     -- Tags & pairs
 
     use 'windwp/nvim-ts-autotag'
@@ -39,6 +43,8 @@ return require('packer').startup(function(use)
     use 'windwp/nvim-autopairs'
 
     use 'p00f/nvim-ts-rainbow'
+
+    use 'kylechui/nvim-surround'
 
     -- Tree-sitter
 

@@ -3,8 +3,10 @@ require('which-key').setup {
         ["<space>"] = "SPC",
         ["<cr>"] = "RET",
         ["<tab>"] = "TAB",
+        ["<F1>"] = "F1",
         ["<F2>"] = "F2",
         ["<F3>"] = "F3",
+        ["<F4>"] = "F4",
 
         ["<C-T>"] = "Ctrl + T",
 
@@ -12,6 +14,7 @@ require('which-key').setup {
         ["<C-K>"] = "Ctrl + K",
         ["<C-H>"] = "Ctrl + H",
         ["<C-L>"] = "Ctrl + L",
+        ["<C-R>"] = "Ctrl + R",
 
         ["<M-Down>"] = "Alt + Down",
         ["<M-Up>"] = "Alt + Up",
