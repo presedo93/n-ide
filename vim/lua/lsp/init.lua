@@ -7,6 +7,8 @@ end
 local luasnip = require 'luasnip'
 require("luasnip.loaders.from_vscode").lazy_load()
 
+local lspkind = require('lspkind')
+
 -- nvim-cmp setup
 local cmp = require 'cmp'
 cmp.setup {
@@ -15,6 +17,20 @@ cmp.setup {
       luasnip.lsp_expand(args.body)
     end,
   },
+  window = {
+    documentation = {
+      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    },
+  },
+    formatting = {
+      format = function(_, vim_item)
+         vim.cmd("packadd lspkind-nvim")
+         vim_item.kind = require("lspkind").presets.codicons[vim_item.kind]
+         .. "  "
+         .. vim_item.kind
+         return vim_item
+      end,
+   },
   mapping = cmp.mapping.preset.insert({
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -26,6 +42,8 @@ cmp.setup {
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
+      elseif luasnip.expandable() then
+        luasnip.expand()
       elseif luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
       elseif has_words_before() then
@@ -49,9 +67,3 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
-
-local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-cmp.event:on(
-  'confirm_done',
-  cmp_autopairs.on_confirm_done()
-)

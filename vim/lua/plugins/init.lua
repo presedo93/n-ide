@@ -80,6 +80,8 @@ return require('packer').startup(function(use)
 
     use 'rafamadriz/friendly-snippets'
 
+    use 'onsails/lspkind.nvim'
+
     -- DAP
 
     use 'mfussenegger/nvim-dap'
