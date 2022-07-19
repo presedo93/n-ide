@@ -43,3 +43,10 @@ require('ufo').setup({
 
 -- Aerial
 require('aerial').setup({})
+
+-- Trouble
+require('trouble').setup()
+
+-- TO-DO
+require('todo-comments').setup()
+

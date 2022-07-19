@@ -81,10 +81,11 @@ wk.register(
             ['M'] = { '<cmd>lua require("ufo").closeAllFolds()<CR>', 'UFO -> Close all foldings' },
         },
 
-        ['<F1>'] = { ':WhichKey<CR>', 'Show which keys' },
-        ['<F2>'] = { ':NvimTreeToggle<CR>', 'Toggle side tree' },
-        ['<F3>'] = { 'Toggle Terminal' },
+        ['<F1>'] = { ':WhichKey<CR>', 'Which keys -> Show' },
+        ['<F2>'] = { ':NvimTreeToggle<CR>', 'Side tree -> Toggle' },
+        ['<F3>'] = { 'Terminal -> Toggle' },
         ['<F4>'] = { ':AerialToggle left<CR>', 'Aerial -> Toggle' },
+        ['<F5>'] = { ':TroubleToggle<CR>', 'Trouble -> Toggle' },
 
         ['['] = {
             ['d'] = { '<cmd>lua vim.diagnostic.goto_prev()<CR>', 'LSP -> go to next' }
@@ -99,6 +100,15 @@ wk.register(
             ['d'] = { 'LSP -> Go to definition' },
             ['i'] = { 'LSP -> Go to implementation' },
             ['r'] = { 'LSP -> Go to references' },
+            ['c'] = {
+                ['c'] = { 'Comment -> comment line wise' },
+                ['o'] = { 'Comment -> insert comment to the next line' },
+                ['O'] = { 'Comment -> insert comment to the prev line' },
+                ['A'] = { 'Comment -> insert comment to the end of the line' },
+            },
+            ['b'] = {
+                ['c'] = { 'Comment -> comment block wise' },
+            },
         },
 
         ['K'] = { '<cmd>lua vim.lsp.buf.hover()<CR>', 'LSP -> Hover' },
@@ -147,6 +157,12 @@ wk.register(
             ['B'] = { '}' },
             ['r'] = { ']' },
             ['q'] = { '"' },
+        },
+
+        ['g'] = {
+            name = "Comment code",
+            ['c'] = { 'Comment -> line wise' },
+            ['b'] = { 'Comment -> block wise' },
         },
 
         ['<'] = { '<gv', 'Left indent' },

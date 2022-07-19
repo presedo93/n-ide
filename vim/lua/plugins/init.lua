@@ -36,6 +36,10 @@ return require('packer').startup(function(use)
 
     use { 'stevearc/aerial.nvim' }
 
+    use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }
+
+    use { 'folke/trouble.nvim', requires = "kyazdani42/nvim-web-devicons" }
+
     -- Tags & pairs
 
     use 'windwp/nvim-ts-autotag'
@@ -96,7 +100,7 @@ return require('packer').startup(function(use)
 
     use 'lewis6991/gitsigns.nvim'
 
-    use 'b3nj5m1n/kommentary'
+    use 'numToStr/Comment.nvim'
 
     -- Languages & tools
 
