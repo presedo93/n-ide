@@ -40,6 +40,8 @@ return require('packer').startup(function(use)
 
     use { 'folke/trouble.nvim', requires = "kyazdani42/nvim-web-devicons" }
 
+    use 'mrjones2014/smart-splits.nvim'
+
     -- Tags & pairs
 
     use 'windwp/nvim-ts-autotag'

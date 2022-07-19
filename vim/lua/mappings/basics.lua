@@ -11,17 +11,17 @@ wk.register(
 
         ['<C-T>'] = { ':$tabnew<CR>', 'tree -> create new tab' },
 
-        ['<C-J>'] = { '<C-W><C-J>', 'Move down in splits' },
-        ['<C-K>'] = { '<C-W><C-K>', 'Move up in splits' },
-        ['<C-L>'] = { '<C-W><C-L>', 'Move right in splits' },
-        ['<C-H>'] = { '<C-W><C-H>', 'Move left in splits' },
+        ['<C-J>'] = { '<cmd>lua require("smart-splits").move_cursor_down()<CR>', 'Move down in splits' },
+        ['<C-K>'] = { '<cmd>lua require("smart-splits").move_cursor_up()<CR>', 'Move up in splits' },
+        ['<C-L>'] = { '<cmd>lua require("smart-splits").move_cursor_right()<CR>', 'Move right in splits' },
+        ['<C-H>'] = { '<cmd>lua require("smart-splits").move_cursor_left()<CR>', 'Move left in splits' },
 
         ['<C-r>'] = { ':nohlsearch', 'Disable highlightning search' },
 
-        ['<S-Up>'] = { '<C-W>+', 'Resize split up' },
-        ['<S-Down>'] = { '<C-W>-', 'Resize split down' },
-        ['<S-Right>'] = { '<C-W>>', 'Resize split right' },
-        ['<S-Left>'] = { '<C-W><', 'Resize split left' },
+        ['<S-Up>'] = { '<cmd>lua require("smart-splits").resize_up()<CR>', 'Resize split up' },
+        ['<S-Down>'] = { '<cmd>lua require("smart-splits").resize_down()<CR>', 'Resize split down' },
+        ['<S-Right>'] = { '<cmd>lua require("smart-splits").resize_right()<CR>', 'Resize split right' },
+        ['<S-Left>'] = { '<cmd>lua require("smart-splits").resize_left()<CR>', 'Resize split left' },
 
         ['<M-Up>'] = { '<C-W>K', 'Move split up' },
         ['<M-Down>'] = { '<C-W>J', 'Move split down' },
