@@ -6,7 +6,7 @@ NC="\033[0m"
 if [[ $# -eq 1 && $1 == "all"* ]]; then
     echo -e "$LG=> Installing all the packages... $NC"
     if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-	echo -e "$LG==> Linux OS detected... $NC"
+	    echo -e "$LG==> Linux OS detected... $NC"
         sudo add-apt-repository ppa:neovim-ppa/unstable
         sudo apt update
         sudo apt install neovim
@@ -17,12 +17,20 @@ if [[ $# -eq 1 && $1 == "all"* ]]; then
         curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
         sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
         rm lazygit.tar.gz
+
+        LAZYDOCKER_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazydocker/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
+        curl -Lo lazydocker.tar.gz "https://github.com/jesseduffield/lazydocker/releases/latest/download/lazydocker_${LAZYDOCKER_VERSION}_Linux_x86_64.tar.gz"
+        mkdir lazydocker-temp && tar xf lazydocker.tar.gz -C lazydocker-temp
+        sudo mv lazydocker-temp/lazydocker /usr/local/bin
+        rm -rf lazydocker.tar.gz && rm -rf lazydocker-temp
+
     elif [[ "$OSTYPE" == "darwin"* ]]; then
-	echo -e "$LG==> Mac OS detected... $NC"
+	    echo -e "$LG==> Mac OS detected... $NC"
         brew install neovim --HEAD
 
         brew install tmux
-        brew install lazygit
+        brew install jesseduffield/lazygit/lazygit
+        brew install jesseduffield/lazydocker/lazydocker
     fi
 
     # Install pyenv
