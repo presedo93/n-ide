@@ -16,7 +16,7 @@ wk.register(
         ['<C-L>'] = { '<cmd>lua require("smart-splits").move_cursor_right()<CR>', 'Move right in splits' },
         ['<C-H>'] = { '<cmd>lua require("smart-splits").move_cursor_left()<CR>', 'Move left in splits' },
 
-        ['<C-N>'] = { ':nohlsearch<CR>', 'Disable highlightning search' },
+        ['<C-r>'] = { ':nohlsearch', 'Disable highlightning search' },
 
         ['<S-Up>'] = { '<cmd>lua require("smart-splits").resize_up()<CR>', 'Resize split up' },
         ['<S-Down>'] = { '<cmd>lua require("smart-splits").resize_down()<CR>', 'Resize split down' },
