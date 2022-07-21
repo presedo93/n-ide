@@ -11,28 +11,28 @@ wk.register(
 
         ['<C-T>'] = { ':$tabnew<CR>', 'tree -> create new tab' },
 
-        ['<C-J>'] = { '<cmd>lua require("smart-splits").move_cursor_down()<CR>', 'Move down in splits' },
-        ['<C-K>'] = { '<cmd>lua require("smart-splits").move_cursor_up()<CR>', 'Move up in splits' },
-        ['<C-L>'] = { '<cmd>lua require("smart-splits").move_cursor_right()<CR>', 'Move right in splits' },
-        ['<C-H>'] = { '<cmd>lua require("smart-splits").move_cursor_left()<CR>', 'Move left in splits' },
+        ['<C-J>'] = { '<C-W><C-J>', 'Move down in splits' },
+        ['<C-K>'] = { '<C-W><C-K>', 'Move up in splits' },
+        ['<C-L>'] = { '<C-W><C-L>', 'Move right in splits' },
+        ['<C-H>'] = { '<C-W><C-H>', 'Move left in splits' },
 
         ['<C-N>'] = { ':nohlsearch<CR>', 'Disable highlightning search' },
 
-        ['<S-Up>'] = { '<cmd>lua require("smart-splits").resize_up()<CR>', 'Resize split up' },
-        ['<S-Down>'] = { '<cmd>lua require("smart-splits").resize_down()<CR>', 'Resize split down' },
-        ['<S-Right>'] = { '<cmd>lua require("smart-splits").resize_right()<CR>', 'Resize split right' },
-        ['<S-Left>'] = { '<cmd>lua require("smart-splits").resize_left()<CR>', 'Resize split left' },
+        ['<S-Up>'] = { ':resize +2<CR>', 'Resize split up' },
+        ['<S-Down>'] = { ':resize -2<CR>', 'Resize split down' },
+        ['<S-Right>'] = { ':vertical resize +2<CR>', 'Resize split right' },
+        ['<S-Left>'] = { ':vertical resize -2<CR>', 'Resize split left' },
 
-        ['<M-Up>'] = { '<C-W>K', 'Move split up' },
-        ['<M-Down>'] = { '<C-W>J', 'Move split down' },
-        ['<M-Right>'] = { '<C-W>L', 'Move split right' },
-        ['<M-Left>'] = { '<C-W>H', 'Move split left' },
+        ['<A-Up>'] = { '<C-W>K', 'Move split up' },
+        ['<A-Down>'] = { '<C-W>J', 'Move split down' },
+        ['<A-Right>'] = { '<C-W>L', 'Move split right' },
+        ['<A-Left>'] = { '<C-W>H', 'Move split left' },
 
-        ['<M-j>'] = { ':m .+1<CR>==', 'Move line one up' },
-        ['<M-k>'] = { ':m .-2<CR>==', 'Move line one down' },
+        ['<A-j>'] = { ':m .+1<CR>==', 'Move line one up' },
+        ['<A-k>'] = { ':m .-2<CR>==', 'Move line one down' },
 
-        ['<M-.>'] = { ':tabn<CR>', 'tabby -> Next tabby tab' },
-        ['<M-,>'] = { ':tabp<CR>', 'tabby -> Prev tabby tab' },
+        ['<A-.>'] = { ':tabn<CR>', 'tabby -> Next tabby tab' },
+        ['<A-,>'] = { ':tabp<CR>', 'tabby -> Prev tabby tab' },
 
         ['x'] = { '"_x', 'Delete character' },
         ['d'] = { '"_d', 'Delete lines' },

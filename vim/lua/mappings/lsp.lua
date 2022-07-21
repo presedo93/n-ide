@@ -37,7 +37,7 @@ end
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 require("nvim-lsp-installer").setup{}
-local servers = { 'clangd', 'pyright', 'rust_analyzer', 'tailwindcss', 'tsserver' }
+local servers = { 'clangd', 'pyright', 'rust_analyzer', 'sumneko_lua', 'tailwindcss', 'tsserver' }
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()

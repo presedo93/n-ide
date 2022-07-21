@@ -1,7 +1,8 @@
 local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    packer_bootstrap = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim',
+        install_path })
 end
 
 return require('packer').startup(function(use)
@@ -32,15 +33,13 @@ return require('packer').startup(function(use)
 
     use 'akinsho/toggleterm.nvim'
 
-    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+    use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 
     use { 'stevearc/aerial.nvim' }
 
-    use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }
+    use { 'folke/todo-comments.nvim', requires = 'nvim-lua/plenary.nvim' }
 
-    use { 'folke/trouble.nvim', requires = "kyazdani42/nvim-web-devicons" }
-
-    use 'mrjones2014/smart-splits.nvim'
+    use { 'folke/trouble.nvim', requires = 'kyazdani42/nvim-web-devicons' }
 
     -- Tags & pairs
 
@@ -62,25 +61,33 @@ return require('packer').startup(function(use)
 
     use { 'm-demare/hlargs.nvim', requires = { 'nvim-treesitter/nvim-treesitter' } }
 
-    -- LSP & snippets
-
-    use 'neovim/nvim-lspconfig'
-
-    use 'nvim-lua/lsp-status.nvim'
-
-    use 'williamboman/nvim-lsp-installer'
+    -- Autocompletion
 
     use 'hrsh7th/nvim-cmp'
 
-    use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+    use 'hrsh7th/cmp-buffer'
 
-    use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
+    use 'hrsh7th/cmp-path'
 
-    use 'L3MON4D3/LuaSnip' -- Snippets plugin
+    use 'hrsh7th/cmp-cmdline'
+
+    use 'saadparwaiz1/cmp_luasnip'
+
+    use 'hrsh7th/cmp-nvim-lsp'
+
+    use 'hrsh7th/cmp-nvim-lua'
+
+    -- Snippets
+
+    use 'L3MON4D3/LuaSnip'
 
     use 'rafamadriz/friendly-snippets'
 
-    use 'onsails/lspkind.nvim'
+    -- LSP
+
+    use 'neovim/nvim-lspconfig'
+
+    use 'williamboman/nvim-lsp-installer'
 
     -- DAP
 
@@ -96,7 +103,7 @@ return require('packer').startup(function(use)
 
     -- Telescope
 
-    use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
+    use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/plenary.nvim' } } }
 
     use 'nvim-telescope/telescope-dap.nvim'
 
@@ -111,9 +118,9 @@ return require('packer').startup(function(use)
     use 'simrat39/rust-tools.nvim'
 
     --
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  end
+    -- Automatically set up your configuration after cloning packer.nvim
+    -- Put this at the end after all plugins
+    if packer_bootstrap then
+        require('packer').sync()
+    end
 end)
