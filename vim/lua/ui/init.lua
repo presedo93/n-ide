@@ -21,7 +21,8 @@ require('nvim-autopairs').setup({
         lua = { 'string' },
         javascript = { 'template_string' },
         java = false,
-    }
+    },
+    disable_filetype = { 'TelescopePrompt' }
 })
 
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
@@ -32,7 +33,11 @@ cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = 
 require('hlargs').setup()
 
 -- Surround
-require('nvim-surround').setup()
+require('nvim-surround').setup({
+    keymaps = {
+        delete = "Cs"
+    }
+})
 
 -- UFO
 require('ufo').setup({
@@ -40,12 +45,6 @@ require('ufo').setup({
         return {'treesitter', 'indent'}
     end
 })
-
--- Aerial
-require('aerial').setup({})
-
--- Trouble
-require('trouble').setup()
 
 -- TO-DO
 require('todo-comments').setup()

@@ -10,6 +10,8 @@ require('plugins.nvimtree')
 require('plugins.treesitter')
 require('plugins.gitsigns')
 require('plugins.term')
+require('plugins.null')
+require('plugins.impatient')
 
 -- Ui
 require('ui')

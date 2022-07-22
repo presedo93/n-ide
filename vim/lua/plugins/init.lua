@@ -5,7 +5,17 @@ if fn.empty(fn.glob(install_path)) > 0 then
         install_path })
 end
 
-return require('packer').startup(function(use)
+local packer = require('packer')
+
+packer.init {
+  display = {
+    open_fn = function()
+      return require("packer.util").float { border = "rounded" }
+    end,
+  },
+}
+
+return packer.startup(function(use)
 
     -- Packer
 
@@ -13,9 +23,9 @@ return require('packer').startup(function(use)
 
     -- 1st
 
-    use { 'lewis6991/impatient.nvim' }
+    use 'lewis6991/impatient.nvim'
 
-    use { 'goolord/alpha-nvim' }
+    use 'goolord/alpha-nvim'
 
     -- Themes / UI
 
@@ -35,19 +45,11 @@ return require('packer').startup(function(use)
 
     use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 
-    use { 'stevearc/aerial.nvim' }
-
     use { 'folke/todo-comments.nvim', requires = 'nvim-lua/plenary.nvim' }
 
-    use { 'folke/trouble.nvim', requires = 'kyazdani42/nvim-web-devicons' }
-
-    -- Tags & pairs
-
-    use 'windwp/nvim-ts-autotag'
+    -- Pairs
 
     use 'windwp/nvim-autopairs'
-
-    use 'p00f/nvim-ts-rainbow'
 
     use 'kylechui/nvim-surround'
 
@@ -59,7 +61,13 @@ return require('packer').startup(function(use)
 
     use { 'SmiteshP/nvim-gps', requires = 'nvim-treesitter/nvim-treesitter' }
 
-    use { 'm-demare/hlargs.nvim', requires = { 'nvim-treesitter/nvim-treesitter' } }
+    use { 'm-demare/hlargs.nvim', requires = 'nvim-treesitter/nvim-treesitter' }
+
+    use 'windwp/nvim-ts-autotag'
+
+    use 'p00f/nvim-ts-rainbow'
+
+    use 'JoosepAlviste/nvim-ts-context-commentstring'
 
     -- Autocompletion
 
@@ -88,6 +96,10 @@ return require('packer').startup(function(use)
     use 'neovim/nvim-lspconfig'
 
     use 'williamboman/nvim-lsp-installer'
+
+    -- Linting
+
+    use 'jose-elias-alvarez/null-ls.nvim'
 
     -- DAP
 

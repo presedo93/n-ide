@@ -1,4 +1,4 @@
-require'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup {
     ensure_installed = { "cpp", "python", "typescript", "tsx", "lua", "rust" },
     highlight = {
         enable = true,
@@ -13,6 +13,9 @@ require'nvim-treesitter.configs'.setup {
     },
     indent = {
         enable = true,
+    },
+    context_commentstring = {
+        enable = true
     },
     refactor = {
         highlight_definitions = { enable = true },

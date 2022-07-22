@@ -36,13 +36,15 @@ wk.register(
 
         ['x'] = { '"_x', 'Delete character' },
         ['d'] = { '"_d', 'Delete lines' },
-        ['ds'] = {
-            name = 'Surround -> delete',
-            ['a'] = { '>' },
-            ['b'] = { ')' },
-            ['B'] = { '}' },
-            ['r'] = { ']' },
-            ['q'] = { '"' },
+        ['C'] = {
+            ['s'] = {
+                name = 'Surround -> delete',
+                ['a'] = { '>' },
+                ['b'] = { ')' },
+                ['B'] = { '}' },
+                ['r'] = { ']' },
+                ['q'] = { '"' },
+            },
         },
         ['c'] = {
             name = 'Sorrund -> change'},
@@ -82,8 +84,8 @@ wk.register(
         ['<F1>'] = { ':WhichKey<CR>', 'Which keys -> Show' },
         ['<F2>'] = { ':NvimTreeToggle<CR>', 'Side tree -> Toggle' },
         ['<F3>'] = { 'Terminal -> Toggle' },
-        ['<F4>'] = { ':AerialToggle left<CR>', 'Aerial -> Toggle' },
-        ['<F5>'] = { ':TroubleToggle<CR>', 'Trouble -> Toggle' },
+        ['<F4>'] = { ':Telescope treesitter previewer=false theme=dropdown<CR>', 'TL -> treesitter' },
+        ['<F5>'] = { ':Telescope diagnostics theme=dropdown<CR>', 'TL -> diagnostics' },
 
         ['['] = {
             ['d'] = { '<cmd>lua vim.diagnostic.goto_prev()<CR>', 'LSP -> go to next' }
