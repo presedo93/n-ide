@@ -6,8 +6,6 @@ end
 local dashboard = require("alpha.themes.dashboard")
 local icons = require("ui.icons")
 local if_nil = vim.F.if_nil
-local fn = vim.fn
-local config_dir = fn.stdpath('config')
 
 -- ╭──────────────────────────────────────────────────────────╮
 -- │ Header                                                   │
@@ -38,51 +36,7 @@ dashboard.section.header.opts = {
   hl = "DHeader",
 }
 
--- ╭──────────────────────────────────────────────────────────╮
--- │ Heading Info                                             │
--- ╰──────────────────────────────────────────────────────────╯
-
-local thingy = io.popen('echo "$(date +%d) $(date +%b)" | tr -d "\n"')
-if thingy == nil then return end
-local date = thingy:read("*a")
-thingy:close()
-
-local datetime = os.date " %H:%M"
-
-vim.api.nvim_set_hl(0, 'DInfo', { bold = true, fg = "#037ffc" });
-local hi_top_section = {
-  type = "text",
-  val =  "┌──────────────   Today is " .. date .. " ──────────────┐",
-  opts = {
-    position = "center",
-    hl = "DInfo"
-  }
-}
-
-local hi_middle_section = {
-  type = "text",
-  val = "│                                                │",
-  opts = {
-    position = "center",
-    hl = "DInfo"
-  }
-}
-
-local hi_bottom_section = {
-  type = "text",
-  val = "└───══───══───══───  " .. datetime .. "  ───══───══───══────┘",
-  opts = {
-    position = "center",
-    hl = "DInfo"
-  }
-}
-
--- ╭──────────────────────────────────────────────────────────╮
--- │ Buttons                                                  │
--- ╰──────────────────────────────────────────────────────────╯
--- Copied from Alpha.nvim source code
-
-vim.api.nvim_set_hl(0, 'DPrimary', { bold = true, fg = "#2a7ede" });
+vim.api.nvim_set_hl(0, 'DPrimary', { bold = true, fg = "#03d3fc" });
 local leader = "Space"
 
 --- @param sc string
@@ -121,30 +75,11 @@ local function button(sc, txt, keybind, keybind_opts)
 end
 
 dashboard.section.buttons.val = {
-  button("<C-P>", icons.fileNoBg .. " " .. "Find File", "<cmd>Telescope find_files<CR>", {}),
+  button("<C-P>", icons.fileNoBg .. " " .. "Find File", "<cmd>Telescope find_files previewer=false theme=dropdown<CR>", {}),
   button("<S-P>", icons.t .. " " .. "Find Word", "<cmd>Telescope live_grep<CR>", {}),
   button("SPC / u", icons.container .. " " .. "Update Plugins", "<cmd>PackerSync<CR>", {}),
   button("-", icons.exit .. " " .. "Exit", "<cmd>exit<CR>", {}),
 }
-
--- ╭──────────────────────────────────────────────────────────╮
--- │ Footer                                                   │
--- ╰──────────────────────────────────────────────────────────╯
-
-local function file_exists(file)
-  local f = io.open(file, "rb")
-  if f then f:close() end
-  return f ~= nil
-end
-
-local function line_from(file)
-  if not file_exists(file) then return {} end
-  local lines = {}
-  for line in io.lines(file) do
-    lines[#lines + 1] = line
-  end
-  return lines
-end
 
 local function footer()
   local v = vim.version()
@@ -163,24 +98,24 @@ dashboard.section.footer.opts = {
 
 local section = {
   header = dashboard.section.header,
-  hi_top_section = hi_top_section,
+  --[[ hi_top_section = hi_top_section,
   hi_middle_section = hi_middle_section,
-  hi_bottom_section = hi_bottom_section,
+  hi_bottom_section = hi_bottom_section, ]]
   buttons = dashboard.section.buttons,
   footer = dashboard.section.footer,
 }
 
 local opts = {
   layout = {
-    {type = "padding", val = 3},
+    {type = "padding", val = 8},
     section.header,
-    {type = "padding", val = 1},
+    {type = "padding", val = 3},
     section.hi_top_section,
     section.hi_middle_section,
     section.hi_bottom_section,
-    {type = "padding", val = 2},
+    {type = "padding", val = 4},
     section.buttons,
-    {type = "padding", val = 3},
+    {type = "padding", val = 6},
     section.footer,
   },
   opts = {
