@@ -104,6 +104,7 @@ alias n="nvim"
 alias t="tmux"
 alias lg="lazygit"
 alias ld="lazydocker"
+alias lc='colorls -lA --sd'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 

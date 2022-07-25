@@ -34,6 +34,11 @@ wk.register(
             ['n'] = { ':+tabmove<CR>', 'tabby -> move to next position' },
             ['p'] = { ':-tabmove<CR>', 'tabby -> move to prev position' },
         },
+        ['s'] = {
+            name = 'Session Management',
+            ['q'] = { '<cmd>lua require("persistence").load()<cr>', 'Persistance -> restore the directory session' },
+            ['l'] = { '<cmd>lua require("persistence").load({ last = true })<cr>', 'Persistance -> restore last session' },
+        }
     },
     {
         mode = 'n',

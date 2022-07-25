@@ -24,6 +24,8 @@ if [[ $# -eq 1 && $1 == "all"* ]]; then
         sudo mv lazydocker-temp/lazydocker /usr/local/bin
         rm -rf lazydocker.tar.gz && rm -rf lazydocker-temp
 
+        sudo apt install ruby-full
+
     elif [[ "$OSTYPE" == "darwin"* ]]; then
 	    echo -e "$LG==> Mac OS detected... $NC"
         brew install neovim --HEAD
@@ -31,6 +33,8 @@ if [[ $# -eq 1 && $1 == "all"* ]]; then
         brew install tmux
         brew install jesseduffield/lazygit/lazygit
         brew install jesseduffield/lazydocker/lazydocker
+
+        brew install ruby
     fi
 
     # Install pyenv
@@ -63,6 +67,9 @@ if [[ $# -eq 1 && $1 == "all"* ]]; then
     # Git clone Tmux Plugin Manager
     echo -e "$LG===> Installing the Tmux Plugin Manager... $NC"
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+    # Install colorls
+    gem install colorls
 
     # oh my zsh plugins
     echo -e "$LG===> Oh My Zsh plugins... $NC"

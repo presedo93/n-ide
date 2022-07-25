@@ -17,6 +17,7 @@ wk.register(
         ['<C-H>'] = { '<C-W><C-H>', 'Move left in splits' },
 
         ['<C-N>'] = { ':nohlsearch<CR>', 'Disable highlightning search' },
+        ['<C-C>'] = { ':qa<CR>', 'Close nvim and save session' },
 
         ['<S-Up>'] = { ':resize +2<CR>', 'Resize split up' },
         ['<S-Down>'] = { ':resize -2<CR>', 'Resize split down' },

@@ -8,11 +8,11 @@ end
 local packer = require('packer')
 
 packer.init {
-  display = {
-    open_fn = function()
-      return require("packer.util").float { border = "rounded" }
-    end,
-  },
+    display = {
+        open_fn = function()
+            return require("packer.util").float { border = "rounded" }
+        end,
+    },
 }
 
 return packer.startup(function(use)
@@ -46,6 +46,10 @@ return packer.startup(function(use)
     use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 
     use { 'folke/todo-comments.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+    -- Session management
+
+    use { 'folke/persistence.nvim', event = 'BufReadPre', module = 'persistence' }
 
     -- Pairs
 
