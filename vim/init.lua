@@ -12,7 +12,7 @@ require('plugins.treesitter')
 require('plugins.gitsigns')
 require('plugins.term')
 require('plugins.null')
-require('plugins.persistance')
+require('plugins.persistence')
 
 -- Ui
 require('ui')
