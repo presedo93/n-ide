@@ -107,3 +107,21 @@ for _, lsp in pairs(servers) do
         settings = severs_configs.load(lsp),
     }
 end
+
+require("rust-tools").setup({
+    tools = {
+        autoSetHints = true,
+        hover_with_actions = true,
+        runnables = {
+            use_telescope = true
+        },
+        inlay_hints = {
+            show_parameter_hints = false,
+            parameter_hints_prefix = "",
+            other_hints_prefix = "",
+        },
+    },
+    server = {
+        on_attach = on_attach
+    },
+})

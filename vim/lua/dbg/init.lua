@@ -4,7 +4,6 @@ require('telescope').load_extension('dap')
 require('nvim-dap-virtual-text').setup()
 require('dapui').setup()
 require('dap-install').setup{ installation_path = vim.fn.stdpath 'data' .. '/dapinstall/' }
-require('rust-tools').setup({})
 
 -- UI
 local dap_breakpoint = {
