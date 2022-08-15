@@ -111,7 +111,6 @@ end
 require("rust-tools").setup({
     tools = {
         autoSetHints = true,
-        hover_with_actions = true,
         runnables = {
             use_telescope = true
         },

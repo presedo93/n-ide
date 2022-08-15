@@ -49,3 +49,5 @@ require('ufo').setup({
 -- TO-DO
 require('todo-comments').setup()
 
+-- Colorizer
+require('colorizer').setup()
