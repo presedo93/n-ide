@@ -37,6 +37,7 @@ wk.register(
 
         ['x'] = { '"_x', 'Delete character' },
         ['d'] = { '"_d', 'Delete lines' },
+        ['s'] = { '"_s', 'Replace character'},
         ['C'] = {
             ['s'] = {
                 name = 'Surround -> delete',
@@ -64,7 +65,8 @@ wk.register(
             ['d'] = { '"+d', 'Copy and Delete' },
             ['D'] = { '"+D', 'Copy and Delete til end of line' },
             ['y'] = { '"+y', 'Copy to clipboard' },
-            ['s'] = {
+            ['s'] = { '"+s', 'Replace to clipboard' },
+            ['S'] = {
                 name = 'Surround -> insert mode',
                 ['a'] = { '>' },
                 ['b'] = { ')' },
@@ -145,9 +147,13 @@ wk.register(
         ['<M-k>'] = { ":m '<-2<CR>gv=gv", 'Move line one up' },
 
         ['d'] = { '"_d', 'Delete lines' },
+        ['x'] = { '"_x', 'Delete character' },
+        ['s'] = { '"_s', 'Replace lines' },
         ['y'] = {
             name = 'Copy to clipboard',
-            ['d'] = { '"+d', 'Copy and Delete' },
+            ['d'] = { '"+d', 'Delete and copy' },
+            ['x'] = { '"+x', 'Delete and copy' },
+            ['s'] = { '"+s', 'Replace and Delete' },
             ['y'] = { '"+y', 'Copy to clipboard' },
         },
 
