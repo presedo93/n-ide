@@ -38,7 +38,8 @@ wk.register(
             name = 'Session Management',
             ['q'] = { '<cmd>lua require("persistence").load()<cr>', 'Persistance -> restore the directory session' },
             ['l'] = { '<cmd>lua require("persistence").load({ last = true })<cr>', 'Persistance -> restore last session' },
-        }
+        },
+        ['l'] = { ':SymbolsOutline<CR>', 'symbols outline' }
     },
     {
         mode = 'n',

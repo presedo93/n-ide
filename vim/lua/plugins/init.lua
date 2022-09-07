@@ -49,6 +49,8 @@ return packer.startup(function(use)
 
     use { 'norcalli/nvim-colorizer.lua' }
 
+    use { 'simrat39/symbols-outline.nvim' }
+
     -- Session management
 
     use { 'folke/persistence.nvim', event = 'BufReadPre', module = 'persistence' }

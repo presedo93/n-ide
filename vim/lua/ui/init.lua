@@ -51,3 +51,6 @@ require('todo-comments').setup()
 
 -- Colorizer
 require('colorizer').setup()
+
+-- Outline
+require('symbols-outline').setup()
