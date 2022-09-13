@@ -5,7 +5,18 @@ if fn.empty(fn.glob(install_path)) > 0 then
         install_path })
 end
 
-local packer = require('packer')
+-- Autocmd that reloads neovim whenever you save the init.lua file
+vim.cmd [[
+    augroup packer_user_config
+        autocmd!
+        autocmd BufWritePost init.lua source <afile> | PackerSync
+    augroup end
+]]
+
+local status_ok, packer = pcall(require, 'packer')
+if not status_ok then
+    return
+end
 
 packer.init {
     display = {

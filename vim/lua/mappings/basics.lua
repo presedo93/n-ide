@@ -49,7 +49,6 @@ wk.register(
             },
         },
         ['c'] = {
-            name = 'Sorrund -> change'},
             ['s'] = {
                 name = 'Surround -> change',
                 ['a'] = { '>' },
@@ -58,6 +57,7 @@ wk.register(
                 ['r'] = { ']' },
                 ['q'] = { '"' },
             },
+        },
         ['D'] = { '"_D', 'Delete until end of line' },
 
         ['y'] = {
@@ -87,7 +87,7 @@ wk.register(
         ['<F1>'] = { ':WhichKey<CR>', 'Which keys -> Show' },
         ['<F2>'] = { ':NvimTreeToggle<CR>', 'Side tree -> Toggle' },
         ['<F3>'] = { 'Terminal -> Toggle' },
-        ['<F4>'] = { ':Telescope treesitter previewer=false theme=dropdown<CR>', 'TL -> treesitter' },
+        ['<F4>'] = { ':SymbolsOutline<CR>', 'symbols outline' },
         ['<F5>'] = { ':Telescope diagnostics theme=dropdown<CR>', 'TL -> diagnostics' },
 
         ['['] = {
