@@ -8,6 +8,8 @@ M.load = function(lsp)
 		return require('lsp.servers.sumneko_lua')
     elseif lsp == 'pyright' then
 	 	return require('lsp.servers.pyright')
+    elseif lsp == 'solargraph' then
+        return require('lsp.servers.solargraph')
 	 end
 
 end

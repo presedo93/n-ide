@@ -1,0 +1,5 @@
+return {
+    solargraph = {
+        completion = true,
+    }
+}
