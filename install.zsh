@@ -68,7 +68,8 @@ if [[ $# -eq 1 && $1 == "all"* ]]; then
     echo -e "$LG===> Installing the Tmux Plugin Manager... $NC"
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-    # Install colorls
+    # Install rbenv
+    curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
     if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         sudo gem install colorls
     elif [[ "$OSTYPE" == "darwin"* ]]; then

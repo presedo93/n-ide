@@ -16,7 +16,10 @@ null_ls.setup {
         formatting.prettier.with { extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } },
         formatting.black.with { extra_args = { "--fast" } },
         formatting.rustfmt.with { extra_args = { "--emit=stdout" } },
+        formatting.rubocop,
+
         diagnostics.flake8,
+        diagnostics.rubocop,
     },
     on_attach = function(client, bufnr)
         if client.name == 'tsserver' then
