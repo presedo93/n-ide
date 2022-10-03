@@ -73,7 +73,7 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker colorize pyenv poetry rbenv rust tmux zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git docker colorize ember-cli pyenv poetry rbenv rust tmux zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 

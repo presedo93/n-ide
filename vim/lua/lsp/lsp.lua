@@ -89,7 +89,7 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 -- map buffer local keybindings when the language server attaches
 require('mason').setup()
 require('mason-lspconfig').setup()
-local servers = { 'clangd', 'pyright', 'gopls', 'rust_analyzer', 'solargraph', 'sumneko_lua', 'tailwindcss', 'tsserver' }
+local servers = { 'pyright', 'gopls', 'rust_analyzer', 'ember', 'solargraph', 'sumneko_lua', 'tailwindcss', 'tsserver' }
 
 local severs_configs = require('lsp.servers')
 
