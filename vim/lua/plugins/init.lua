@@ -132,8 +132,6 @@ return packer.startup(function(use)
 
     use 'rcarriga/nvim-dap-ui'
 
-    use { 'Pocco81/DAPInstall.nvim', branch = 'dev' }
-
     -- Telescope
 
     use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/plenary.nvim' } } }
