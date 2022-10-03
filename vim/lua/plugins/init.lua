@@ -148,6 +148,13 @@ return packer.startup(function(use)
 
     use 'simrat39/rust-tools.nvim'
 
+    -- Dadbod UI
+    use 'tpope/vim-dadbod'
+
+    use 'kristijanhusak/vim-dadbod-ui'
+
+    use 'vim-dadbod-completion'
+
     --
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
