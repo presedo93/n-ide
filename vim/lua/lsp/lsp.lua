@@ -19,6 +19,7 @@ local on_attach = function(client, bufnr)
                 ['r'] = { '<cmd>lua vim.lsp.buf.references()<CR>', 'LSP -> Go to references' },
                 ['k'] = { '<cmd>lua vim.lsp.buf.signature_help()<CR>', 'LSP -> Signature help' },
                 ['l'] = { '<cmd>lua vim.diagnostic.open_float({ border = "rounded" })<CR>', 'LSP -> Line diagnistics' },
+                ['o'] = { '<C-W>w', 'Focus on floating window' },
             },
             ['<leader>'] = {
                 ['d'] = { '<cmd>lua vim.diagnostic.setloclist()<CR>', 'LSP -> list diagnistics' },
@@ -65,7 +66,7 @@ local config = {
     underline = true,
     severity_sort = true,
     float = {
-        focusable = false,
+        focusable = true,
         style = "minimal",
         border = "rounded",
         source = "always",
