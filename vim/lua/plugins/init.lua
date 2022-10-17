@@ -62,6 +62,8 @@ return packer.startup(function(use)
 
     use { 'simrat39/symbols-outline.nvim' }
 
+    use { 'gbprod/yanky.nvim' }
+
     -- Session management
 
     use { 'folke/persistence.nvim', event = 'BufReadPre', module = 'persistence' }
@@ -152,8 +154,6 @@ return packer.startup(function(use)
     use 'tpope/vim-dadbod'
 
     use 'kristijanhusak/vim-dadbod-ui'
-
-    use 'vim-dadbod-completion'
 
     --
     -- Automatically set up your configuration after cloning packer.nvim

@@ -54,3 +54,6 @@ require('colorizer').setup()
 
 -- Outline
 require('symbols-outline').setup()
+
+-- Yanky
+require('yanky').setup()
