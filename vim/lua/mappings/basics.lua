@@ -74,6 +74,7 @@ wk.register(
                 ['r'] = { ']' },
                 ['q'] = { '"' },
             },
+            ['h'] = { ':YankyRingHistory<CR>', 'Yanky -> show yank history' },
         },
 
         ['z'] = {
