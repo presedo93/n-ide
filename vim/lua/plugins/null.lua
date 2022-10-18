@@ -13,14 +13,15 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup {
     debug = false,
     sources = {
-        formatting.prettier.with { extra_args = { "--single-quote", "--jsx-single-quote" } },
         formatting.black.with { extra_args = { "--fast" } },
         formatting.rustfmt.with { extra_args = { "--emit=stdout" } },
         formatting.rubocop,
         formatting.gofmt,
+        formatting.eslint_d,
 
         diagnostics.flake8,
         diagnostics.rubocop,
+        diagnostics.eslint_d,
     },
     on_attach = function(client, bufnr)
         if client.name == 'tsserver' then
