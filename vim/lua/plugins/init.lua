@@ -48,8 +48,6 @@ return packer.startup(function(use)
 
     use 'folke/which-key.nvim'
 
-    use 'bronson/vim-trailing-whitespace'
-
     use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }, tag = 'nightly' }
 
     use 'akinsho/toggleterm.nvim'
@@ -150,10 +148,33 @@ return packer.startup(function(use)
 
     use 'simrat39/rust-tools.nvim'
 
-    -- Dadbod UI
-    use 'tpope/vim-dadbod'
+    -- Copilot
 
-    use 'kristijanhusak/vim-dadbod-ui'
+    use {
+      "zbirenbaum/copilot.lua",
+      after = "feline.nvim",
+      config = function ()
+        vim.defer_fn(function()
+          require("copilot").setup()
+        end, 100)
+      end,
+    }
+
+    -- use 'zbirenbaum/copilot-cmp'
+
+    use {
+      "zbirenbaum/copilot-cmp",
+      after = { "copilot.lua" },
+      config = function ()
+        require("copilot_cmp").setup()
+      end
+    }
+
+    -- Dadbod UI
+
+    -- use 'tpope/vim-dadbod'
+
+    -- use 'kristijanhusak/vim-dadbod-ui'
 
     --
     -- Automatically set up your configuration after cloning packer.nvim

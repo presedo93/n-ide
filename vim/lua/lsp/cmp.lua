@@ -16,6 +16,7 @@ local check_backspace = function()
 end
 
 local kind_icons = {
+    Copilot = '',
     Text = '',
     Method = "",
     Function = '',
@@ -42,6 +43,11 @@ local kind_icons = {
     Operator = '',
     TypeParameter = '',
 }
+
+
+vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#00C644" } )
+vim.api.nvim_set_hl(0, "CmpItemKindFunction", { fg = "#FF0000" } )
+vim.api.nvim_set_hl(0, "CmpItemKindFunction", { fg = "#FFFF00" } )
 
 cmp.setup {
     snippet = {
@@ -94,6 +100,7 @@ cmp.setup {
             -- Kind icons
             vim_item.kind = string.format('%s', kind_icons[vim_item.kind])
             vim_item.menu = ({
+                copilot = '[Copilot]',
                 nvim_lsp = '[LSP]',
                 nvim_lua = '[NVIM_LUA]',
                 luasnip = '[Snippet]',
@@ -104,6 +111,7 @@ cmp.setup {
         end,
     },
     sources = {
+        { name = 'copilot', max_item_count = 3 },
         { name = 'nvim_lsp' },
         { name = 'nvim_lua' },
         { name = 'luasnip' },
