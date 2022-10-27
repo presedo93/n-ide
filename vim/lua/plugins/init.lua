@@ -118,6 +118,8 @@ return packer.startup(function(use)
 
     use 'williamboman/mason.nvim'
 
+    use 'ray-x/lsp_signature.nvim'
+
     -- Linting
 
     use 'jose-elias-alvarez/null-ls.nvim'

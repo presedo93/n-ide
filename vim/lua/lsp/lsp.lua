@@ -3,6 +3,15 @@ local wk = require('which-key')
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
+    require('lsp_signature').on_attach({
+        bind = true, -- This is mandatory, otherwise border config won't get registered.
+        -- If you want to hook lspsaga or other signature handler, pls set to false
+        handler_opts = {
+            border = 'single'   -- double, single, shadow, none
+        },
+        decorator = { '`', '`' }  -- or decorator = {'***', '***'}
+    }, bufnr)
+
     if client.name == 'tsserver' then
         client.server_capabilities.document_formatting = false
         client.server_capabilities.document_range_formatting = false
