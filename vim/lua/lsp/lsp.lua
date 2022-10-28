@@ -56,7 +56,7 @@ end
 require('lsp_signature').setup({
     bind = true,
     hint_enable = false,
-    floating_window_off_y = 1,
+    -- floating_window_off_y = 1,
     handler_opts = {
         border = 'rounded'
     },
