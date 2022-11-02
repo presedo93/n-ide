@@ -18,6 +18,8 @@ require('plugins.persistence')
 require('ui')
 vim.cmd('colorscheme nightfox')
 
+vim.api.nvim_set_hl(0, "VertSplit", { fg = "#63cdcf"} )
+
 -- LSP
 require('lsp')
 
