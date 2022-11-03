@@ -35,6 +35,7 @@ wk.register(
             ['p'] = { ':-tabmove<CR>', 'tabby -> move to prev position' },
         },
         ['l'] = { '<cmd>lua require("persistence").load()<cr>', 'Persistance -> restore the directory session' },
+        ['w'] = { '<C-W>=', 'Windows -> resize windows automatically' },
     },
     {
         mode = 'n',
