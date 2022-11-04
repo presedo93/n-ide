@@ -17,6 +17,7 @@ null_ls.setup {
         formatting.black.with { extra_args = { "--fast" } },
         formatting.rustfmt.with { extra_args = { "--emit=stdout" } },
         formatting.rubocop,
+        formatting.gofmt,
 
         diagnostics.flake8,
         diagnostics.rubocop,
