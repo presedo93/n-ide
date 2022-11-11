@@ -18,7 +18,7 @@ local line = {
   active_tab = {
     label = function(tabid)
       return {
-        "   ",
+        "  ",
         hl = ui.groups.TLActive,
       }
     end,

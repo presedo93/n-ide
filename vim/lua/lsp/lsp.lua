@@ -26,6 +26,7 @@ local on_attach = function(client, bufnr)
                 ['d'] = { '<cmd>lua vim.lsp.buf.definition()<CR>', 'LSP -> Go to definition' },
                 ['v'] = { ':vsplit | lua vim.lsp.buf.definition()<CR>', 'LSP -> Go to definition in vertical split' },
                 ['x'] = { ':split | lua vim.lsp.buf.definition()<CR>', 'LSP -> Go to definition in horizontal split' },
+                ['t'] = { ':tabnew | lua vim.lsp.buf.definition()<CR>', 'LSP -> Go to definition in new tab' },
                 ['i'] = { '<cmd>lua vim.lsp.buf.implementation()<CR>', 'LSP -> Go to implementation' },
                 ['r'] = { '<cmd>lua vim.lsp.buf.references()<CR>', 'LSP -> Go to references' },
                 ['k'] = { '<cmd>lua vim.lsp.buf.signature_help()<CR>', 'LSP -> Signature help' },
