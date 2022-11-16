@@ -112,7 +112,7 @@ alias lc='colorls -lA --sd'
 unsetopt correct_all
 
 SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_CHAR_SYMBOL=🚀
+# SPACESHIP_CHAR_SYMBOL=🚀
 
 # Poetry
 export PATH="$HOME/.local/bin:$PATH"
