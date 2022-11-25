@@ -24,6 +24,7 @@ wk.register(
             ['r'] = { ':Gitsigns reset_hunk<CR>', 'GS -> git reset'},
             ['t'] = { ':Gitsigns stage_hunk<CR>', 'GS -> git stage'},
             ['u'] = { ':Gitsigns undo_stage_hunk<CR>', 'GS -> git undo stage'},
+            ['b'] = { ':Gitsigns blame_line<CR>', 'GS -> git blame line'},
         },
         ['e'] = { '<cmd>lua vim.diagnostic.open_float()<CR>', 'LSP -> open float' },
         ['q'] = { '<cmd>lua vim.diagnostic.setloclist()<CR>', 'LSP -> set local list' },
