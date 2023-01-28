@@ -4,6 +4,7 @@ local wk = require('which-key')
 wk.register(
     {
         ['q'] = {':w<CR>', 'Save the file' },
+        ['Q'] = {':noa w<CR>', 'Save the file without formatting' },
         ['<esc>'] = {
             ['<esc>'] = { ':q<CR>', 'Close the view' },
         },
