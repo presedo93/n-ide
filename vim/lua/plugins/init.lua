@@ -62,9 +62,13 @@ return packer.startup(function(use)
 
     use { 'gbprod/yanky.nvim' }
 
+    use { 'rcarriga/nvim-notify' }
+
     -- Session management
 
     use { 'folke/persistence.nvim', event = 'BufReadPre', module = 'persistence' }
+
+    use { 'sindrets/winshift.nvim' }
 
     -- Pairs
 

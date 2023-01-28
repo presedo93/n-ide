@@ -57,3 +57,7 @@ require('symbols-outline').setup()
 
 -- Yanky
 require('yanky').setup()
+
+-- Notify
+vim.api.nvim_set_hl(0, 'NotifyBackground', {bg='#000000'})
+vim.notify = require("notify")

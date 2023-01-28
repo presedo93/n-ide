@@ -37,6 +37,7 @@ wk.register(
         },
         ['l'] = { '<cmd>lua require("persistence").load()<cr>', 'Persistance -> restore the directory session' },
         ['w'] = { '<C-W>=', 'Windows -> resize windows automatically' },
+        ['m'] = { '<cmd>WinShift<CR>', 'Winshift -> enter the visual edit mode' },
     },
     {
         mode = 'n',
