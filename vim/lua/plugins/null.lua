@@ -13,7 +13,7 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup {
     debug = false,
     sources = {
-        formatting.prettier.with { extra_args = { "--single-quote", "--jsx-single-quote" } },
+        formatting.prettier,
         formatting.black.with { extra_args = { "--fast" } },
         formatting.rustfmt.with { extra_args = { "--emit=stdout" } },
         formatting.rubocop,
@@ -23,18 +23,16 @@ null_ls.setup {
         diagnostics.rubocop,
     },
     on_attach = function(client, bufnr)
-        if client.name == 'tsserver' then
-            client.server_capabilities.document_formatting = false
-            client.server_capabilities.document_range_formatting = false
-        end
-
         if client.supports_method("textDocument/formatting") then
             vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
             vim.api.nvim_create_autocmd("BufWritePre", {
                 group = augroup,
                 buffer = bufnr,
                 callback = function()
-                    vim.lsp.buf.format({ bufnr = bufnr })
+                    vim.lsp.buf.format({
+                        bufnr = bufnr,
+                        filter = function(lsp_client) return lsp_client.name ~= "tsserver" end
+                    })
                 end,
             })
         end

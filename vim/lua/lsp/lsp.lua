@@ -13,8 +13,9 @@ local on_attach = function(client, bufnr)
     }, bufnr)
 
     if client.name == 'tsserver' then
-        client.server_capabilities.document_formatting = false
-        client.server_capabilities.document_range_formatting = false
+      vim.lsp.buf.format {
+        filter = function(client) return client.name ~= "tsserver" end
+      }
     end
     -- Enable completion triggered by <c-x><c-o>
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
