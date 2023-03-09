@@ -62,7 +62,7 @@ return packer.startup(function(use)
 
     use { 'gbprod/yanky.nvim' }
 
-    use { 'rcarriga/nvim-notify' }
+    use { 'vigoux/notifier.nvim' }
 
     -- Session management
 
@@ -121,6 +121,8 @@ return packer.startup(function(use)
     use 'williamboman/mason-lspconfig.nvim'
 
     use 'williamboman/mason.nvim'
+
+    use 'jay-babu/mason-nvim-dap.nvim'
 
     use 'ray-x/lsp_signature.nvim'
 

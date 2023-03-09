@@ -112,8 +112,12 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 require('mason').setup()
+require("mason-nvim-dap").setup({
+    automatic_setup = true,
+})
+require 'mason-nvim-dap'.setup_handlers {}
 require('mason-lspconfig').setup()
-local servers = { 'pyright', 'gopls', 'rust_analyzer', 'ember', 'solargraph', 'sumneko_lua', 'tailwindcss', 'tsserver' }
+local servers = { 'pyright', 'gopls', 'rust_analyzer', 'ember', 'solargraph', 'lua_ls', 'tailwindcss', 'tsserver' }
 
 local severs_configs = require('lsp.servers')
 

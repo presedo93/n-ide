@@ -8,6 +8,7 @@ wk.register(
           -- ['c'] = { "<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[condition] > ')<cr>", "conditional breakpoint" },
           ['t'] = { "<cmd>lua require'dapui'.toggle()<cr>", "toggle ui" },
           ['e'] = { "<cmd>lua require'dapui'.eval()<cr>", "evaluate" },
+          ['P'] = { "<cmd>lua require'dap-python'.test_method()<CR>", "run a pytest case"},
 
           ['c'] = { "<cmd>lua require'dap'.continue()<cr>", "start / continue" },
           ['d'] = { "<cmd>lua require'dap'.disconnect()<cr>", "disconnect" },
