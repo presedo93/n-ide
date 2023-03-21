@@ -152,4 +152,15 @@ require("rust-tools").setup({
     server = {
         on_attach = on_attach
     },
+    dap = {
+        adapter = {
+            type = "server",
+            port = "${port}",
+            host = "127.0.0.1",
+            executable = {
+                command = "codelldb",
+                args = { "--port", "${port}" },
+            },
+        },
+    },
 })
