@@ -61,3 +61,6 @@ require('yanky').setup()
 -- Notify
 vim.api.nvim_set_hl(0, 'NotifyBackground', {bg='#000000'})
 require('notifier').setup()
+
+-- Dressing
+require('dressing').setup()

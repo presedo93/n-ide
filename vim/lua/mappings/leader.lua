@@ -14,6 +14,7 @@ wk.register(
             ['s'] = { ':Telescope treesitter previewer=false theme=dropdown<CR>', 'TL -> treesitter' },
             ['d'] = { ':Telescope diagnostics theme=dropdown<CR>', 'TL -> diagnostics' },
             ['r'] = { ':Telescope lsp_references<CR>', 'TL -> references' },
+            ['R'] = { ':Telescope resume<CR>', 'TL -> Resume' },
             ['t'] = { ':TodoTelescope theme=dropdown<CR>', 'TL -> todos' },
         },
         ['g'] = {

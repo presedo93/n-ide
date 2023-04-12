@@ -64,6 +64,8 @@ return packer.startup(function(use)
 
     use { 'vigoux/notifier.nvim' }
 
+    use { 'stevearc/dressing.nvim' }
+
     -- Session management
 
     use { 'folke/persistence.nvim', event = 'BufReadPre', module = 'persistence' }

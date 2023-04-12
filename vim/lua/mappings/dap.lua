@@ -9,6 +9,7 @@ wk.register(
           ['t'] = { "<cmd>lua require'dapui'.toggle()<cr>", "toggle ui" },
           ['e'] = { "<cmd>lua require'dapui'.eval()<cr>", "evaluate" },
           ['P'] = { "<cmd>lua require'dap-python'.test_method()<CR>", "run a pytest case"},
+          ['S'] = { ":RustRunnables<CR>", "run rust runnable files" },
 
           ['c'] = { "<cmd>lua require'dap'.continue()<cr>", "start / continue" },
           ['d'] = { "<cmd>lua require'dap'.disconnect()<cr>", "disconnect" },

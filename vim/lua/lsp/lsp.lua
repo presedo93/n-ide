@@ -115,8 +115,15 @@ require('mason').setup()
 require("mason-nvim-dap").setup({
     automatic_setup = true,
 })
-require 'mason-nvim-dap'.setup_handlers {}
-require('mason-lspconfig').setup()
+
+local config = {}
+require('mason-lspconfig').setup({
+    handlers = {
+        function (config)
+            require('mason-nvim-dap').default_setup(config)
+        end
+    }
+})
 local servers = { 'pyright', 'gopls', 'rust_analyzer', 'ember', 'solargraph', 'lua_ls', 'tailwindcss', 'tsserver' }
 
 local severs_configs = require('lsp.servers')
