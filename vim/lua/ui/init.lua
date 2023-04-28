@@ -4,12 +4,13 @@ require('ui.feline')
 -- Nightfox themes
 require('nightfox').setup({
     options = {
-        transparent = true,
+        -- transparent = true,
         styles = {
             comments = 'italic',
             conditionals = 'italic',
-            constants = 'bold,italic',
-            functions = 'italic'
+            constants = 'bold',
+            functions = 'italic',
+            strings = 'italic',
         }
     }
 })

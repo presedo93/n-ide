@@ -16,7 +16,7 @@ require('plugins.persistence')
 
 -- Ui
 require('ui')
-vim.cmd('colorscheme nightfox')
+vim.cmd('colorscheme duskfox')
 
 vim.api.nvim_set_hl(0, "VertSplit", { fg = "#63cdcf"} )
 
