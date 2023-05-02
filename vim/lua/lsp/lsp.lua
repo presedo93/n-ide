@@ -57,6 +57,8 @@ local on_attach = function(client, bufnr)
     )
 end
 
+require("neodev").setup({})
+
 require('lsp_signature').setup({
     bind = true,
     hint_enable = false,
@@ -124,7 +126,7 @@ require('mason-lspconfig').setup({
         end
     }
 })
-local servers = { 'pyright', 'gopls', 'rust_analyzer', 'ember', 'solargraph', 'lua_ls', 'tailwindcss', 'tsserver' }
+local servers = { 'pyright', 'rust_analyzer', 'ember', 'solargraph', 'lua_ls', 'tailwindcss', 'tsserver' }
 
 local severs_configs = require('lsp.servers')
 

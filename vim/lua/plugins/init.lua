@@ -1,195 +1,181 @@
-local fn = vim.fn
-local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-    packer_bootstrap = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim',
-        install_path })
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
--- Autocmd that reloads neovim whenever you save the init.lua file
--- vim.cmd [[
---     augroup packer_user_config
---         autocmd!
---         autocmd BufWritePost init.lua source <afile> | PackerSync
---     augroup end
--- ]]
-
-local status_ok, packer = pcall(require, 'packer')
-if not status_ok then
-    return
-end
-
-packer.init {
-    display = {
-        open_fn = function()
-            return require("packer.util").float { border = "rounded" }
-        end,
-    },
-}
-
-return packer.startup(function(use)
-
+require("lazy").setup({
     -- Packer
 
-    use 'wbthomason/packer.nvim'
+     'wbthomason/packer.nvim',
 
     -- 1st
 
-    use 'lewis6991/impatient.nvim'
+     'lewis6991/impatient.nvim',
 
-    use 'goolord/alpha-nvim'
+     'goolord/alpha-nvim',
 
     -- Themes / UI
 
-    use 'EdenEast/nightfox.nvim'
+     'EdenEast/nightfox.nvim',
 
-    use 'feline-nvim/feline.nvim'
+     'feline-nvim/feline.nvim',
 
-    use 'nanozuki/tabby.nvim'
+     'nanozuki/tabby.nvim',
 
-    use 'folke/which-key.nvim'
+     'folke/which-key.nvim',
 
-    use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }, tag = 'nightly' }
+     { 'kyazdani42/nvim-tree.lua', dependencies = { 'kyazdani42/nvim-web-devicons' }, tag = 'nightly' },
 
-    use 'akinsho/toggleterm.nvim'
+     'akinsho/toggleterm.nvim',
 
-    use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
+     { 'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async' },
 
-    use { 'folke/todo-comments.nvim', requires = 'nvim-lua/plenary.nvim' }
+     { 'folke/todo-comments.nvim', dependencies = 'nvim-lua/plenary.nvim' },
 
-    use { 'norcalli/nvim-colorizer.lua' }
+     { 'norcalli/nvim-colorizer.lua' },
 
-    use { 'simrat39/symbols-outline.nvim' }
+     { 'simrat39/symbols-outline.nvim' },
 
-    use { 'gbprod/yanky.nvim' }
+     { 'gbprod/yanky.nvim' },
 
-    use { 'vigoux/notifier.nvim' }
+     { 'vigoux/notifier.nvim' },
 
-    use { 'stevearc/dressing.nvim' }
+     { 'stevearc/dressing.nvim' },
 
     -- Session management
 
-    use { 'folke/persistence.nvim', event = 'BufReadPre', module = 'persistence' }
+     { 'folke/persistence.nvim', event = 'BufReadPre' },
 
-    use { 'sindrets/winshift.nvim' }
+     { 'sindrets/winshift.nvim' },
 
     -- Pairs
 
-    use 'windwp/nvim-autopairs'
+     'windwp/nvim-autopairs',
 
-    use 'kylechui/nvim-surround'
+     'kylechui/nvim-surround',
 
     -- Tree-sitter
 
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+     { 'nvim-treesitter/nvim-treesitter', lazy = true, build = ':TSUpdate' },
 
-    use 'nvim-treesitter/nvim-treesitter-refactor'
+     'nvim-treesitter/nvim-treesitter-refactor',
 
-    use { 'SmiteshP/nvim-gps', requires = 'nvim-treesitter/nvim-treesitter' }
+     { 'SmiteshP/nvim-gps', dependencies = 'nvim-treesitter/nvim-treesitter' },
 
-    use { 'm-demare/hlargs.nvim', requires = 'nvim-treesitter/nvim-treesitter' }
+     { 'm-demare/hlargs.nvim', dependencies = 'nvim-treesitter/nvim-treesitter' },
 
-    use 'windwp/nvim-ts-autotag'
+     'windwp/nvim-ts-autotag',
 
-    use 'p00f/nvim-ts-rainbow'
+     'p00f/nvim-ts-rainbow',
 
-    use 'JoosepAlviste/nvim-ts-context-commentstring'
+     'JoosepAlviste/nvim-ts-context-commentstring',
 
     -- Autocompletion
 
-    use 'hrsh7th/nvim-cmp'
+     'folke/neodev.nvim',
 
-    use 'hrsh7th/cmp-buffer'
+     'hrsh7th/nvim-cmp',
 
-    use 'hrsh7th/cmp-path'
+     'hrsh7th/cmp-buffer',
 
-    use 'hrsh7th/cmp-cmdline'
+     'hrsh7th/cmp-path',
 
-    use 'saadparwaiz1/cmp_luasnip'
+     'hrsh7th/cmp-cmdline',
 
-    use 'hrsh7th/cmp-nvim-lsp'
+     'saadparwaiz1/cmp_luasnip',
 
-    use 'hrsh7th/cmp-nvim-lua'
+     'hrsh7th/cmp-nvim-lsp',
+
+     'hrsh7th/cmp-nvim-lua',
 
     -- Snippets
 
-    use 'L3MON4D3/LuaSnip'
+     'L3MON4D3/LuaSnip',
 
-    use 'rafamadriz/friendly-snippets'
+     'rafamadriz/friendly-snippets',
 
     -- LSP
 
-    use 'neovim/nvim-lspconfig'
+     'neovim/nvim-lspconfig',
 
-    use 'williamboman/mason-lspconfig.nvim'
+     'williamboman/mason-lspconfig.nvim',
 
-    use 'williamboman/mason.nvim'
+     'williamboman/mason.nvim',
 
-    use 'jay-babu/mason-nvim-dap.nvim'
+     'jay-babu/mason-nvim-dap.nvim',
 
-    use 'ray-x/lsp_signature.nvim'
+     'ray-x/lsp_signature.nvim',
 
     -- Linting
 
-    use 'jose-elias-alvarez/null-ls.nvim'
+     'jose-elias-alvarez/null-ls.nvim',
 
     -- DAP
 
-    use 'mfussenegger/nvim-dap'
+     'mfussenegger/nvim-dap',
 
-    use 'mfussenegger/nvim-dap-python'
+     'mfussenegger/nvim-dap-python',
 
-    use 'theHamsta/nvim-dap-virtual-text'
+     'theHamsta/nvim-dap-virtual-text',
 
-    use 'rcarriga/nvim-dap-ui'
+     'rcarriga/nvim-dap-ui',
 
     -- Telescope
 
-    use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/plenary.nvim' } } }
+     { 'nvim-telescope/telescope.nvim', dependencies = { { 'nvim-lua/plenary.nvim' } } },
 
-    use 'nvim-telescope/telescope-dap.nvim'
+     'nvim-telescope/telescope-dap.nvim',
 
     -- Git & comments
 
-    use 'lewis6991/gitsigns.nvim'
+     'lewis6991/gitsigns.nvim',
 
-    use 'b3nj5m1n/kommentary'
+     'b3nj5m1n/kommentary',
 
     -- Languages & tools
 
-    use 'simrat39/rust-tools.nvim'
+     'simrat39/rust-tools.nvim',
 
     -- Copilot
 
-    use {
+     {
       "zbirenbaum/copilot.lua",
-      after = "feline.nvim",
+      dependencies = "feline.nvim",
       config = function ()
         vim.defer_fn(function()
           require("copilot").setup()
         end, 100)
       end,
-    }
+    },
 
-    -- use 'zbirenbaum/copilot-cmp'
-
-    use {
+     {
       "zbirenbaum/copilot-cmp",
-      after = { "copilot.lua" },
+      dependencies = { "copilot.lua" },
       config = function ()
         require("copilot_cmp").setup()
       end
-    }
+    },
 
     -- Dadbod UI
 
-    -- use 'tpope/vim-dadbod'
+    --  'tpope/vim-dadbod'
+    --  'kristijanhusak/vim-dadbod-ui'
+})
 
-    -- use 'kristijanhusak/vim-dadbod-ui'
+-- Load the rest of the plugins
+require('plugins.alpha')
+require('plugins.nvimtree')
+require('plugins.treesitter')
+require('plugins.gitsigns')
+require('plugins.term')
+require('plugins.null')
+require('plugins.persistence')
 
-    --
-    -- Automatically set up your configuration after cloning packer.nvim
-    -- Put this at the end after all plugins
-    if packer_bootstrap then
-        require('packer').sync()
-    end
-end)

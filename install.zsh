@@ -99,3 +99,6 @@ ln -svf $PWD/zsh/zshrc $HOME/.zshrc
 
 # Create a symbolic link from this repo's kitty.conf
 ln -svf $PWD/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
+
+# Create a symbolic link from this repo's lazy-lock.json
+ln -svf $PWD/lazy-lock.json $HOME/.config/nvim/lazy-lock.json

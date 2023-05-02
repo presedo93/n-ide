@@ -1,20 +1,12 @@
 pcall(require, 'impatient')
 require('plugins.impatient')
 
-require('plugins')
+-- Order must not be changed
 require('settings')
+require('plugins')
 require('mappings')
 
--- Plugins
-require('plugins.alpha')
-require('plugins.nvimtree')
-require('plugins.treesitter')
-require('plugins.gitsigns')
-require('plugins.term')
-require('plugins.null')
-require('plugins.persistence')
-
--- Ui
+-- UI
 require('ui')
 vim.cmd('colorscheme duskfox')
 

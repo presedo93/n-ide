@@ -10,6 +10,8 @@ M.load = function(lsp)
         return require('lsp.servers.solargraph')
     elseif lsp == 'tsserver' then
         return require('lsp.servers.tsserver')
+    elseif lsp == 'lua_ls' then
+        return require('lsp.servers.lua')
 	 end
 
 end

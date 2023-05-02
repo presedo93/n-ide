@@ -32,4 +32,3 @@ vim.fn.sign_define('DapBreakpointRejected', dap_breakpoint.rejected)
 
 -- Configure debuggers
 require('dbg.python')
--- require('debug.go').setup()
