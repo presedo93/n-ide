@@ -10,4 +10,3 @@ require('dbg')
 
 -- UI
 require('ui')
-vim.cmd.colorscheme "duskfox"

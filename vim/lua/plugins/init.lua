@@ -24,7 +24,7 @@ require("lazy").setup({
 
     -- Themes / UI
 
-     'EdenEast/nightfox.nvim',
+     { 'catppuccin/nvim', name = 'catppuccin' },
 
      'feline-nvim/feline.nvim',
 
@@ -32,7 +32,7 @@ require("lazy").setup({
 
      'folke/which-key.nvim',
 
-     { 'kyazdani42/nvim-tree.lua', dependencies = { 'kyazdani42/nvim-web-devicons' }, tag = 'nightly' },
+     { 'kyazdani42/nvim-tree.lua', dependencies = { 'nvim-tree/nvim-web-devicons' }, tag = 'nightly' },
 
      'akinsho/toggleterm.nvim',
 
