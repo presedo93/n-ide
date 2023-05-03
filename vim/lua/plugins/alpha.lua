@@ -77,7 +77,7 @@ end
 dashboard.section.buttons.val = {
   button("<C-P>", icons.fileNoBg .. " " .. "Find File", "<cmd>Telescope find_files previewer=false theme=dropdown<CR>", {}),
   button("<S-P>", icons.t .. " " .. "Find Word", "<cmd>Telescope live_grep<CR>", {}),
-  button("SPC / u", icons.container .. " " .. "Update Plugins", "<cmd>PackerSync<CR>", {}),
+  button("SPC / u", icons.container .. " " .. "Update Plugins", "<cmd>Lazy update<CR>", {}),
   button("-", icons.exit .. " " .. "Exit", "<cmd>exit<CR>", {}),
 }
 

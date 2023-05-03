@@ -5,15 +5,9 @@ require('plugins.impatient')
 require('settings')
 require('plugins')
 require('mappings')
+require('lsp')
+require('dbg')
 
 -- UI
 require('ui')
-vim.cmd('colorscheme duskfox')
-
-vim.api.nvim_set_hl(0, "VertSplit", { fg = "#63cdcf"} )
-
--- LSP
-require('lsp')
-
--- DAP
-require('dbg')
+vim.cmd.colorscheme "duskfox"

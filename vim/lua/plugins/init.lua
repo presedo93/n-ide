@@ -64,7 +64,7 @@ require("lazy").setup({
 
     -- Tree-sitter
 
-     { 'nvim-treesitter/nvim-treesitter', lazy = true, build = ':TSUpdate' },
+     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 
      'nvim-treesitter/nvim-treesitter-refactor',
 
@@ -146,7 +146,7 @@ require("lazy").setup({
 
     -- Copilot
 
-     {
+     --[[ {
       "zbirenbaum/copilot.lua",
       dependencies = "feline.nvim",
       config = function ()
@@ -154,15 +154,15 @@ require("lazy").setup({
           require("copilot").setup()
         end, 100)
       end,
-    },
+    }, ]]
 
-     {
+     --[[ {
       "zbirenbaum/copilot-cmp",
       dependencies = { "copilot.lua" },
       config = function ()
         require("copilot_cmp").setup()
       end
-    },
+    }, ]]
 
     -- Dadbod UI
 
