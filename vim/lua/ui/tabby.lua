@@ -1,39 +1,35 @@
 local filename = require("tabby.filename")
-local util = require("tabby.util")
-local ui = require('ui.utils')
+local clrs = require("catppuccin.palettes").get_palette()
 
-local cwd = function()
-  return "  " .. vim.fn.fnamemodify(vim.fn.getcwd(), ":t") .. " "
-end
+local active = { bg = "#39506D", fg = "#AEAFB0", style = "bold" }
+local active_sep = { fg = "#39506d" }
+local bold_line = { bg = "#212E3F", fg = "#71839B", style = "bold" }
+local line_sep = { fg = "#212E3F" }
 
 -- ֍ ֎ 
 
 local line = {
   hl = "TabLineFill",
   layout = "active_wins_at_tail",
-  head = {
-    { cwd, hl = ui.groups.TLHead },
-    { "", hl = ui.groups.TLHeadSep },
-  },
   active_tab = {
     label = function(tabid)
       return {
         "  ",
-        hl = ui.groups.TLActive,
+        hl = active,
       }
     end,
-    left_sep = { "", hl = ui.groups.TLActiveSep },
-    right_sep = { "", hl = ui.groups.TLActiveSep },
+    left_sep = { "", hl = active_sep },
+    right_sep = { " ", hl = active_sep },
   },
   inactive_tab = {
     label = function(tabid)
       return {
         "  ",
-        hl = ui.groups.TLBoldLine,
+        hl = bold_line,
       }
     end,
-    left_sep = { "", hl = ui.groups.TLLineSep },
-    right_sep = { "", hl = ui.groups.TLLineSep },
+    left_sep = { "", hl = line_sep },
+    right_sep = { " ", hl = line_sep },
   },
   top_win = {
     label = function(winid)
@@ -42,8 +38,8 @@ local line = {
         hl = "TabLine",
       }
     end,
-    left_sep = { "", hl = ui.groups.TLLineSep },
-    right_sep = { "", hl = ui.groups.TLLineSep },
+    left_sep = { " ", hl = line_sep },
+    right_sep = { " ", hl = line_sep },
   },
   win = {
     label = function(winid)
@@ -52,12 +48,8 @@ local line = {
         hl = "TabLine",
       }
     end,
-    left_sep = { "", hl = ui.groups.TLLineSep },
-    right_sep = { "", hl = ui.groups.TLLineSep },
-  },
-  tail = {
-    { "", hl = ui.groups.TLHeadSep },
-    { "  ", hl = ui.groups.TLHead },
+    left_sep = { " ", hl = line_sep },
+    right_sep = { " ", hl = line_sep },
   },
 }
 
