@@ -9,8 +9,8 @@ require('toggleterm').setup {
     close_on_exit = true,
     float_opts = {
       border = "curved",
-      width = 240,
-      height = 60,
+      width = 200,
+      height = 40,
       winblend = 0,
       highlights = {
         border = "Special",

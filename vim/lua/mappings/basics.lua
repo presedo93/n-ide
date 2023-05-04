@@ -33,8 +33,11 @@ wk.register(
         ['<A-j>'] = { ':m .+1<CR>==', 'Move line one up' },
         ['<A-k>'] = { ':m .-2<CR>==', 'Move line one down' },
 
-        ['<A-.>'] = { ':tabn<CR>', 'tabby -> Next tabby tab' },
-        ['<A-,>'] = { ':tabp<CR>', 'tabby -> Prev tabby tab' },
+        ['<A-.>'] = { ':tabn<CR>', 'tabs -> Next tab' },
+        ['<A-,>'] = { ':tabp<CR>', 'tabs -> Prev tab' },
+
+        ['<A->>'] = { ':+tabmove<CR>', 'tabs -> move to next position' },
+        ['<A-<>'] = { ':-tabmove<CR>', 'tabs -> move to prev position' },
 
         ['x'] = { '"_x', 'Delete character' },
         ['d'] = { '"_d', 'Delete lines' },
@@ -90,7 +93,7 @@ wk.register(
         ['<F2>'] = { ':NvimTreeToggle<CR>', 'Side tree -> Toggle' },
         ['<F3>'] = { 'Terminal -> Toggle' },
         ['<F4>'] = { ':SymbolsOutline<CR>', 'symbols outline' },
-        ['<F5>'] = { ':Telescope diagnostics theme=dropdown<CR>', 'TL -> diagnostics' },
+        ['<F12>'] = { ':Telescope telescope-tabs list_tabs theme=dropdown previewer=false<CR>', 'TL -> diagnostics' },
 
         ['['] = {
             ['d'] = { '<cmd>lua vim.diagnostic.goto_prev()<CR>', 'LSP -> go to next' }

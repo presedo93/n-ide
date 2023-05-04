@@ -32,10 +32,6 @@ wk.register(
         ['D'] = { '<cmd>lua vim.lsp.buf.type_definition()<CR>', 'LSP -> Type definition' },
         ['r'] = { '<cmd>lua vim.lsp.buf.rename()<CR>', 'LSP -> Rename' },
         ['c'] = { '<cmd>lua vim.lsp.buf.code_action()<CR>', 'LSP -> Code Action' },
-        ['t'] = {
-            ['n'] = { ':+tabmove<CR>', 'tabby -> move to next position' },
-            ['p'] = { ':-tabmove<CR>', 'tabby -> move to prev position' },
-        },
         ['l'] = { '<cmd>lua require("persistence").load()<cr>', 'Persistance -> restore the directory session' },
         ['w'] = { '<C-W>=', 'Windows -> resize windows automatically' },
         ['m'] = { '<cmd>WinShift<CR>', 'Winshift -> enter the visual edit mode' },

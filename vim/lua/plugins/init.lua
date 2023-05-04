@@ -28,7 +28,7 @@ require("lazy").setup({
 
      'feline-nvim/feline.nvim',
 
-     'nanozuki/tabby.nvim',
+     { 'utilyre/barbecue.nvim', name = 'barbecue', version = '*', dependencies = { 'SmiteshP/nvim-navic', 'nvim-tree/nvim-web-devicons' } },
 
      'folke/which-key.nvim',
 
@@ -133,6 +133,8 @@ require("lazy").setup({
      { 'nvim-telescope/telescope.nvim', dependencies = { { 'nvim-lua/plenary.nvim' } } },
 
      'nvim-telescope/telescope-dap.nvim',
+
+     { 'LukasPietzschmann/telescope-tabs', dependencies= { 'nvim-telescope/telescope.nvim' } },
 
     -- Git & comments
 
