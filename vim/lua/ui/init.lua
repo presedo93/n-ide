@@ -122,7 +122,7 @@ require('ufo').setup({
 require('todo-comments').setup()
 
 -- Colorizer
-require('colorizer').setup()
+require('colorizer').setup({"*"}, {RRGGBBAA = true, hsl_fn = true, names = false })
 
 -- Outline
 require('symbols-outline').setup()
