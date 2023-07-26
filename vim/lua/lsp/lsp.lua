@@ -24,12 +24,15 @@ local on_attach = function(client, bufnr)
         {
             ['g'] = {
                 name = 'LSP shortcuts',
+                ['c'] = { '<cmd>lua vim.lsp.buf.code_action()<CR>', 'LSP -> Code Action' },
                 ['d'] = { '<cmd>lua vim.lsp.buf.definition()<CR>', 'LSP -> Go to definition' },
                 ['v'] = { ':vsplit | lua vim.lsp.buf.definition()<CR>', 'LSP -> Go to definition in vertical split' },
                 ['x'] = { ':split | lua vim.lsp.buf.definition()<CR>', 'LSP -> Go to definition in horizontal split' },
-                ['t'] = { ':tabnew | lua vim.lsp.buf.definition()<CR>', 'LSP -> Go to definition in new tab' },
+                ['t'] = { ':tab split | lua vim.lsp.buf.definition()<CR>', 'LSP -> Go to definition in new tab' },
                 ['i'] = { '<cmd>lua vim.lsp.buf.implementation()<CR>', 'LSP -> Go to implementation' },
-                ['r'] = { '<cmd>lua vim.lsp.buf.references()<CR>', 'LSP -> Go to references' },
+                ['r'] = { '<cmd>lua vim.lsp.buf.rename()<CR>', 'LSP -> Rename' },
+                ['e'] = { '<cmd>lua vim.lsp.buf.references()<CR>', 'LSP -> Go to references' },
+                ['f'] = { '<cmd>lua vim.lsp.buf.format{ async = true }<CR>', 'LSP -> Formatting' },
                 ['k'] = { '<cmd>lua vim.lsp.buf.signature_help()<CR>', 'LSP -> Signature help' },
                 ['l'] = { '<cmd>lua vim.diagnostic.open_float({ border = "rounded" })<CR>', 'LSP -> Line diagnistics' },
                 ['o'] = { '<C-W>w', 'Focus on floating window' },
@@ -37,11 +40,6 @@ local on_attach = function(client, bufnr)
             ['<leader>'] = {
                 ['d'] = { '<cmd>lua vim.diagnostic.setloclist()<CR>', 'LSP -> list diagnistics' },
                 ['D'] = { '<cmd>lua vim.lsp.buf.type_definition()<CR>', 'LSP -> Type definition' },
-                ['rn'] = { '<cmd>lua vim.lsp.buf.rename()<CR>', 'LSP -> Rename' },
-                ['ca'] = { '<cmd>lua vim.lsp.buf.code_action()<CR>', 'LSP -> Code Action' },
-                ['f'] = {
-                    ['c'] = { '<cmd>lua vim.lsp.buf.format{ async = true }<CR>', 'LSP -> Formatting' },
-                },
                 ['[d'] = { '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', 'LSP -> go to prev' },
                 [']d'] = { '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', 'LSP -> go to next' },
             },
@@ -126,7 +124,7 @@ require('mason-lspconfig').setup({
         end
     }
 })
-local servers = { 'pyright', 'rust_analyzer', 'ember', 'solargraph', 'lua_ls', 'tailwindcss', 'tsserver' }
+local servers = { 'pyright', 'rust_analyzer', 'ember', 'solargraph', 'lua_ls', 'tailwindcss', 'tsserver', 'yamlls' }
 
 local severs_configs = require('lsp.servers')
 
