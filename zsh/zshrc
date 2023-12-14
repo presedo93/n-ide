@@ -136,3 +136,11 @@ bindkey "\e[1;3D" backward-word # ⌥←
 bindkey "\e[1;3C" forward-word # ⌥→
 
 export PATH="/opt/homebrew/Cellar/libpq/15.3_1/bin:$PATH"
+
+# bun completions
+[ -s "/Users/r.presedo.ext/.bun/_bun" ] && source "/Users/r.presedo.ext/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH=$PATH:$HOME/.maestro/bin
