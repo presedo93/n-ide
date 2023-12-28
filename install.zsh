@@ -76,6 +76,11 @@ if [[ $# -eq 1 && $1 == "all"* ]]; then
         gem install colorls
     fi
 
+    # Install bat
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        brew install bat
+    fi
+
     # oh my zsh plugins
     echo -e "$LG===> Oh My Zsh plugins... $NC"
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
