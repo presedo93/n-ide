@@ -1,7 +1,25 @@
 return {
   "neovim/nvim-lspconfig",
+  init = function()
+    local keys = require("lazyvim.plugins.lsp.keymaps").get()
+    keys[#keys + 1] = { "<leader>cl", "<cmd>:lua vim.lsp.codelens.run()<cr>", desc = "Code Lens Run" }
+  end,
   opts = {
-    servers = { eslint = {} },
+    servers = {
+      eslint = {},
+      rust_analyzer = {
+        settings = {
+          ["rust-analyzer"] = {
+            cargo = {
+              features = { "all" },
+            },
+          },
+        },
+      },
+      -- debugpy = {
+      --   mason = false,
+      -- },
+    },
     setup = {
       eslint = function()
         require("lazyvim.util").lsp.on_attach(function(client)

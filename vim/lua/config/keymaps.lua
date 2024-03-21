@@ -3,8 +3,11 @@
 -- Add any additional keymaps here
 
 -- vim.keymap.set({ "n", "v" }, "d", '"_d', { desc = "Delete without copying" })
--- vim.keymap.set({ "n", "v" }, "yd", '"+d', { desc = "Delete and copying" })
--- vim.keymap.set({ "n", "v" }, "D", '"_D', { desc = "Delete without copying" })
+
+vim.keymap.set("n", "<S-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
+vim.keymap.set("n", "<S-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
+vim.keymap.set("n", "<S-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
+vim.keymap.set("n", "<S-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
 
 vim.keymap.set("n", "U", "<C-r>", { desc = "Re-do" })
 
