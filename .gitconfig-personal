@@ -1,0 +1,6 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Rene Presedo
+	email = presedo.93@gmail.com
+[fetch]
+	prune = true

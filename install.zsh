@@ -107,3 +107,14 @@ ln -svf $PWD/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
 
 # Create a symbolic link from this repo's lazy-lock.json
 ln -svf $PWD/lazy-lock.json $HOME/.config/nvim/lazy-lock.json
+
+# Create a symbolic link from this repo's zellij config.kdl
+ln -svf $PWD/zellij/config.kdl $HOME/.config/zellij/config.kdl
+
+# Create a symbolic link from this repo's zellij config.kdl
+ln -svf $PWD/zellij/layouts/default.kdl $HOME/.config/zellij/layouts/default.kdl
+
+wget -q https://github.com/karimould/zellij-forgot/releases/latest/download/zellij_forgot.wasm
+wget -q https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm
+
+mkdir -p $HOME/.config/zellij/plugins/ && mv zellij_forgot.wasm $HOME/.config/zellij/plugins/ && mv zjstatus.wasm $HOME/.config/zellij/plugins/
