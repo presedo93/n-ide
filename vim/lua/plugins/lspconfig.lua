@@ -16,9 +16,6 @@ return {
           },
         },
       },
-      -- debugpy = {
-      --   mason = false,
-      -- },
     },
     setup = {
       eslint = function()
