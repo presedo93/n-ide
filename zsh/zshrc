@@ -1,4 +1,3 @@
-export TERM="xterm-256color"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -60,20 +59,12 @@ COMPLETION_WAITING_DOTS="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Pyenv config
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
-
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker colorize ember-cli pyenv poetry rbenv rust tmux zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git docker docker-compose colorize fnm pyenv rust zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,11 +76,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -102,8 +93,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias n='nvim'
 alias t='tmux'
+alias z='zellij'
 alias lg='lazygit'
-alias ld='lazydocker'
 alias lc='colorls -lA --sd'
 alias lct='f() { colorls -lA --tree=$1 };f'
 alias inc=' unset HISTFILE'
@@ -116,31 +107,16 @@ unsetopt correct_all
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 # SPACESHIP_CHAR_SYMBOL=🚀
 
-# Poetry
-export PATH="$HOME/.local/bin:$PATH"
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init - zsh)"
-
+# pyenv
 export PYENV_ROOT="${HOME}/.pyenv"
 command -v pyenv >/dev/null || export PATH="${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${PATH}"
 eval "$(pyenv init -)"
-
-bindkey "\e[1;3D" backward-word # ⌥←
-bindkey "\e[1;3C" forward-word # ⌥→
-
-export PATH="/opt/homebrew/Cellar/libpq/15.3_1/bin:$PATH"
-
-# bun completions
-[ -s "/Users/r.presedo.ext/.bun/_bun" ] && source "/Users/r.presedo.ext/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH=$PATH:$HOME/.maestro/bin
+
+# fnm
+export PATH="/Users/r.presedo.ext/Library/Application Support/fnm:$PATH"
+eval "`fnm env`"
