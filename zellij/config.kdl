@@ -87,7 +87,7 @@ keybinds clear-defaults=true {
         bind "j" "Down" { ScrollDown; }
         bind "k" "Up" { ScrollUp; }
         bind "Alt f" "PageDown" "Right" "l" { PageScrollDown; }
-        bind "Alt b" "PageUp" "Left" "h" { PageScrollUp; }
+        bind "PageUp" "Left" "h" { PageScrollUp; }
         bind "d" { HalfPageScrollDown; }
         bind "u" { HalfPageScrollUp; }
         // uncomment this and adjust key if using copy_on_select=false
@@ -100,7 +100,7 @@ keybinds clear-defaults=true {
         bind "j" "Down" { ScrollDown; }
         bind "k" "Up" { ScrollUp; }
         bind "Alt f" "PageDown" "Right" "l" { PageScrollDown; }
-        bind "Alt b" "PageUp" "Left" "h" { PageScrollUp; }
+        bind "PageUp" "Left" "h" { PageScrollUp; }
         bind "d" { HalfPageScrollDown; }
         bind "u" { HalfPageScrollUp; }
         bind "n" { Search "down"; }
@@ -140,7 +140,7 @@ keybinds clear-defaults=true {
 
     tmux {
         bind "[" { SwitchToMode "Scroll"; }
-        bind "Alt b" { Write 2; SwitchToMode "Normal"; }
+        // bind "Alt b" { Write 2; SwitchToMode "Normal"; }
         bind "\"" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "%" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "z" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
@@ -206,7 +206,7 @@ keybinds clear-defaults=true {
     }
 
     shared_except "tmux" "locked" {
-        bind "Alt b" { SwitchToMode "Tmux"; }
+        // bind "Alt b" { SwitchToMode "Tmux"; }
     }
 }
 
@@ -317,7 +317,7 @@ default_layout "compact"
 //   - true (default)
 //   - false
 //
-// mouse_mode false
+mouse_mode false
 
 // Configure the scroll back buffer size
 // This is the number of lines zellij stores for each pane in the scroll back
