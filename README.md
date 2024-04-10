@@ -13,7 +13,7 @@ For the terminal, kitty is my preference.
 
 It contains neovim, zellij or lazygit.
 
-    $ brew install neovim
+    $ brew install neovim@HEAD
     $ brew install zellij
     $ brew install lazygit
     $ brew install lazydocker
@@ -35,6 +35,7 @@ Like pyenv, fnm, etc...
     $ brew install fnm
     $ gem install colorls
     $ brew install bat
+    $ brew install jq
 
 ## Oh my Zsh
 
