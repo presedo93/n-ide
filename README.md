@@ -21,7 +21,7 @@ It contains neovim, zellij or lazygit.
 Next thing is to install the languages and their package managers.
 
     $ brew install ruby
-    $ brew install nodejs npm
+    $ brew install nodejs
     $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 ## Tools
@@ -60,6 +60,7 @@ We need to create the config folder for neovim and then start lazyvim linking th
 
 Finally, we need to link the rest of the configs.
 
+    $ mkdir -p ~/.config/zellij
     $ ln -svf $PWD/zsh/zshrc $HOME/.zshrc
     $ ln -svf $PWD/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
     $ ln -svf $PWD/zellij/config.kdl $HOME/.config/zellij/config.kdl
