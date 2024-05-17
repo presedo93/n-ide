@@ -5,18 +5,8 @@ return {
     keys[#keys + 1] = { "<leader>cl", "<cmd>:lua vim.lsp.codelens.run()<cr>", desc = "Code Lens Run" }
   end,
   opts = {
-    inlay_hints = { enabled = true },
     servers = {
       eslint = {},
-      rust_analyzer = {
-        settings = {
-          ["rust-analyzer"] = {
-            cargo = {
-              features = { "all" },
-            },
-          },
-        },
-      },
     },
     setup = {
       eslint = function()

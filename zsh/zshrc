@@ -92,11 +92,12 @@ fi
 #
 # Example aliases
 alias n='nvim'
-alias z='zellij'
 alias zrf='zellij run -f --'
 alias lg='lazygit'
-alias lc='colorls -lA --sd'
-alias lct='f() { colorls -lA --tree=$1 };f'
+alias ls='eza --icons=always --color=always'
+eval "$(zoxide init zsh)"
+alias cd="z"
+alias zlj='zellij'
 alias inc=' unset HISTFILE'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"

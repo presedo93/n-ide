@@ -33,8 +33,9 @@ Like pyenv, fnm, etc...
     $ poetry config virtualenvs.in-project true
 
     $ brew install fnm
-    $ gem install colorls
     $ brew install bat
+    $ brew install eza
+    $ brew install zoxide
     $ brew install jq
 
 ## Oh my Zsh
