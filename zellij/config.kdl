@@ -167,10 +167,10 @@ keybinds clear-defaults=true {
         bind "Alt q" { Quit; }
         bind "Alt n" { NewPane; }
         bind "Alt w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
-        bind "Alt Left" { MoveFocusOrTab "Left"; }
-        bind "Alt Right" { MoveFocusOrTab "Right"; }
-        bind "Alt Down" { MoveFocus "Down"; }
-        bind "Alt Up" { MoveFocus "Up"; }
+        bind "Alt Left" "Alt H" { MoveFocusOrTab "Left"; }
+        bind "Alt Right" "Alt L" { MoveFocusOrTab "Right"; }
+        bind "Alt Down" "Alt J" { MoveFocus "Down"; }
+        bind "Alt Up" "Alt K" { MoveFocus "Up"; }
         bind "Alt =" "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt [" { PreviousSwapLayout; }

@@ -109,8 +109,8 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 # SPACESHIP_CHAR_SYMBOL=🚀
 
 # pyenv
-export PYENV_ROOT="${HOME}/.pyenv"
-command -v pyenv >/dev/null || export PATH="${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${PATH}"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # bun
@@ -119,5 +119,17 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH=$PATH:$HOME/.maestro/bin
 
 # fnm
-export PATH="/Users/r.presedo.ext/Library/Application Support/fnm:$PATH"
+export PATH="/Users/r.presedo/Library/Application Support/fnm:$PATH"
 eval "`fnm env`"
+
+# bun completions
+[ -s "/Users/r.presedo/.bun/_bun" ] && source "/Users/r.presedo/.bun/_bun"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+# golang
+export PATH="/usr/local/go:~/go/bin:$PATH"
+export GOPATH=$HOME/go
+export PATH="$GOPATH/bin:$PATH"
+
+# Created by `pipx` on 2024-07-12 14:00:12
+export PATH="$PATH:/Users/r.presedo/.local/bin"
