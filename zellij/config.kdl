@@ -179,7 +179,7 @@ keybinds clear-defaults=true {
 
     shared_except "locked" {
         bind "Alt g" { SwitchToMode "Locked"; }
-        bind "Alt q" { Quit; }
+        bind "Alt Q" { Quit; }
         bind "Alt n" { NewPane; }
         bind "Alt w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
         bind "Alt F" { SwitchToMode "EnterSearch"; SearchInput 0; }
@@ -232,11 +232,12 @@ plugins {
     strider location="zellij:strider"
     compact-bar location="zellij:compact-bar"
     session-manager location="zellij:session-manager"
+    welcome-screen location="zellij:session-manager" {
+        welcome_screen true
+    }
     filepicker location="zellij:strider" {
         cwd "/"
     }
-    configuration location="zellij:configuration"
-    plugin-manager location="zellij:plugin-manager"
 }
 
 // Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
@@ -252,7 +253,7 @@ plugins {
 //    - true
 //    - false (Default)
 //
-// simplified_ui true
+simplified_ui false
 
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
@@ -288,7 +289,7 @@ pane_frames false
 // Options:
 //   - true
 //   - false (default)
-// serialize_pane_viewport true
+serialize_pane_viewport true
 
 // Scrollback lines to serialize along with the pane viewport when serializing sessions, 0
 // defaults to the scrollback size. If this number is higher than the scrollback size, it will
@@ -300,31 +301,31 @@ pane_frames false
 // For more examples, see: https://github.com/zellij-org/zellij/tree/main/example/themes
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
 //
-// themes {
-//     dracula {
-//         fg 248 248 242
-//         bg 40 42 54
-//         red 255 85 85
-//         green 80 250 123
-//         yellow 241 250 140
-//         blue 98 114 164
-//         magenta 255 121 198
-//         orange 255 184 108
-//         cyan 139 233 253
-//         black 0 0 0
-//         white 255 255 255
-//     }
-// }
+themes {
+  my-theme {
+    bg "#585b70" // Surface2
+    fg "#cdd6f4"
+    red "#f38ba8"
+    blue "#a6e3a1"
+    green "#89b4fa"
+    yellow "#f9e2af"
+    magenta "#f5c2e7" // Pink
+    orange "#fab387" // Peach
+    cyan "#89dceb" // Sky
+    black "#181825" // Mantle
+    white "#cdd6f4"
+  }
+}
 
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "tokyo-night-dark"
+theme "my-theme"
 
 // The name of the default layout to load on startup
 // Default: "default"
 //
-default_layout "compact"
+default_layout "default"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal
@@ -370,7 +371,7 @@ default_layout "compact"
 // Enable or disable automatic copy (and clear) of selection when releasing mouse
 // Default: true
 //
-copy_on_select false
+// copy_on_select false
 
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
@@ -386,7 +387,8 @@ copy_on_select false
 
 // The folder in which Zellij will look for layouts
 //
-// layout_dir "/path/to/my/layout_dir"
+// TODO: make it part of the install script
+layout_dir "/Users/r.presedo/Volpex/work/n-ide/zellij/layouts"
 
 // The folder in which Zellij will look for themes
 //
