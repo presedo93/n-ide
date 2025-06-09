@@ -258,7 +258,7 @@ simplified_ui false
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
 //
-// default_shell "fish"
+default_shell "fish"
 
 // Choose the path to override cwd that zellij will use for opening new panes
 //
@@ -297,30 +297,11 @@ serialize_pane_viewport true
 //
 // scrollback_lines_to_serialize 10000
 
-// Define color themes for Zellij
-// For more examples, see: https://github.com/zellij-org/zellij/tree/main/example/themes
-// Once these themes are defined, one of them should to be selected in the "theme" section of this file
-//
-themes {
-  my-theme {
-    bg "#585b70" // Surface2
-    fg "#cdd6f4"
-    red "#f38ba8"
-    blue "#a6e3a1"
-    green "#89b4fa"
-    yellow "#f9e2af"
-    magenta "#f5c2e7" // Pink
-    orange "#fab387" // Peach
-    cyan "#89dceb" // Sky
-    black "#181825" // Mantle
-    white "#cdd6f4"
-  }
-}
-
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "my-theme"
+// theme "my-theme"
+theme "catppuccin-mocha"
 
 // The name of the default layout to load on startup
 // Default: "default"
@@ -376,7 +357,7 @@ default_layout "default"
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
 //
-// scrollback_editor "/usr/bin/vim"
+scrollback_editor "/opt/homebrew/bin/nvim"
 
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)

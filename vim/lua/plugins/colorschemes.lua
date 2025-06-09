@@ -1,6 +1,5 @@
 return {
   { "tiagovla/tokyodark.nvim", priority = 1000, lazy = false },
-  { "scottmckendry/cyberdream.nvim", priority = 1000, lazy = false },
   { "sontungexpt/witch", priority = 1000, lazy = false },
   { "rebelot/kanagawa.nvim", priority = 1000, lazy = false, opts = {
     transparent = true,

@@ -1,0 +1,16 @@
+theme="catppuccin-mocha"
+
+font-family="DankMono Nerd Font"
+font-size=18
+font-thicken=true
+font-thicken-strength=128
+
+background-opacity=0.9
+background-blur-radius=18
+
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+bold-is-bright=true
+macos-titlebar-style="hidden"

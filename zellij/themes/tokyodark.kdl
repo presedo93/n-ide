@@ -1,0 +1,33 @@
+themes {
+  tokyodark {
+    text_unselected { base "#a0a8cd" background "#11121d" }
+    text_selected { base "#11121d" background "#82aaff" }
+
+    ribbon_unselected { base "#c3ccdc" background "#1a1b26" }
+    ribbon_selected { base "#11121d" background "#82aaff" }
+
+    table_title { base "#82aaff" background "#16161e" }
+    table_cell_unselected { base "#a0a8cd" background "#16161e" }
+    table_cell_selected { base "#11121d" background "#82aaff" }
+
+    exit_code_success { base "#c3e88d" }
+    exit_code_error { base "#ff757f" }
+
+    frame_highlight { base "#ff966c" background "#16161e" }
+    list_selected { base "#ffc777" background "#2d4260" }
+
+    multiplayer_user_colors {
+      player_1 "#82aaff"
+      player_2 "#c3e88d"
+      player_3 "#ffc777"
+      player_4 "#c099ff"
+      player_5 "#7fdbca"
+    }
+
+    emphasis_0 "#ff757f"  // Error red
+    emphasis_1 "#c3e88d"  // Success green
+    emphasis_2 "#7fdbca"  // Info teal
+    emphasis_3 "#c099ff"  // Accent purple
+  }
+}
+
