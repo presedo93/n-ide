@@ -72,3 +72,7 @@ In case of having a layout config in zellij.
 ## git
 
 Extra, copy the git config file...
+
+## fish
+
+How to install it in [macOS](https://mmazzarolo.com/blog/2023-11-16-my-fish-shell-setup-on-macos/)

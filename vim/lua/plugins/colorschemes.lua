@@ -1,5 +1,5 @@
 return {
-  { "tiagovla/tokyodark.nvim", priority = 1000, lazy = false },
+  { "tiagovla/tokyodark.nvim", priority = 1000, lazy = false, opts = { transparent_background = true } },
   { "sontungexpt/witch", priority = 1000, lazy = false },
   { "rebelot/kanagawa.nvim", priority = 1000, lazy = false, opts = {
     transparent = true,
