@@ -15,7 +15,6 @@ It contains neovim, zellij or lazygit.
     brew install neovim@HEAD
     brew install zellij
     brew install lazygit
-    brew install lazydocker
 
 Next thing is to install the languages and their package managers.
 
@@ -73,6 +72,14 @@ In case of having a layout config in zellij.
 
 Extra, copy the git config file...
 
+Install [delta](https://github.com/dandavison/delta) for better diffs.
+
+    brew install git-delta
+
 ## fish
 
-How to install it in [macOS](https://mmazzarolo.com/blog/2023-11-16-my-fish-shell-setup-on-macos/)
+How to install it in [macOS](https://mmazzarolo.com/blog/2023-11-16-my-fish-shell-setup-on-macos/). And needed plugins:
+
+    jorgebucaran/fisher
+    jethrokuan/z
+    patrickf1/fzf.fish
