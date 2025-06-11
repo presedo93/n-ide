@@ -19,12 +19,9 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:green bg:sapphire)\
-$conda\
-[](fg:sapphire bg:lavender)\
-$time\
-[ ](fg:lavender)\
+[](fg:green bg:lavender)\
 $cmd_duration\
+[ ](fg:lavender)\
 $line_break\
 $character"""
 
@@ -143,7 +140,7 @@ format = '[$symbol$environment ]($style)'
 ignore_base = false
 
 [time]
-disabled = false
+disabled = true
 time_format = "%R"
 style = "bg:lavender"
 format = '[[  $time ](fg:crust bg:lavender)]($style)'
@@ -162,7 +159,7 @@ vimcmd_visual_symbol = '[❮](bold fg:yellow)'
 
 [cmd_duration]
 show_milliseconds = false
-format = " $duration "
+format = "[[  $duration ](fg:crust bg:lavender)]($style)"
 style = "bg:lavender"
 disabled = false
 show_notifications = true

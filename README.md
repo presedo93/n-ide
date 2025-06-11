@@ -2,23 +2,20 @@
 
 This repo contains all the dotfiles I usually use to configure my OS!
 
-## Kitty
+## Ghostty
 
-For the terminal, kitty is my preference.
-
-    curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+Just download and install it from the internet. And copy the configs.
 
 ## IDE, languages and more
 
 It contains neovim, zellij or lazygit.
 
-    brew install neovim@HEAD
+    brew install neovim
     brew install zellij
     brew install lazygit
 
 Next thing is to install the languages and their package managers.
 
-    brew install ruby
     brew install nodejs
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
@@ -30,23 +27,26 @@ Like pyenv, fnm, etc...
     curl -sSL https://install.python-poetry.org | python3 - --preview
     poetry config virtualenvs.in-project true
 
-    brew install fnm
+    curl -fsSL https://fnm.vercel.app/install | bash
     brew install bat
     brew install eza
-    brew install zoxide
     brew install jq
     brew install fzf
 
-## Oh my Zsh
+## Fish
 
-First, let's install it and then configure some of its plugins and theme.
+Just run the following command to install fish shell:
 
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    brew install fish
+    brew install starship
 
-    git clone https://github.com/spaceship-prompt/spaceship-prompt.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship-prompt" --depth=1
-    ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship.zsh-theme"
+    echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
+    chsh -s /opt/homebrew/bin/fish
+
+    fish_add_path "/opt/homebrew/bin/"
+    fish_update_completions
+
+    curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 
 ## Neovim and lazyvim
 
@@ -61,7 +61,6 @@ Finally, we need to link the rest of the configs.
 
     mkdir -p ~/.config/zellij
     ln -svf $PWD/zsh/zshrc $HOME/.zshrc
-    ln -svf $PWD/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
     ln -svf $PWD/zellij/config.kdl $HOME/.config/zellij/config.kdl
 
 In case of having a layout config in zellij.
