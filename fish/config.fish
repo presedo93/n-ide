@@ -8,4 +8,5 @@ alias lg='lazygit'
 alias ls='eza --icons=always --color=always'
 alias zlj='zellij'
 
+pyenv init - fish | source
 starship init fish | source
