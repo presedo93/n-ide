@@ -20,7 +20,7 @@ $kotlin\
 $haskell\
 $python\
 [](fg:green bg:lavender)\
-$cmd_duration\
+$time\
 [ ](fg:lavender)\
 $line_break\
 $character"""
@@ -140,7 +140,7 @@ format = '[$symbol$environment ]($style)'
 ignore_base = false
 
 [time]
-disabled = true
+disabled = false
 time_format = "%R"
 style = "bg:lavender"
 format = '[[  $time ](fg:crust bg:lavender)]($style)'
