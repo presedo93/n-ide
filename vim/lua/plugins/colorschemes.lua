@@ -1,20 +1,8 @@
 return {
   { "tiagovla/tokyodark.nvim", priority = 1000, lazy = false, opts = { transparent_background = true } },
+  { "catppuccin/nvim", priority = 1000, lazy = false, opts = { transparent_background = true } },
   { "sontungexpt/witch", priority = 1000, lazy = false },
-  { "rebelot/kanagawa.nvim", priority = 1000, lazy = false, opts = {
-    transparent = true,
-  } },
-  { "xero/evangelion.nvim", priority = 1000, lazy = false },
-  {
-    "wheat-thin-wiens/rei.nvim",
-    priority = 1000,
-    opts = {},
-  },
-  {
-    "dgox16/oldworld.nvim",
-    lazy = false,
-    priority = 1000,
-  },
+  { "rebelot/kanagawa.nvim", priority = 1000, lazy = false, opts = { transparent = true } },
   {
     "eldritch-theme/eldritch.nvim",
     priority = 1000,
@@ -53,17 +41,6 @@ return {
       styles = {
         sidebars = "transparent",
       },
-    },
-  },
-  {
-    "uloco/bluloco.nvim",
-    lazy = false,
-    priority = 1000,
-    dependencies = { "rktjmp/lush.nvim" },
-    config = {
-      style = "auto", -- "auto" | "dark" | "light"
-      transparent = true,
-      italics = true,
     },
   },
 }
