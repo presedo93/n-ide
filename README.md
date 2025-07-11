@@ -37,8 +37,10 @@ Like pyenv, fnm, etc...
 
 Just run the following command to install fish shell:
 
+    brew install gh
     brew install fish
     brew install starship
+    brew install sst/tap/opencode
 
     echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
     chsh -s /opt/homebrew/bin/fish
@@ -82,3 +84,7 @@ How to install it in [macOS](https://mmazzarolo.com/blog/2023-11-16-my-fish-shel
     jorgebucaran/fisher
     jethrokuan/z
     patrickf1/fzf.fish
+    meaningful-ooo/sponge
+    jorgebucaran/autopair.fish
+    gazorby/fish-abbreviation-tips
+    fishingline/safe-rm
