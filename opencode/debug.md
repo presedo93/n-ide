@@ -1,7 +1,7 @@
 ---
 description: Systematically identifies and resolves bugs with root cause analysis
 mode: subagent
-model: anthropic/claude-opus-4-1-20250805
+model: anthropic/claude-opus-4-1
 temperature: 0.2
 tools:
   write: true

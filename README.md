@@ -58,6 +58,10 @@ It contains neovim, zellij or lazygit.
     ln -svf $PWD/zellij/config.kdl $HOME/.config/zellij/config.kdl
     ln -svf $PWD/zellij/layouts/default.kdl $HOME/.config/zellij/layouts/default.kdl
 
+Install the ascii image converter:
+
+    brew install TheZoraiz/ascii-image-converter/ascii-image-converter
+
 ## Tools
 
 Like pyenv, fnm, etc...

@@ -1,7 +1,7 @@
 ---
 description: Creates comprehensive test suites with high coverage and edge case handling
 mode: subagent
-model: anthropic/claude-sonnet-4-20250514
+model: anthropic/claude-sonnet-4
 temperature: 0.15
 tools:
   read: true

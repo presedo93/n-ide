@@ -1,6 +1,6 @@
 ---
 description: Primary development agent with full capabilities for active coding
-model: anthropic/claude-sonnet-4-20250514
+model: anthropic/claude-sonnet-4
 temperature: 0.25
 tools:
   "*": true

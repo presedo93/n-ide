@@ -1,6 +1,6 @@
 ---
 description: Strategic planning and architecture without code modifications
-model: anthropic/claude-sonnet-4-20250514
+model: anthropic/claude-sonnet-4
 temperature: 0.4
 tools:
   read: true
