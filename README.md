@@ -77,3 +77,9 @@ Install [delta](https://github.com/dandavison/delta) for better diffs.
 
     brew install lazygit git-delta
     ln -svf $PWD/lazygit/config.yml $HOME/Library/Application\ Support/lazygit/config.yml
+
+## opencode
+
+Link all the opencode agents:
+
+    ln -svf $PWD/opencode/* ~/.config/opencode/agent
