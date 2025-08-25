@@ -31,7 +31,8 @@ Just run the following command to install fish shell:
     ln -svf $PWD/fish/starship.toml $HOME/.config/starship.toml
     ln -svf $PWD/fish/config.fish $HOME/.config/fish/config.fish
 
-    curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+    curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | \
+    source && fisher install jorgebucaran/fisher
 
 ### fisher
 
@@ -67,6 +68,7 @@ Install the ascii image converter:
 Like pyenv, fnm, etc...
 
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    rustup component add rust-analyzer clippy
     brew install nodejs fnm bat eza jq fzf readline xz pyenv
 
     curl -sSL https://install.python-poetry.org | python3 - --preview
@@ -81,9 +83,11 @@ Install [delta](https://github.com/dandavison/delta) for better diffs.
 
     brew install lazygit git-delta
     ln -svf $PWD/lazygit/config.yml $HOME/Library/Application\ Support/lazygit/config.yml
+    ln -svf $PWD/lazygit/gitconfig $HOME/.gitconfig
 
 ## opencode
 
 Link all the opencode agents:
 
+    mkdir -p ~/.config/opencode/agent
     ln -svf $PWD/opencode/* ~/.config/opencode/agent
