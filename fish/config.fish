@@ -8,6 +8,8 @@ alias lg='lazygit'
 alias ls='eza --icons=always --color=always'
 alias zlj='zellij'
 
+set -gx EDITOR nvim
+
 pyenv init - fish | source
 starship init fish | source
 
