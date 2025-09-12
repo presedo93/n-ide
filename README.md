@@ -72,7 +72,7 @@ Like pyenv, fnm, etc...
     brew install nodejs fnm bat eza jq fzf readline xz pyenv
 
     curl -sSL https://install.python-poetry.org | python3 - --preview
-    export PATH="/Users/presedo/.local/bin:$PATH"
+    fish_add_path ~/.local/bin
     poetry config virtualenvs.in-project true
 
 ## git
