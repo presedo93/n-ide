@@ -92,6 +92,13 @@ Link all the opencode agents:
     mkdir -p ~/.config/opencode/agent
     ln -svf $PWD/opencode/* ~/.config/opencode/agent
 
+## codex
+
+Link the `AGENTS.md` file:
+
+    mkdir -p ~/.codex
+    ln -svf $PWD/codex/AGENTS.md ~/.codex/AGENTS.md
+
 ## ssh
 
 When doing ssh, some instances won't map the **backspace** key properly. To fix
