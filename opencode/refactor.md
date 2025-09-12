@@ -1,7 +1,7 @@
 ---
 description: Improves code structure and quality while preserving functionality
 mode: subagent
-model: anthropic/claude-sonnet-4
+model: github-copilot/gpt-5
 temperature: 0.2
 tools:
   read: true

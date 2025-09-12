@@ -1,6 +1,6 @@
 ---
 description: Primary development agent with full capabilities for active coding
-model: anthropic/claude-sonnet-4
+model: github-copilot/gpt-5-mini
 temperature: 0.25
 tools:
   "*": true

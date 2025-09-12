@@ -1,6 +1,6 @@
 ---
 description: Strategic planning and architecture without code modifications
-model: anthropic/claude-sonnet-4
+model: github-copilot/gpt-5-mini
 temperature: 0.4
 tools:
   read: true

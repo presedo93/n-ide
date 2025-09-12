@@ -1,7 +1,7 @@
 ---
 description: Creates and maintains comprehensive technical documentation
 mode: subagent
-model: anthropic/claude-sonnet-4
+model: github-copilot/gpt-5-mini
 temperature: 0.3
 tools:
   write: true

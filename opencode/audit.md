@@ -1,7 +1,7 @@
 ---
 description: Identifies security vulnerabilities and provides remediation guidance
 mode: subagent
-model: anthropic/claude-sonnet-4
+model: github-copilot/gpt-5-mini
 temperature: 0.1
 tools:
   write: false

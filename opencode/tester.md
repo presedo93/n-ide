@@ -1,7 +1,7 @@
 ---
 description: Creates comprehensive test suites with high coverage and edge case handling
 mode: subagent
-model: anthropic/claude-sonnet-4
+model: github-copilot/gpt-5-mini
 temperature: 0.15
 tools:
   read: true
