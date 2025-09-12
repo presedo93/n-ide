@@ -91,3 +91,10 @@ Link all the opencode agents:
 
     mkdir -p ~/.config/opencode/agent
     ln -svf $PWD/opencode/* ~/.config/opencode/agent
+
+## ssh
+
+When doing ssh, some instances won't map the **backspace** key properly. To fix
+that, run this command replacing the `YOUR-SERVER` variable:
+
+    infocmp -x xterm-ghostty | ssh YOUR-SERVER -- tic -x -

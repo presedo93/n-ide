@@ -12,3 +12,6 @@
 
 [fetch]
     prune = true
+[user]
+	email = presedo93@gmail.com
+	name = Rene Presedo
