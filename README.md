@@ -58,6 +58,7 @@ It contains neovim, zellij or lazygit.
 ```bash
 brew install neovim
 brew install zellij
+brew install tree-sitter-cli
 
 mkdir -p ~/.config/nvim
 ln -svf $PWD/vim/* $HOME/.config/nvim
