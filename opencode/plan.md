@@ -1,6 +1,6 @@
 ---
 description: Strategic planning and architecture without code modifications
-model: github-copilot/gpt-5-mini
+model: github-copilot/gpt-5-codex
 temperature: 0.4
 tools:
   read: true

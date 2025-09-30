@@ -1,6 +1,6 @@
 ---
 description: Primary development agent with full capabilities for active coding
-model: github-copilot/gpt-5-mini
+model: github-copilot/gpt-5-codex
 temperature: 0.25
 tools:
   "*": true

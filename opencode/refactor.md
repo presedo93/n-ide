@@ -1,7 +1,7 @@
 ---
 description: Improves code structure and quality while preserving functionality
 mode: subagent
-model: github-copilot/gpt-5
+model: github-copilot/claude-opus-41
 temperature: 0.2
 tools:
   read: true

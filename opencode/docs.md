@@ -1,7 +1,7 @@
 ---
 description: Creates and maintains comprehensive technical documentation
 mode: subagent
-model: github-copilot/gpt-5-mini
+model: github-copilot/gpt-5-codex
 temperature: 0.3
 tools:
   write: true

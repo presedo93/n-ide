@@ -1,7 +1,7 @@
 ---
 description: Systematically identifies and resolves bugs with root cause analysis
 mode: subagent
-model: github-copilot/gpt-5
+model: github-copilot/claude-opus-41
 temperature: 0.2
 tools:
   write: true

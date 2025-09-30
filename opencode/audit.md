@@ -1,7 +1,7 @@
 ---
 description: Identifies security vulnerabilities and provides remediation guidance
 mode: subagent
-model: github-copilot/gpt-5-mini
+model: github-copilot/gpt-5-codex
 temperature: 0.1
 tools:
   write: false
