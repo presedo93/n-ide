@@ -1,7 +1,7 @@
 ---
 description: Creates comprehensive test suites with high coverage and edge case handling
 mode: subagent
-model: github-copilot/gpt-5-codex
+model: github-copilot/claude-sonnet-4.5
 temperature: 0.15
 tools:
   read: true

@@ -1,6 +1,6 @@
 ---
 description: Strategic planning and architecture without code modifications
-model: github-copilot/gpt-5-codex
+model: github-copilot/claude-opus-41
 temperature: 0.4
 tools:
   read: true
