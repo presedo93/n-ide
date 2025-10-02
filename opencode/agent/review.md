@@ -1,7 +1,7 @@
 ---
 description: Reviews code for quality, best practices, and architectural patterns
 mode: subagent
-model: github-copilot/claude-sonnet-4.5
+model: openai/gpt-5-codex
 temperature: 0.1
 tools:
   write: false

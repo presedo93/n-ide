@@ -1,6 +1,6 @@
 ---
 description: Primary development agent with full capabilities for active coding
-model: github-copilot/claude-sonnet-4.5
+model: openai/gpt-5-codex
 temperature: 0.25
 tools:
   "*": true

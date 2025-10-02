@@ -106,7 +106,8 @@ Link all the opencode agents:
 
 ```bash
 mkdir -p ~/.config/opencode/agent
-ln -svf $PWD/opencode/* ~/.config/opencode/agent
+ln -svf $PWD/opencode/agent/*.md ~/.config/opencode/agent
+ln -svf $PWD/opencode/config.json ~/.config/opencode/config.json
 ```
 
 ## codex
