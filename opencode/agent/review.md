@@ -1,7 +1,7 @@
 ---
 description: Reviews code for quality, best practices, and architectural patterns
 mode: subagent
-model: openai/gpt-5-codex
+model: openai/gpt-5-codex-medium
 temperature: 0.1
 tools:
   write: false

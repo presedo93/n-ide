@@ -1,7 +1,7 @@
 ---
 description: Creates and maintains comprehensive technical documentation
 mode: subagent
-model: openai/gpt-5-codex
+model: openai/gpt-5-codex-medium
 temperature: 0.3
 tools:
   write: true

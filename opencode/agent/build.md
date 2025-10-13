@@ -1,7 +1,8 @@
 ---
 description: Primary development agent with full capabilities for active coding
-model: openai/gpt-5-codex
+model: openai/gpt-5-codex-medium
 temperature: 0.25
+mode: primary
 tools:
   "*": true
 permissions:

@@ -1,7 +1,7 @@
 ---
 description: Identifies security vulnerabilities and provides remediation guidance
 mode: subagent
-model: openai/gpt-5-codex
+model: openai/gpt-5-codex-medium
 temperature: 0.1
 tools:
   write: false
