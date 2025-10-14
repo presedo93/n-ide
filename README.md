@@ -127,3 +127,12 @@ that, run this command replacing the `YOUR-SERVER` variable:
 ```bash
 infocmp -x xterm-ghostty | ssh YOUR-SERVER -- tic -x -
 ```
+
+## rust
+
+Link the cargo config file:
+
+```bash
+mkdir -p ~/.cargo
+ln -svf $PWD/rust/cargo.toml $HOME/.cargo/config.toml
+```
