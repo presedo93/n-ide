@@ -1,7 +1,6 @@
 ---
 description: Improves code structure and quality while preserving functionality
 mode: subagent
-model: github-copilot/claude-sonnet-4.5
 temperature: 0.2
 tools:
   read: true

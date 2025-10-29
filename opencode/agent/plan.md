@@ -1,6 +1,5 @@
 ---
 description: Strategic planning and architecture without code modifications
-model: github-copilot/claude-opus-41
 temperature: 0.4
 mode: primary
 tools:

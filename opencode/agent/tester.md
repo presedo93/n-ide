@@ -1,7 +1,6 @@
 ---
 description: Creates comprehensive test suites with high coverage and edge case handling
 mode: subagent
-model: openai/gpt-5-codex-medium
 temperature: 0.15
 tools:
   read: true
