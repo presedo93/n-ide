@@ -3,6 +3,9 @@
   "theme": "catppuccin",
   "model": "github-copilot/claude-sonnet-4.5",
   "small_model": "github-copilot/claude-haiku-4.5",
+  "keybinds": {
+    "command_list": "ctrl+P"
+  },
   "mcp": {
     "context7": {
       "type": "remote",
