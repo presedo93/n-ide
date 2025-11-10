@@ -108,6 +108,8 @@ Link all the opencode agents:
 mkdir -p ~/.config/opencode/agent
 ln -svf $PWD/opencode/agent/*.md ~/.config/opencode/agent
 ln -svf $PWD/opencode/config.json ~/.config/opencode/config.json
+
+npm install -g @upstash/context7-mcp
 ```
 
 ## codex
