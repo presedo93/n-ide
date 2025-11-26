@@ -1,16 +1,17 @@
-theme="TokyoNight"
+theme = "Catppuccin Mocha"
 
-font-family="DankMono Nerd Font"
-font-size=18
-font-thicken=true
-font-thicken-strength=128
+font-family = "DankMono Nerd Font"
+font-size = 16
+font-thicken = true
+font-thicken-strength = 64
 
-background-opacity=0.93
-background-blur-radius=16
+alpha-blending = linear
+background-opacity = 0.86
+background-blur = 20
 
 cursor-style = block
 cursor-style-blink = false
-shell-integration-features = no-cursor
+shell-integration-features = true
 
-bold-is-bright=true
-macos-titlebar-style="hidden"
+bold-color = bright
+macos-titlebar-style = "hidden"
