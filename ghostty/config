@@ -1,17 +1,52 @@
+# Theme:
 theme = "Catppuccin Mocha"
 
+# Font configuration:
 font-family = "DankMono Nerd Font"
+font-family-bold = "Cartograph CF"
+font-family-italic = "Cartograph CF"
+font-family-bold-italic = "Cartograph CF"
 font-size = 16
-font-thicken = true
-font-thicken-strength = 64
+
+adjust-cell-width = -5%
+adjust-cell-height = 20%
+adjust-underline-position = 6
+adjust-underline-thickness = 40%
+adjust-cursor-thickness = 150%
 
 alpha-blending = linear
 background-opacity = 0.86
 background-blur = 20
 
-cursor-style = block
+# Cursor:
+cursor-color = F8F8F2
 cursor-style-blink = false
-shell-integration-features = true
+cursor-text = 000000
+shell-integration-features = no-cursor
 
+# Let me close stuff in peace:
+confirm-close-surface = false
+
+# Brighter:
 bold-color = bright
+
+# Title bar font:
+window-title-font-family = "DankMono Nerd Font"
+
+# Hide titlebar:
 macos-titlebar-style = "hidden"
+
+# Enable URLs:
+link-url = true
+
+# Treat the option key as alt:
+macos-option-as-alt = true
+
+# No shadow looks cleaner:
+macos-window-shadow = false
+
+# It's annoying:
+mouse-hide-while-typing = true
+
+# To keep background:
+macos-non-native-fullscreen = true
