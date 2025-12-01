@@ -1,8 +1,27 @@
 # $HOME/Library/Application Support/lazygit/config.yml
+notARepository: 'quit'
+
 git:
   pagers:
     - colorArg: always
-      pager: delta --dark --paging=never
+      pager: diff-so-fancy
+
+os:
+  editPreset: nvim
+
+gui:
+  showBottomLine: false
+  theme:
+    activeBorderColor:
+      - magenta
+    selectedLineBgColor:
+      - black
+    unstagedChangesColor:
+      - yellow
+  border: rounded
+  nerdFontsVersion: '3'
+  skipDiscardChangeWarning: true
+
 customCommands:
   - key: "C"
     command: 'git commit -m "{{ .Form.Type }}{{if .Form.Scopes}}({{ .Form.Scopes }}){{end}}{{if eq .Form.Breaking `yes`}}!{{end}}: {{ .Form.Description }}"'

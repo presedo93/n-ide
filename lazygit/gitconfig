@@ -1,18 +1,41 @@
 [core]
-    pager = "delta"
+	editor = nvim
+  pager = "diff-so-fancy"
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[filter "git-ignore"]
+	clean = "sed '/#\\s*git-ignore$/d'"
+	smudge = cat
+
+[init]
+	defaultBranch = main
 
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 
 [delta]
-    navigate = true
+  navigate = true
 
 [merge]
-    conflictstyle = zdiff3
+  conflictstyle = zdiff3
 
 [fetch]
-    prune = true
+  prune = true
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
 
 [user]
+  name = Rene Presedo
 	email = presedo93@gmail.com
-	name = Rene Presedo
+
+[advice]
+	skippedCherryPicks = false

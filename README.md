@@ -92,10 +92,10 @@ echo 'uv generate-shell-completion fish | source' > ~/.config/fish/completions/u
 
 Extra, copy the git config file...
 
-Install [delta](https://github.com/dandavison/delta) for better diffs.
+Install [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) for better diffs.
 
 ```bash
-brew install lazygit git-delta
+brew install lazygit diff-so-fancy
 ln -svf $PWD/lazygit/config.yml $HOME/Library/Application\ Support/lazygit/config.yml
 ln -svf $PWD/lazygit/gitconfig $HOME/.gitconfig
 ```
