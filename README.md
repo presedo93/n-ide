@@ -63,8 +63,9 @@ brew install tree-sitter-cli
 mkdir -p ~/.config/nvim
 ln -svf $PWD/vim/* $HOME/.config/nvim
 
-mkdir -p ~/.config/zellij
+mkdir -p ~/.config/zellij && mkdir -p ~/.config/zellij/themes
 ln -svf $PWD/zellij/config.kdl $HOME/.config/zellij/config.kdl
+ln -svf $PWD/zellij/themes/*.kdl $HOME/.config/zellij/themes/
 ln -svf $PWD/zellij/layouts/default.kdl $HOME/.config/zellij/layouts/default.kdl
 ```
 

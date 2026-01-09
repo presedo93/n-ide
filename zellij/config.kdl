@@ -247,8 +247,8 @@ plugins {
 // Plugins to load in the background when a new session starts
 // eg. "file:/path/to/my-plugin.wasm"
 // eg. "https://example.com/my-plugin.wasm"
-load_plugins {
-}
+load_plugins { }
+
 ui {
     pane_frames {
         rounded_corners true
@@ -311,7 +311,7 @@ default_layout "default"
 //   - true (default, enabled)
 //   - false
 // 
-pane_frames false
+pane_frames true
  
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)

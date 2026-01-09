@@ -51,7 +51,9 @@ layout {
     }
 
     swap_floating_layout name="staggered" {
-        floating_panes
+        floating_panes max_panes=1 {
+            pane {y "20%"; x "16%"; width "70%"; height "50%"; }
+        }
     }
 
     swap_floating_layout name="enlarged" {
