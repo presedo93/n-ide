@@ -106,20 +106,12 @@ ln -svf $PWD/lazygit/gitconfig $HOME/.gitconfig
 Link all the opencode agents:
 
 ```bash
-mkdir -p ~/.config/opencode/agent
-ln -svf $PWD/opencode/agent/*.md ~/.config/opencode/agent
-ln -svf $PWD/opencode/config.json ~/.config/opencode/config.json
-
-npm install -g @upstash/context7-mcp
+ln -svf $PWD/opencode/opencode.jsonc ~/.config/opencode/opencode.jsonc
 ```
 
-## codex
+```
 
-Link the `AGENTS.md` file:
-
-```bash
-mkdir -p ~/.codex
-ln -svf $PWD/codex/AGENTS.md ~/.codex/AGENTS.md
+npm install -g @upstash/context7-mcp
 ```
 
 ## ssh
