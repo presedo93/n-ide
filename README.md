@@ -107,10 +107,10 @@ Link all the opencode agents:
 
 ```bash
 ln -svf $PWD/opencode/opencode.jsonc ~/.config/opencode/opencode.jsonc
+ln -svf $PWD/opencode/oh-my-opencode.json ~/.config/opencode/oh-my-opencode.json
 ```
 
-```
-
+```bash
 npm install -g @upstash/context7-mcp
 ```
 
