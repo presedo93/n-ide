@@ -28,7 +28,7 @@ return {
         fluo = "cyan", -- "pink" | "cyan" | "yellow" | "orange" | "green"
       },
       ui = {
-        borders = "fluo", -- "theme" | "inverse" | "fluo" | "none"
+        borders = "light", -- "theme" | "inverse" | "fluo" | "none"
         aggressive_spell = true, -- true | false
       },
     },
