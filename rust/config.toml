@@ -1,4 +1,0 @@
-# ~/.cargo/config.toml file
-
-[build]
-rustc-wrapper = "/opt/homebrew/Cellar/sccache/0.11.0/bin/sccache"

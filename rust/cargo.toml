@@ -1,0 +1,2 @@
+[build]
+rustc-wrapper = "/opt/homebrew/Cellar/sccache/0.14.0/bin/sccache"
