@@ -130,3 +130,16 @@ Link the cargo config file:
 mkdir -p ~/.cargo
 ln -svf $PWD/rust/cargo.toml $HOME/.cargo/config.toml
 ```
+
+## docker
+
+Instead of using `docker` or `orbstack` we can go with `colima` which is a
+docker alternative that runs on top of qemu and is more lightweight.
+
+```bash
+brew install colima
+brew install docker docker-compose docker-buildx
+```
+
+After installing, run `brew info docker` to get the instructions to
+link the docker cli to colima.
