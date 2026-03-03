@@ -45,7 +45,6 @@ fisher install \
 jorgebucaran/fisher \
 jethrokuan/z \
 patrickf1/fzf.fish \
-meaningful-ooo/sponge \
 jorgebucaran/autopair.fish \
 gazorby/fish-abbreviation-tips \
 fishingline/safe-rm
