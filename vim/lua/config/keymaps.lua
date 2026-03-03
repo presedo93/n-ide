@@ -12,6 +12,9 @@ vim.keymap.set("n", "U", "<C-r>", { desc = "Re-do" })
 vim.keymap.set({ "n", "x" }, "d", '"_d', { noremap = true, silent = true, desc = "Delete without yanking" })
 vim.keymap.set("n", "dd", '"_dd', { noremap = true, silent = true, desc = "Delete line without yanking" })
 
+vim.keymap.set("n", "Y", '"+y', { noremap = true, silent = true, desc = "Yank to system clipboard" })
+vim.keymap.set("v", "Y", '"+y', { noremap = true, silent = true, desc = "Yank to system clipboard" })
+
 vim.keymap.set("t", "<S-Right>", function()
   Snacks.terminal(nil, { win = { split = "right" } })
 end, { desc = "Right split terminal" })
