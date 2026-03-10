@@ -3,6 +3,7 @@ return {
   { "catppuccin/nvim", priority = 1000, lazy = false, opts = { transparent_background = true } },
   { "sontungexpt/witch", priority = 1000, lazy = false },
   { "rebelot/kanagawa.nvim", priority = 1000, lazy = false, opts = { transparent = true } },
+  { "rose-pine/neovim", priority = 1000, name = "rose-pine" },
   {
     "eldritch-theme/eldritch.nvim",
     priority = 1000,
