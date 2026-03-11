@@ -95,9 +95,14 @@ Extra, copy the git config file...
 Install [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) for better diffs.
 
 ```bash
-brew install lazygit diff-so-fancy
+gh extension install dlvhdr/gh-dash
+gh extension install dlvhdr/gh-enhance
+brew install lazygit diff-so-fancy dlvhdr/formulae/diffnav
+
 ln -svf $PWD/lazygit/config.yml $HOME/Library/Application\ Support/lazygit/config.yml
 ln -svf $PWD/lazygit/gitconfig $HOME/.gitconfig
+ln -svf $PWD/lazygit/gitignore $HOME/.gitignore
+ln -svf $PWD/lazygit/dash.yml $HOME/.config/gh-dash/config.yml
 ```
 
 ## opencode

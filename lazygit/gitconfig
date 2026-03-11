@@ -1,6 +1,7 @@
 [core]
 	editor = nvim
   pager = "diff-so-fancy"
+  excludesFile = ~/.gitignore
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
