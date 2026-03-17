@@ -124,6 +124,12 @@ keybinds clear-defaults=true {
             }
             SwitchToMode "normal"
         }
+        bind "W" {
+            LaunchOrFocusPlugin "https://github.com/dj95/zj-smart-sessions/releases/latest/download/zj-smart-sessions.wasm" {
+                floating true
+            }
+            SwitchToMode "Normal"
+        }
     }
     shared_except "locked" {
         bind "Alt left" { MoveFocusOrTab "left"; }
