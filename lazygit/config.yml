@@ -1,5 +1,5 @@
 # $HOME/Library/Application Support/lazygit/config.yml
-notARepository: 'quit'
+notARepository: "quit"
 
 git:
   pagers:
@@ -11,15 +11,30 @@ os:
 
 gui:
   showBottomLine: false
+  # eldritch
   theme:
+    inactiveBorderColor:
+      - "#37f499"
+    defaultFgColor:
+      - "#ebfafa"
+    cherryPickedCommitFgColor:
+      - "#f265b5"
+    cherryPickedCommitBgColor:
+      - "#a48cf2"
     activeBorderColor:
-      - magenta
-    selectedLineBgColor:
-      - black
+      - "#f7c67f"
+      - "bold"
     unstagedChangesColor:
-      - yellow
+      - "#f16c75"
+    selectedLineBgColor:
+      - "#722f55"
+    searchingActiveBorderColor:
+      - "#f7c67f"
+      - "bold"
+    optionsTextColor:
+      - "#f265b5"
   border: rounded
-  nerdFontsVersion: '3'
+  nerdFontsVersion: "3"
   skipDiscardChangeWarning: true
 
 customCommands:
