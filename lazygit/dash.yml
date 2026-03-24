@@ -86,12 +86,12 @@ keybindings:
     - key: G
       name: laygit
       command: lazygit
-    - key: C
-      name: code review
-      command: nvim -c ":silent Octo pr edit {{.PrNumber}}"
     - key: S
       name: squash merge
       command: gh pr merge --repo {{.RepoName}} {{.PrNumber}} --squash --delete-branch
+    - key: N
+      name: new worktree
+      command: source ~/.config/fish/functions/worktrees.fish; gh_review_worktree {{.PrNumber}}
 repoPaths: {}
 theme:
   ui:

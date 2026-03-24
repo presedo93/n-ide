@@ -8,6 +8,7 @@ git:
 
 os:
   editPreset: nvim
+  shellFunctionsFile: ~/.config/fish/functions/worktrees.fish
 
 gui:
   showBottomLine: false
@@ -38,6 +39,16 @@ gui:
   skipDiscardChangeWarning: true
 
 customCommands:
+  - key: "W"
+    context: "localBranches"
+    description: "Create new worktree from typed branch name"
+    prompts:
+      - type: "input"
+        title: "New branch name"
+        key: "BranchName"
+    command: "gh_create_worktree {{.Form.BranchName | quote}}"
+    loadingText: "Creating worktree"
+    output: "popup"
   - key: "C"
     command: 'git commit -m "{{ .Form.Type }}{{if .Form.Scopes}}({{ .Form.Scopes }}){{end}}{{if eq .Form.Breaking `yes`}}!{{end}}: {{ .Form.Description }}"'
     description: "commit with commitizen"

@@ -32,6 +32,7 @@ set -gx EDITOR nvim
 
 ln -svf $PWD/fish/starship.toml $HOME/.config/starship.toml
 ln -svf $PWD/fish/config.fish $HOME/.config/fish/config.fish
+ln -svf $PWD/fish/functions/worktrees.fish $HOME/.config/fish/functions/worktrees.fish
 
 curl -sL
 https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish
