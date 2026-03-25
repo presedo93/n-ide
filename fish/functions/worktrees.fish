@@ -34,6 +34,10 @@ function gh_review_worktree
     else
         git fetch origin "pull/$pr_number/head:$branch_name"; or return 1
         git worktree add "$worktree_path" "$branch_name"; or return 1
+
+        # configure upstream tracking so Octo recognises the PR branch
+        git -C "$worktree_path" config "branch.$branch_name.remote" origin
+        git -C "$worktree_path" config "branch.$branch_name.merge" "refs/heads/$branch_name"
     end
 
     nvim --cmd "cd $worktree_path" -c "Octo pr edit $pr_number"
