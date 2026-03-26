@@ -89,7 +89,7 @@ keybindings:
     - key: S
       name: squash merge
       command: gh pr merge --repo {{.RepoName}} {{.PrNumber}} --squash --delete-branch
-    - key: N
+    - key: Z
       name: new worktree
       command: source ~/.config/fish/functions/worktrees.fish; gh_review_worktree {{.PrNumber}}
 repoPaths: {}

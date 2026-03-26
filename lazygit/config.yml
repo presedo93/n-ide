@@ -39,7 +39,7 @@ gui:
   skipDiscardChangeWarning: true
 
 customCommands:
-  - key: "W"
+  - key: "Z"
     context: "localBranches"
     description: "Create new worktree from typed branch name"
     prompts:
