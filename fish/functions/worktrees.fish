@@ -64,15 +64,27 @@ function gh_create_worktree
         return 1
     end
 
-    set -l worktree_path (_git_worktree_path "$repo_root" "$branch_name")
-
-    if test -d "$worktree_path"
-        echo "Worktree already exists: $worktree_path" >&2
-        return 1
+    if string match -q 'origin/*' "$branch_name"
+        # remote branch: strip the origin/ prefix
+        set -l local_name (string replace 'origin/' '' "$branch_name")
+        set -l worktree_path (_git_worktree_path "$repo_root" "$local_name")
+        if test -d "$worktree_path"
+            echo "Worktree already exists: $worktree_path" >&2
+            return 1
+        end
+        mkdir -p "$repo_root/.worktrees"; or return 1
+        git fetch origin "$local_name" 2>/dev/null
+        git worktree add --track -b "$local_name" "$worktree_path" "$branch_name"; or return 1
+        echo "Created worktree from $branch_name: $worktree_path"
+    else
+        # new local branch
+        set -l worktree_path (_git_worktree_path "$repo_root" "$branch_name")
+        if test -d "$worktree_path"
+            echo "Worktree already exists: $worktree_path" >&2
+            return 1
+        end
+        mkdir -p "$repo_root/.worktrees"; or return 1
+        git worktree add -b "$branch_name" "$worktree_path"; or return 1
+        echo "Created worktree: $worktree_path"
     end
-
-    mkdir -p "$repo_root/.worktrees"; or return 1
-    git worktree add -b "$branch_name" "$worktree_path"; or return 1
-
-    echo "Created worktree: $worktree_path"
 end
