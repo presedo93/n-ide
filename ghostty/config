@@ -2,20 +2,20 @@
 theme = "Catppuccin Mocha"
 
 # Font configuration:
-font-family="Cartograph CF"
+font-family="0xProto Nerd Font"
 font-size=13
 font-thicken=true
 font-thicken-strength=32
 
-adjust-font-baseline=80%
-adjust-cell-width=10%
-adjust-cell-height=30%
+adjust-font-baseline=20%
+adjust-cell-width=8%
+adjust-cell-height=25%
 adjust-underline-position=6
-adjust-underline-thickness=40%
-adjust-cursor-thickness=150%
+adjust-underline-thickness=20%
+adjust-cursor-thickness=10%
 
 alpha-blending=linear
-background-opacity=0.86
+background-opacity=1
 background-blur=20
 
 # Cursor:
