@@ -14,6 +14,24 @@ return {
       styles = {
         sidebars = "transparent",
       },
+      on_highlights = function(hl, c)
+        -- remove rust-analyzer unresolved reference underline
+        hl["@lsp.type.unresolvedReference"] = {
+          fg = c.text,
+          bg = "NONE",
+          underline = false,
+          undercurl = false,
+          sp = "NONE",
+        }
+
+        hl["@lsp.type.unresolvedReference.rust"] = {
+          fg = c.text,
+          bg = "NONE",
+          underline = false,
+          undercurl = false,
+          sp = "NONE",
+        }
+      end,
     },
   },
   {
