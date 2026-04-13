@@ -99,7 +99,7 @@ Install [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) for better di
 ```bash
 gh extension install dlvhdr/gh-dash
 gh extension install dlvhdr/gh-enhance
-brew install lazygit diff-so-fancy dlvhdr/formulae/diffnav
+brew install lazygit diff-so-fancy dlvhdr/formulae/diffnav sem-cli
 
 ln -svf $PWD/lazygit/config.yml $HOME/Library/Application\ Support/lazygit/config.yml
 ln -svf $PWD/lazygit/gitconfig $HOME/.gitconfig
