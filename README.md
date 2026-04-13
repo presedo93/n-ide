@@ -9,7 +9,8 @@ E.g., *Dank Mono Nerd Font*!
 
 ## Ghostty
 
-Just download and install it from the internet. And copy the configs.
+Just download and install it from the internet. And copy the configs
+(remember to install the theme).
 
 ## Fish
 
