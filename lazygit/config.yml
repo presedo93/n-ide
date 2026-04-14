@@ -3,8 +3,7 @@ notARepository: "quit"
 
 git:
   pagers:
-    - colorArg: always
-      pager: diff-so-fancy
+    - useExternalDiffGitConfig: true
 
 os:
   editPreset: nvim

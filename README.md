@@ -107,6 +107,14 @@ ln -svf $PWD/lazygit/gitignore $HOME/.gitignore
 ln -svf $PWD/lazygit/dash.yml $HOME/.config/gh-dash/config.yml
 ```
 
+Setup sem for even better diffs:
+
+```bash
+sem setup
+```
+
+Remember to modify the wrapper `sem` creates to add the `-v` flag.
+
 ## opencode
 
 Link all the opencode agents:

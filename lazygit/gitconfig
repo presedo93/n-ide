@@ -40,3 +40,6 @@
 
 [advice]
 	skippedCherryPicks = false
+
+[diff]
+	external = sem-diff-wrapper
