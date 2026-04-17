@@ -9,7 +9,6 @@ alias zlj='zellij'
 
 set -gx EDITOR nvim
 
-pyenv init - fish | source
 starship init fish | source
 
 # Set up Ghostty's shell integration.

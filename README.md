@@ -78,12 +78,12 @@ brew install TheZoraiz/ascii-image-converter/ascii-image-converter
 
 ## Tools
 
-Like pyenv, fnm, uv, etc...
+Like fnm, uv, etc...
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup component add rust-analyzer clippy
-brew install nodejs fnm bat eza jq fzf readline xz pyenv
+brew install nodejs fnm bat eza jq fzf readline xz
 
 curl -LsSf https://astral.sh/uv/install.sh | sh
 echo 'uv generate-shell-completion fish | source' > ~/.config/fish/completions/uv.fish
