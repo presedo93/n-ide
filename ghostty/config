@@ -1,15 +1,15 @@
 # Theme:
-theme = "eldritch"
+theme = "Eldritch"
 
 # Font configuration:
-font-family="0xProto Nerd Font"
-font-size=13
+font-family="Iosevka Custom"
+font-size=15
 font-thicken=true
-font-thicken-strength=32
+font-thicken-strength=128
 
 adjust-font-baseline=20%
 adjust-cell-width=8%
-adjust-cell-height=25%
+adjust-cell-height=4%
 adjust-underline-position=6
 adjust-underline-thickness=20%
 adjust-cursor-thickness=10%
@@ -19,7 +19,7 @@ background-opacity=1
 background-blur=20
 
 # Cursor:
-cursor-color=F8F8F2
+cursor-color=#F8F8F2
 cursor-style-blink=false
 cursor-text=000000
 shell-integration-features=no-cursor
