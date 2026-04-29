@@ -39,15 +39,6 @@ function gh_review_worktree
         git -C "$worktree_path" config "branch.$branch_name.remote" origin
         git -C "$worktree_path" config "branch.$branch_name.merge" "refs/heads/$branch_name"
     end
-
-    nvim --cmd "cd $worktree_path" -c "Octo pr edit $pr_number"
-
-    # clean up worktree and local branch after nvim exits
-    read -l -P "Remove worktree and branch '$branch_name'? [y/N] " confirm
-    if test "$confirm" = y -o "$confirm" = Y
-        git worktree remove --force "$worktree_path" 2>/dev/null
-        git branch -D "$branch_name" 2>/dev/null
-    end
 end
 
 function gh_create_worktree
